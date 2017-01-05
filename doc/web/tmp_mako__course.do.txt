@@ -37,7 +37,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/intro/pdf/intro-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/intro/pdf/intro-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/intro/pdf/intro-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/intro/pdf/intro-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/intro/pdf/intro-beamer.pdf"
  * HTML:
@@ -54,7 +54,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/languages/pdf/languages-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/languages/pdf/languages-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/languages/pdf/languages-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/languages/pdf/languages-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/languages/pdf/languages-beamer.pdf"
  * HTML:
@@ -71,7 +71,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/projectwriting/pdf/projectwriting-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/projectwriting/pdf/projectwriting-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/projectwriting/pdf/projectwriting-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/projectwriting/pdf/projectwriting-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/projectwriting/pdf/projectwriting-beamer.pdf"
  * HTML:
@@ -88,7 +88,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/linalg/pdf/linalg-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/linalg/pdf/linalg-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/linalg/pdf/linalg-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/linalg/pdf/linalg-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/linalg/pdf/linalg-beamer.pdf"
  * HTML:
@@ -105,7 +105,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/eigvalues/pdf/eigvalues-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/eigvalues/pdf/eigvalues-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/eigvalues/pdf/eigvalues-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/eigvalues/pdf/eigvalues-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/eigvalues/pdf/eigvalues-beamer.pdf"
  * HTML:
@@ -122,7 +122,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/codeoptimization/pdf/codeoptimization-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/codeoptimization/pdf/codeoptimization-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/codeoptimization/pdf/codeoptimization-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/codeoptimization/pdf/codeoptimization-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/codeoptimization/pdf/codeoptimization-beamer.pdf"
  * HTML:
@@ -139,7 +139,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/oo/pdf/oo-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/oo/pdf/oo-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/oo/pdf/oo-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/oo/pdf/oo-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/oo/pdf/oo-beamer.pdf"
  * HTML:
@@ -156,7 +156,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/integrate/pdf/integrate-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/integrate/pdf/integrate-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/integrate/pdf/integrate-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/integrate/pdf/integrate-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/integrate/pdf/integrate-beamer.pdf"
  * HTML:
@@ -173,7 +173,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/mcint/pdf/mcint-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/mcint/pdf/mcint-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/mcint/pdf/mcint-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/mcint/pdf/mcint-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/mcint/pdf/mcint-beamer.pdf"
  * HTML:
@@ -190,7 +190,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/rw/pdf/rw-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/rw/pdf/rw-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/rw/pdf/rw-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/rw/pdf/rw-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/rw/pdf/rw-beamer.pdf"
  * HTML:
@@ -207,7 +207,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/statphys/pdf/statphys-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/statphys/pdf/statphys-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/statphys/pdf/statphys-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/statphys/pdf/statphys-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/statphys/pdf/statphys-beamer.pdf"
  * HTML:
@@ -224,7 +224,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/vmc/pdf/vmc-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/vmc/pdf/vmc-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/vmc/pdf/vmc-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/vmc/pdf/vmc-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/vmc/pdf/vmc-beamer.pdf"
  * HTML:
@@ -241,7 +241,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/ode/pdf/ode-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/ode/pdf/ode-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/ode/pdf/ode-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/ode/pdf/ode-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/ode/pdf/ode-beamer.pdf"
  * HTML:
@@ -258,7 +258,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/pde/pdf/pde-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/pde/pdf/pde-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/pde/pdf/pde-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/pde/pdf/pde-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/pde/pdf/pde-beamer.pdf"
  * HTML:
@@ -275,7 +275,7 @@ formulas in HTML or ipython notebook files.
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/summary/pdf/summary-print.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/summary/pdf/summary-print6.pdf"
+     * "Standard one-page format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/summary/pdf/summary-minted.pdf", compact: "6 pages per sheet": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/summary/pdf/summary-beamer-handouts2x3.pdf"
    * For screen viewing:
      * "standard Beamer format": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub/summary/pdf/summary-beamer.pdf"
  * HTML:
@@ -339,7 +339,7 @@ formulas in HTML or ipython notebook files.
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 7|  Ordinary differential equations  |  | Sections 8.1-8.3  |   Object orientation (OO) |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 8|  Ordinary differential equations           |  Sections 8.3-8.7                                 |   | OO and  Vectorization  |
+| Week 8|  Ordinary differential equations    |       |  Sections 8.3-8.7                                   | OO and  Vectorization  |
 |        |                                  |                                   | Read slides on vectorization etc |  Finalize project 2      |
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 9  |  Numerical integration  and parallelization       |  _Project 3, deadline March 27_              |  Section 5.5  | Parallelization with OpenMP  |
