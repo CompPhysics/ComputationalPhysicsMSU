@@ -13,7 +13,7 @@ DATE: 2017
    o Introduction to C++ programming and numerical precision. Exercises for first week. 
    o Numerical differentiation and loss of numerical precision (chapter 3 lecture notes)
   * Computer lab: Thursday (most likely)
-   o The first two weeks we focus on simple programming tasks, start to look at project 1 and to set up github and QTcreator. This week we discuss how to set up git and obtain a github account.
+   o The first two weeks we focus on simple programming tasks, start to look at project 1 and to set up Github and Qt Creator as one possible IDE. This week we discuss how to set up git and obtain a github account.
 !eblock
 
 !split
