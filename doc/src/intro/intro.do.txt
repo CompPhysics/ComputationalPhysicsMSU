@@ -13,7 +13,7 @@ DATE: 2017
    o Introduction to C++ programming and numerical precision. Exercises for first week. 
    o Numerical differentiation and loss of numerical precision (chapter 3 lecture notes)
   * Computer lab: Thursday (most likely)
-   o The first two weeks we focus on simple programming tasks, start to look at project 1 and to set up Github and Qt Creator as one possible IDE. This week we discuss how to set up git and obtain a github account.
+   o The first two weeks we focus on simple programming tasks, start to look at project 1 and to set up the software "Git":"https://git-scm.com/" and a repository at "Github":"https://github.com/" as well as  "Qt Creator":"https://www.qt.io/ide/" as one possible IDE. This week we discuss how to set up Git and obtain a Github account.
 !eblock
 
 !split
@@ -37,7 +37,7 @@ DATE: 2017
   * Detailed lecture notes, exercises, all programs presented, projects etc can be found at the Github address of the course.
   * Computerlab: Most likely Thursdays. We have reserved a time slot from 3pm to 7pm.
   * Weekly plans and all other information are the github address of the course.
-  * Four projects, all have to be approved. The first project is pass/not passed only while the last three projects are graded and count $25\%$ each of the final mark.  The course ends with a final oral exam where you present a project of your choice. The final oral exam accounts for the remaining $25\%$ of the final grade.
+  * Four projects, all have to be approved. The first project is pass/not passed only while the last three projects are graded and count 25% each of the final mark.  The course ends with a final oral exam where you present a project of your choice. The final oral exam accounts for the remaining 25% of the final grade.
 !eblock
 
 !split
@@ -182,20 +182,20 @@ FIGURE: [fig-intro/Nebbdyr2.pdf, width=500 frac=0.6]
 
  * J. J. Barton and L. R. Nackman,*Scientific and Engineering C++*, Addison Wesley, 3rd edition 2000.
  * B. Stoustrup, *The C++ programming language*, Pearson, 1997.
- * H. P. Langtangen INF-VERK3830 URL: "http://heim.ifi.uio.no/~hpl/INF-VERK4830/"
+ * An excellent text is "Discovering Modern C++":"http://ptgmedia.pearsoncmg.com/images/9780134383583/samplepages/9780134383583.pdf"
  * D. Yang, *C++ and Object-oriented Numeric Computing for Scientists and Engineers*, Springer 2000.
-
-
+ * And the "C++ resource network":"http://www.cplusplus.com/" provides great help.
+ * The "Fortran tutorial":"http://www.fortrantutorial.com/" is also very useful.
+ * And for Python programmers, see the textbook by "Hans Petter Langtangen":"https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Lectures/HPLpython.pdf"
 
 !split
 ===== Extremely useful tools, strongly recommended =====
 
 !bblock and discussed at the lab sessions
-  * GIT for version control (see webpage), this week and next weeks
+  * "Git":"https://git-scm.com/" and a repository at "Github":"https://github.com/", this week and next weeks. 
   * ipython notebook
-  * QTcreator for editing and mastering computational projects (for C++ codes, see webpage of course), discussed during the whole semester. You can however use other IDEs as well.
+  * "Qt Creator":"https://www.qt.io/ide/" as one possible IDE for editing and mastering computational projects (for C++ codes, see webpage of course), discussed during the whole semester. You can however use other IDEs as well such as "VisualC++":"https://www.microsoft.com/en-us/download/details.aspx?id=48145".
   * Armadillo as a useful numerical library for C++, highly recommended, discussed in connection with LinAlgebra lectures
   * Unit tests, discussed throughout the whole semester
   * Piazza for discussions and teaching material
 !eblock
-
