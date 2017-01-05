@@ -1,0 +1,197 @@
+# Strange way of testing for vortex...
+TITLE: Overview of course material: Computational Physics
+AUTHOR: "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/" at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, USA &  Department of Physics, University of Oslo, Norway
+
+<%
+pub_url = 'http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub'
+published = ['intro', 'languages', 'projectwriting', 'linalg', 'eigvalues', 'codeoptimization', 'oo', 'integrate', 'mcint', 'rw', 'statphys', 'vmc', 'ode', 'pde', 'summary',]
+chapters = {
+ 'intro': 'Introduction to computational physics',
+ 'languages': 'Introduction to programming',
+ 'projectwriting': 'How to write scientific reports',
+ 'linalg': 'Matrices and linear algebra',
+ 'eigvalues': 'Diagonalization and eigenvalue problems',
+ 'oo': 'Object orientation',
+ 'codeoptimization': 'How to optimize your code, from compiler flags to vectorization and parallelization',
+ 'integrate': 'Numerical integration',
+ 'mcint': 'Introduction to Monte Carlo methods',
+ 'rw': 'Brownian motion and randow walks',
+ 'statphys': 'Statistical physics',
+ 'vmc': 'Quantum mechanical systems',
+ 'ode': 'Ordinary differential equations',
+ 'pde': 'Partial differential equations',
+ 'summary': 'Summary of course',
+}
+%>
+
+
+
+
+
+<%def name="text_types(name)">
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format": "${pub_url}/${name}/pdf/${name}-print.pdf", compact: "6 pages per sheet": "${pub_url}/${name}/pdf/${name}-print6.pdf"
+   * For screen viewing:
+     * "standard Beamer format": "${pub_url}/${name}/pdf/${name}-beamer.pdf"
+ * HTML:
+   * "Plain html": "${pub_url}/${name}/html/${name}.html"
+   * "reveal.js beige slide style": "${pub_url}/${name}/html/${name}-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "${pub_url}/${name}/html/${name}-bs.html"
+ * iPython notebook:
+   * "ipynb file": "${pub_url}/${name}/ipynb/${name}.ipynb"
+</%def>
+
+<%def name="slide_types(name)">
+</%def>
+
+The teaching material is produced in various formats for printing and on-screen reading.
+
+!split
+!bwarning
+The PDF files are based on LaTeX and have seldom technical
+failures that cannot be easily corrected.
+The HTML-based files, called ``HTML'' and ``ipynb'' below, apply MathJax
+for rendering LaTeX formulas and sometimes this technology gives rise
+to unexpected failures (e.g.,
+incorrect rendering in a web page despite correct LaTeX syntax in the
+formula). Consult the corresponding PDF
+files if you find missing or incorrectly rendered
+formulas in HTML or ipython notebook files.
+!ewarning
+
+
+
+======= Computational Physics  Notes =======
+
+% for ch in published:
+===== ${chapters[ch]} =====
+
+${text_types(ch)}
+
+% endfor
+
+
+!split
+===== Projects Spring 2017 =====
+
+=== Project 1, deadline February 6 ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project1/pdf/Project1.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project1/pdf/Project1.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project1/html/Project1.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project1/html/Project1-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project1/ipynb/Project1.ipynb"
+
+
+=== Project 2, deadline February 27 ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project2/pdf/Project2.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project2/pdf/Project2.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project2/html/Project2.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project2/html/Project2-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project2/ipynb/Project2.ipynb"
+
+
+
+
+!split
+===== Teaching schedule Spring 2017 =====
+
+|----------------------------------------------------------------------------------------------------------------------------|
+|  Week and days  |  Topics to be covered | Projects and deadlines | Reading assignments|  Lab  activities                   |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 2|   Introduction to programming  | Warm-up exercise  |    Chapters 2 and 3.1 and 3.2  | presentation of Git and github|
+|        |   Numerical derivation         |                   |    From lecture notes          | Installing c++              |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 3 | Linear algebra, Gaussian elemination, LU decomposition | _Project 1, deadline February 6_ | Sections 2.5, 3.1, 6.3, 6.4  | Installing and using Qt |
+|         | Discussion of pointers and arrays    |                                 |                              | Work on project 1 |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 4|  Linear algebra, Gaussian elimination |      |  Sections 6.4, 6.5 and 6.6 | How to write a good report and more git and Qt stuff |
+|        |  Spline interpolation and iterative methods| Discussed during lab sessions | Read slides on how to write a report |  
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 5 | Eigenvalue problems, Jacobi's method             |   |  Sections 7.1-7.4 | Object orientation with examples |
+|----------------------------------------------------------------------------------------------------------------------------|
+|   | Householder's and Given's methods               |                                   |  Read slides on object orientation and section 3.3 | Finalize project 1 |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 6 | Eigenvalue problems, iterative and power methods | _Project 2, deadline February 27_ | Sections 7.4-7.7 |  Object orientation |
+|   |                |                                   |  | Start project 2 |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 7|  Ordinary differential equations  |  | Sections 8.1-8.3  |   Object orientation (OO) |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 8|  Ordinary differential equations           |  Sections 8.3-8.7                                 |   | OO and  Vectorization  |
+|        |                                  |                                   | Read slides on vectorization etc |  Finalize project 2      |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 9  |  Numerical integration  and parallelization       |  _Project 3, deadline March 27_              |  Section 5.5  | Parallelization with OpenMP  |
+|          |  Introduction to Monte Carlo methods              |                |  Sections 11.1-11.2 | Start work on project 3                      |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 10  |  Spring break       |                |    |   |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 11  |  Introduction to Monte Carlo methods              |  | Sections 11.3-11.5 |  Parallelization with MPI |
+|          |  Random walks and the Metropolis algorithm        |                                   |  Sections 12.1-12.3 |     |   
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 12 |  Random walks and the Metropolis algorithm         |                                   | Sections 12.4-12.5  |  Finalize project 3    | 
+|         |  Discussion of project 4 and statistical mechanics |                                   | Sections 13.1-13.3   |  More OO     |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 13|   Project 4 and statistical mechanics               |   _Project 4, deadline April 17_ | Sections 13.4-13.7 |  Parallelization and high-performance computing |   
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 14|  Variational Monte Carlo                            |  |  Sections 14.1-14.4  |   Work on project 4             |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 15| Partial differential equations                     |                                  |  Sections 10.1-10.2 | Work on project 4   | 
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 16 | Partial differential equations                     |                                  |  Sections 10.1-10.2 | Finalize project 4   |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 17 | Partial differential equations                     |                                  |  Sections 10.3-10.4 |   |
+|         | Summary of course and discussions                  |                                  |                            |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 18 | Finals, Oral exam                     | Schedule to be determined                                  |   |    |
+|----------------------------------------------------------------------------------------------------------------------------|
+
+
+
+!split
+===== Basic Syllabus =====
+!bblock
+The syllabus for this course consists of the lecture notes on the webpage (chapters 2-15) and 4 compulsory projects. The last three projects
+are graded and count 25% each of the final mark. A final oral exam with a presentation of a chosen project makes up the final 25% of the total grade. 
+
+ * Monte Carlo methods in physics ("Lecture notes chapters 11, 12, 13 and 14":"https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Lectures")
+
+ * Partial differential equations ("Lecture notes chapter 10":"https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Lectures")
+
+ * Ordinary differential equations ("Lecture notes chapter 8":"https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Lectures")
+
+ * Numerical integration, standard methods and Monte Carlo methods ("Lecture notes chapters 5.1-5.5 and 11":"https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Lectures")
+
+ * Linear algebra and eigenvalue problems. ("Lecture notes chapters 6 and 7":"https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Lectures")
+
+A good text that can be used (with more math plus much material on parallelization) is "Parallel Scientific Computing in C++ and MPI, of Karniadakis and Kirby III":"http://www.cambridge.org/us/academic/subjects/computer-science/scientific-computing-scientific-software/parallel-scientific-computing-c-and-mpi-seamless-approach-parallel-algorithms-and-their-implementation".
+!eblock
+
+
+===== Additional literature =====
+!bblock
+In addition we recommend highly the texts on Numerical Recipes in C++ or Fortran90 by Press et al. The C, F77 and
+Fortran90 can be downloaded down for free, follow the links at "Numerical Recipes":"http://www.nr.com/".
+
+The program library in C++ and Fortran2008 used in this course is a rewritten version of the Numerical Recipes codes.
+!eblock
+
+!split
+===== Programs in C++, Fortran and Python discussed in lecture notes =====
+!bblock
+All programs are available at the github address of the "course":"https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Programs"
+!eblock
+
+
+
+
+ 
+
+
+

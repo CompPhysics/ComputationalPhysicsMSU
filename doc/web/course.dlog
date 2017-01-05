@@ -254,3 +254,72 @@ running preprocess -DFORMAT=html -DDEVICE=screen  course.do.txt > tmp_preprocess
 running mako on tmp_preprocess__course.do.txt to make tmp_mako__course.do.txt
 translating doconce text in tmp_mako__course.do.txt to html
 output in course.html
+running preprocess -DFORMAT=html -DDEVICE=screen  course.do.txt > tmp_preprocess__course.do.txt
+running mako on tmp_preprocess__course.do.txt to make tmp_mako__course.do.txt
+translating doconce text in tmp_mako__course.do.txt to html
+*** error: syntax error in table!
+    missing three horizontal rules and heading
+    in the right places
+
+    lines surrounding the table:
+|        |  Spline interpolation and iterative methods| Discussed during lab sessions | Read slides on how to write a report |  
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 5 | Eigenvalue problems, Jacobi's method             |   |  Sections 7.1-7.4 | Object orientation with examples |
+|----------------------------------------------------------------------------------------------------------------------------|
+|   | Householder's and Given's methods               |                                   |  Read slides on object orientation and section 3.3 | Finalize project 1 |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 6 | Eigenvalue problems, iterative and power methods | <b>Project 2, deadline February 27</b> | Sections 7.4-7.7 |  Object orientation |
+|   |                |                                   |  | Start project 2 |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 7|  Ordinary differential equations  |  | Sections 8.1-8.3  |   Object orientation (OO) |
+
+<p>
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 8|  Ordinary differential equations           |  Sections 8.3-8.7                                 |   | OO and  Vectorization  |
+|        |                                  |                                   | Read slides on vectorization etc |  Finalize project 2      |
+
+    here are the recorded table rows:
+|---------------------| (horizontal rule)
+| Week and days | Topics to be covered | Projects and deadlines | Reading assignments | Lab  activities |
+|---------------------| (horizontal rule)
+| Week 2 | Introduction to programming | Warm-up exercise | Chapters 2 and 3.1 and 3.2 | presentation of Git and github |
+NOTE: do not use pipes in horizontal rule of this type:
+(write instead |-Numerical derivation--From lecture notes-Installing c++|)
+|  | Numerical derivation |  | From lecture notes | Installing c++ |
+|---------------------| (horizontal rule)
+| Week 3 | Linear algebra, Gaussian elemination, LU decomposition | <b>Project 1, deadline February 6</b> | Sections 2.5, 3.1, 6.3, 6.4 | Installing and using Qt |
+NOTE: do not use pipes in horizontal rule of this type:
+(write instead |-Discussion of pointers and arrays---Work on project 1|)
+|  | Discussion of pointers and arrays |  |  | Work on project 1 |
+|---------------------| (horizontal rule)
+NOTE: do not use pipes in horizontal rule of this type:
+(write instead |Week 4-Linear algebra, Gaussian elimination--Sections 6.4, 6.5 and 6.6-How to write a good report and more git and Qt stuff|)
+| Week 4 | Linear algebra, Gaussian elimination |  | Sections 6.4, 6.5 and 6.6 | How to write a good report and more git and Qt stuff |
+NOTE: do not use pipes in horizontal rule of this type:
+(write instead |-Spline interpolation and iterative methods-Discussed during lab sessions-Read slides on how to write a report|)
+|  | Spline interpolation and iterative methods | Discussed during lab sessions | Read slides on how to write a report |
+|---------------------| (horizontal rule)
+NOTE: do not use pipes in horizontal rule of this type:
+(write instead |Week 5-Eigenvalue problems, Jacobi's method--Sections 7.1-7.4-Object orientation with examples|)
+| Week 5 | Eigenvalue problems, Jacobi's method |  | Sections 7.1-7.4 | Object orientation with examples |
+|---------------------| (horizontal rule)
+NOTE: do not use pipes in horizontal rule of this type:
+(write instead |-Householder's and Given's methods--Read slides on object orientation and section 3.3-Finalize project 1|)
+|  | Householder's and Given's methods |  | Read slides on object orientation and section 3.3 | Finalize project 1 |
+|---------------------| (horizontal rule)
+| Week 6 | Eigenvalue problems, iterative and power methods | <b>Project 2, deadline February 27</b> | Sections 7.4-7.7 | Object orientation |
+NOTE: do not use pipes in horizontal rule of this type:
+(write instead |----Start project 2|)
+|  |  |  |  | Start project 2 |
+|---------------------| (horizontal rule)
+NOTE: do not use pipes in horizontal rule of this type:
+(write instead |Week 7-Ordinary differential equations--Sections 8.1-8.3-Object orientation (OO)|)
+| Week 7 | Ordinary differential equations |  | Sections 8.1-8.3 | Object orientation (OO) |
+
+possible trouble:
+1. Not a table, just an opening pipe symbol at the beginning of the line?
+2. Something wrong with the syntax in a preceding table?
+running preprocess -DFORMAT=html -DDEVICE=screen  course.do.txt > tmp_preprocess__course.do.txt
+running mako on tmp_preprocess__course.do.txt to make tmp_mako__course.do.txt
+translating doconce text in tmp_mako__course.do.txt to html
+output in course.html
