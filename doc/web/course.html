@@ -1,0 +1,1023 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Overview of course material: Computational Physics">
+
+<title>Overview of course material: Computational Physics</title>
+
+
+<style type="text/css">
+/* blueish style */
+
+/* Color definitions:  http://www.december.com/html/spec/color0.html
+   CSS examples:       http://www.w3schools.com/css/css_examples.asp */
+
+body {
+  margin-top: 1.0em;
+  background-color: #ffffff;
+  font-family: Helvetica, Arial, FreeSans, san-serif;
+  color: #000000;
+}
+h1 { font-size: 1.8em; color: #1e36ce; }
+h2 { font-size: 1.6em; color: #1e36ce; }
+h3 { font-size: 1.4em; color: #1e36ce; }
+a { color: #1e36ce; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #bababa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #f8f8f8;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 1,
+ 'sections': [('Computational Physics  Notes', 1, None, '___sec0'),
+              ('Introduction to computational physics', 2, None, '___sec1'),
+              ('Introduction to programming', 2, None, '___sec2'),
+              ('How to write scientific reports', 2, None, '___sec3'),
+              ('Matrices and linear algebra', 2, None, '___sec4'),
+              ('Diagonalization and eigenvalue problems', 2, None, '___sec5'),
+              ('How to optimize your code, from compiler flags to vectorization and parallelization',
+               2,
+               None,
+               '___sec6'),
+              ('Object orientation', 2, None, '___sec7'),
+              ('Numerical integration', 2, None, '___sec8'),
+              ('Introduction to Monte Carlo methods', 2, None, '___sec9'),
+              ('Brownian motion and randow walks', 2, None, '___sec10'),
+              ('Statistical physics', 2, None, '___sec11'),
+              ('Quantum mechanical systems', 2, None, '___sec12'),
+              ('Ordinary differential equations', 2, None, '___sec13'),
+              ('Partial differential equations', 2, None, '___sec14'),
+              ('Summary of course', 2, None, '___sec15'),
+              ('Projects Fall 2016', 2, None, '___sec16'),
+              ('Project 1', 3, None, '___sec17'),
+              ('Project 2', 3, None, '___sec18'),
+              ('Project 3', 3, None, '___sec19'),
+              ('Project 4', 3, None, '___sec20'),
+              ('Project 5 Variational Monte Carlo', 3, None, '___sec21'),
+              ('Project 5 Molecular Dynamics', 3, None, '___sec22'),
+              ('Project 5 Monte Carlo Modeling of Transactions',
+               3,
+               None,
+               '___sec23'),
+              ('Project 5 Partial Differential Equations',
+               3,
+               None,
+               '___sec24'),
+              ('Project 5 Astrophysics project', 3, None, '___sec25'),
+              ('Teaching schedule Fall 2016', 2, None, '___sec26'),
+              ('Basic Syllabus', 2, None, '___sec27'),
+              ('Additional literature', 2, None, '___sec28'),
+              ('Programs in C++, Fortran and Python discussed in lecture notes',
+               2,
+               None,
+               '___sec29')]}
+end of tocinfo -->
+
+<body>
+
+    
+<!-- ------------------- main content ---------------------- -->
+
+<!-- Strange way of testing for vortex... -->
+
+
+<center><h1>Overview of course material: Computational Physics</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): <a href="http://mhjgit.github.io/info/doc/web/" target="_self">Morten Hjorth-Jensen</a> -->
+
+<center>
+<b><a href="http://mhjgit.github.io/info/doc/web/" target="_self">Morten Hjorth-Jensen</a></b> [1, 2]
+</center>
+
+<p>
+<!-- institution(s) -->
+
+<center>[1] <b>Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, USA</b></center>
+<center>[2] <b>Department of Physics, University of Oslo, Norway</b></center>
+<br>
+
+<p>
+The teaching material is produced in various formats for printing and on-screen reading.
+
+<p>
+<!-- !split -->
+<div class="alert alert-block alert-warning alert-text-normal">
+<b>Warning.</b>
+<p>
+The PDF files are based on LaTeX and have seldom technical
+failures that cannot be easily corrected.
+The HTML-based files, called &quot;HTML&quot; and &quot;ipynb&quot; below, apply MathJax
+for rendering LaTeX formulas and sometimes this technology gives rise
+to unexpected failures (e.g.,
+incorrect rendering in a web page despite correct LaTeX syntax in the
+formula). Consult the corresponding PDF
+files if you find missing or incorrectly rendered
+formulas in HTML or ipython notebook files.
+</div>
+
+
+<h1 id="___sec0">Computational Physics  Notes </h1>
+
+<h2 id="___sec1">Introduction to computational physics </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/intro/pdf/intro-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/intro/pdf/intro-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/intro/pdf/intro-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/intro/html/intro.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/intro/html/intro-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/intro/html/intro-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/intro/ipynb/intro.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec2">Introduction to programming </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/languages/pdf/languages-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/languages/pdf/languages-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/languages/pdf/languages-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/languages/html/languages.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/languages/html/languages-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/languages/html/languages-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/languages/ipynb/languages.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec3">How to write scientific reports </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/projectwriting/pdf/projectwriting-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/projectwriting/pdf/projectwriting-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/projectwriting/pdf/projectwriting-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/projectwriting/html/projectwriting.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/projectwriting/html/projectwriting-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/projectwriting/html/projectwriting-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/projectwriting/ipynb/projectwriting.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec4">Matrices and linear algebra </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/linalg/pdf/linalg-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/linalg/pdf/linalg-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/linalg/pdf/linalg-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/linalg/html/linalg.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/linalg/html/linalg-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/linalg/html/linalg-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/linalg/ipynb/linalg.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec5">Diagonalization and eigenvalue problems </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/eigvalues/pdf/eigvalues-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/eigvalues/pdf/eigvalues-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/eigvalues/pdf/eigvalues-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/eigvalues/html/eigvalues.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/eigvalues/html/eigvalues-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/eigvalues/html/eigvalues-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/eigvalues/ipynb/eigvalues.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec6">How to optimize your code, from compiler flags to vectorization and parallelization </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/codeoptimization/pdf/codeoptimization-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/codeoptimization/pdf/codeoptimization-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/codeoptimization/pdf/codeoptimization-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/codeoptimization/html/codeoptimization.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/codeoptimization/html/codeoptimization-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/codeoptimization/html/codeoptimization-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/codeoptimization/ipynb/codeoptimization.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec7">Object orientation </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/oo/pdf/oo-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/oo/pdf/oo-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/oo/pdf/oo-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/oo/html/oo.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/oo/html/oo-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/oo/html/oo-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/oo/ipynb/oo.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec8">Numerical integration </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/integrate/pdf/integrate-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/integrate/pdf/integrate-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/integrate/pdf/integrate-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/integrate/html/integrate.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/integrate/html/integrate-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/integrate/html/integrate-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/integrate/ipynb/integrate.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec9">Introduction to Monte Carlo methods </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/mcint/pdf/mcint-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/mcint/pdf/mcint-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/mcint/pdf/mcint-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/mcint/html/mcint.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/mcint/html/mcint-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/mcint/html/mcint-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/mcint/ipynb/mcint.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec10">Brownian motion and randow walks </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/rw/pdf/rw-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/rw/pdf/rw-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/rw/pdf/rw-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/rw/html/rw.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/rw/html/rw-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/rw/html/rw-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/rw/ipynb/rw.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec11">Statistical physics </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/statphys/pdf/statphys-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/statphys/pdf/statphys-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/statphys/pdf/statphys-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/statphys/html/statphys.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/statphys/html/statphys-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/statphys/html/statphys-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/statphys/ipynb/statphys.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec12">Quantum mechanical systems </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/vmc/pdf/vmc-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/vmc/pdf/vmc-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/vmc/pdf/vmc-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/vmc/html/vmc.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/vmc/html/vmc-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/vmc/html/vmc-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/vmc/ipynb/vmc.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec13">Ordinary differential equations </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/ode/pdf/ode-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/ode/pdf/ode-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/ode/pdf/ode-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/ode/html/ode.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/ode/html/ode-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/ode/html/ode-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/ode/ipynb/ode.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec14">Partial differential equations </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/pde/pdf/pde-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/pde/pdf/pde-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/pde/pdf/pde-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/pde/html/pde.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/pde/html/pde-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/pde/html/pde-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/pde/ipynb/pde.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h2 id="___sec15">Summary of course </h2>
+
+<ul>
+ <li> LaTeX PDF:</li>
+
+<ul>
+   <li> For printing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/summary/pdf/summary-print.pdf" target="_self">Standard one-page format</a>, compact: <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/summary/pdf/summary-print6.pdf" target="_self">6 pages per sheet</a></li>
+</ul>
+
+   <li> For screen viewing:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/summary/pdf/summary-beamer.pdf" target="_self">standard Beamer format</a></li>
+</ul>
+
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/summary/html/summary.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/summary/html/summary-reveal.html" target="_self">reveal.js beige slide style</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/summary/html/summary-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/pub/summary/ipynb/summary.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<!-- !split -->
+
+<h2 id="___sec16">Projects Fall 2016 </h2>
+
+<h3 id="___sec17">Project 1 </h3>
+
+<ul>
+ <li> LaTeX and PDF:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project1/pdf/Project1.tex" target="_self">LaTex file</a></li>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project1/pdf/Project1.pdf" target="_self">PDF file</a></li>
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project1/html/Project1.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project1/html/Project1-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project1/ipynb/Project1.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h3 id="___sec18">Project 2 </h3>
+
+<ul>
+ <li> LaTeX and PDF:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project2/pdf/Project2.tex" target="_self">LaTex file</a></li>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project2/pdf/Project2.pdf" target="_self">PDF file</a></li>
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project2/html/Project2.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project2/html/Project2-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project2/ipynb/Project2.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h3 id="___sec19">Project 3 </h3>
+
+<ul>
+ <li> LaTeX and PDF:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project3/pdf/Project3.tex" target="_self">LaTex file</a></li>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project3/pdf/Project3.pdf" target="_self">PDF file</a></li>
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project3/html/Project3.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project3/html/Project3-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project3/ipynb/Project3.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h3 id="___sec20">Project 4 </h3>
+
+<ul>
+ <li> LaTeX and PDF:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project4/pdf/Project4.tex" target="_self">LaTex file</a></li>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project4/pdf/Project4.pdf" target="_self">PDF file</a></li>
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project4/html/Project4.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project4/html/Project4-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project4/ipynb/Project4.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h3 id="___sec21">Project 5 Variational Monte Carlo </h3>
+
+<ul>
+ <li> LaTeX and PDF:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/QuantumMonteCarlo/pdf/QuantumMonteCarlo.tex" target="_self">LaTex file</a></li>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/QuantumMonteCarlo/pdf/QuantumMonteCarlo.pdf" target="_self">PDF file</a></li>
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/QuantumMonteCarlo/html/QuantumMonteCarlo.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/QuantumMonteCarlo/html/QuantumMonteCarlo-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/QuantumMonteCarlo/ipynb/QuantumMonteCarlo.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h3 id="___sec22">Project 5 Molecular Dynamics </h3>
+
+<ul>
+ <li> LaTeX and PDF:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/MolecularDynamics/pdf/MolecularDynamics.tex" target="_self">LaTex file</a></li>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/MolecularDynamics/pdf/MolecularDynamics.pdf" target="_self">PDF file</a></li>
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/MolecularDynamics/html/MolecularDynamics.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/MolecularDynamics/html/MolecularDynamics-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/MolecularDynamics/ipynb/MolecularDynamics.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h3 id="___sec23">Project 5 Monte Carlo Modeling of Transactions </h3>
+
+<ul>
+ <li> LaTeX and PDF:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/FinancialEngineering/pdf/FinancialEngineering.tex" target="_self">LaTex file</a></li>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/FinancialEngineering/pdf/FinancialEngineering.pdf" target="_self">PDF file</a></li>
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/FinancialEngineering/html/FinancialEngineering.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/FinancialEngineering/html/FinancialEngineering-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/FinancialEngineering/ipynb/FinancialEngineering.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h3 id="___sec24">Project 5 Partial Differential Equations </h3>
+
+<ul>
+ <li> LaTeX and PDF:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/PartialDiffEquations/pdf/PartialDiffEquations.tex" target="_self">LaTex file</a></li>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/PartialDiffEquations/pdf/PartialDiffEquations.pdf" target="_self">PDF file</a></li>
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/PartialDiffEquations/html/PartialDiffEquations.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/PartialDiffEquations/html/PartialDiffEquations-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/PartialDiffEquations/ipynb/PartialDiffEquations.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<h3 id="___sec25">Project 5 Astrophysics project </h3>
+
+<ul>
+ <li> LaTeX and PDF:</li>
+
+<ul>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/AstroProject/pdf/AstroProject.tex" target="_self">LaTex file</a></li>
+     <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/AstroProject/pdf/AstroProject.pdf" target="_self">PDF file</a></li>
+</ul>
+
+ <li> HTML:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/AstroProject/html/AstroProject.html" target="_self">Plain html</a></li>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/AstroProject/html/AstroProject-bs.html" target="_self">Bootstrap  slide style, easy for reading on mobile devices</a></li>
+</ul>
+
+ <li> iPython notebook:</li>
+
+<ul>
+   <li> <a href="http://compphysics.github.io/ComputationalPhysics/doc/Projects/2016/Project5/AstroProject/ipynb/AstroProject.ipynb" target="_self">ipynb file</a></li>
+</ul>
+
+</ul>
+
+<!-- !split -->
+
+<h2 id="___sec26">Teaching schedule Fall 2016 </h2>
+
+<p>
+<table border="1">
+<thead>
+<tr><th align="center">Week and days</th> <th align="center">                 Topics to be covered                 </th> <th align="center">         Projects and deadlines        </th> <th align="center">               Reading assignments               </th> <th align="center">                  Lab  activities                   </th> </tr>
+</thead>
+<tbody>
+<tr><td align="center">   Week 34          </td> <td align="center">   Introduction to programming                               </td> <td align="center">   Warm-up exercise                           </td> <td align="center">   Chapters 2 and 3.1 and 3.2                           </td> <td align="center">   presentation of Git and github                          </td> </tr>
+<tr><td align="center">                    </td> <td align="center">   Numerical derivation                                      </td> <td align="center">                                              </td> <td align="center">   From lecture notes                                   </td> <td align="center">   Installing c++                                          </td> </tr>
+<tr><td align="center">   Week 35          </td> <td align="center">   Linear algebra, Gaussian elemination, LU decomposition    </td> <td align="center">   <b>Project 1, deadline September 19</b>    </td> <td align="center">   Sections 2.5, 3.1, 6.3, 6.4                          </td> <td align="center">   Installing and using Qt                                 </td> </tr>
+<tr><td align="center">                    </td> <td align="center">   Discussion of pointers and arrays                         </td> <td align="center">                                              </td> <td align="center">                                                        </td> <td align="center">   Work on project 1                                       </td> </tr>
+<tr><td align="center">   Week 36          </td> <td align="center">   Linear algebra, Gaussian elimination                      </td> <td align="center">                                              </td> <td align="center">   Sections 6.4, 6.5 and 6.6                            </td> <td align="center">   How to write a good report and more git and Qt stuff    </td> </tr>
+<tr><td align="center">                    </td> <td align="center">   Spline interpolation and iterative methods                </td> <td align="center">   Discussed during lab sessions              </td> <td align="center">   Read slides on how to write a report                 </td> </tr>
+<tr><td align="center">   Week 37          </td> <td align="center">   Eigenvalue problems, Jacobi's method                      </td> <td align="center">   <b>Project 2, deadline October 3</b>       </td> <td align="center">   Sections 7.1-7.4                                     </td> <td align="center">   Object orientation with examples                        </td> </tr>
+<tr><td align="center">                    </td> <td align="center">   Householder's and Given's methods                         </td> <td align="center">                                              </td> <td align="center">   Read slides on object orientation and section 3.3    </td> <td align="center">   Finalize project 1                                      </td> </tr>
+<tr><td align="center">   Week 38          </td> <td align="center">   Eigenvalue problems, iterative and power methods          </td> <td align="center">                                              </td> <td align="center">   Sections 7.4-7.7                                     </td> <td align="center">   Object orientation                                      </td> </tr>
+<tr><td align="center">                    </td> <td align="center">   Differential equations                                    </td> <td align="center">                                              </td> <td align="center">   Sections 8.1-8.3                                     </td> </tr>
+<tr><td align="center">   Week 39          </td> <td align="center">   Ordinary differential equations                           </td> <td align="center">   <b>Project 3, deadline October 24</b>      </td> <td align="center">   Sections 8.3-8.7                                     </td> <td align="center">   Object orientation (OO)                                 </td> </tr>
+<tr><td align="center">                    </td> <td align="center">                                                             </td> <td align="center">                                              </td> <td align="center">                                                        </td> <td align="center">   Finalize project 2                                      </td> </tr>
+<tr><td align="center">   Week 40          </td> <td align="center">   Numerical integration                                     </td> <td align="center">                                              </td> <td align="center">   Sections 5.1-5.3                                     </td> <td align="center">   OO and  Vectorization                                   </td> </tr>
+<tr><td align="center">                    </td> <td align="center">                                                             </td> <td align="center">                                              </td> <td align="center">   Read slides on vectorization etc                     </td> <td align="center">                                                           </td> </tr>
+<tr><td align="center">   Week 41          </td> <td align="center">   Numerical integration  and parallelization                </td> <td align="center">                                              </td> <td align="center">   Section 5.5                                          </td> <td align="center">   Parallelization with OpenMP                             </td> </tr>
+<tr><td align="center">                    </td> <td align="center">   Introduction to Monte Carlo methods                       </td> <td align="center">                                              </td> <td align="center">   Sections 11.1-11.2                                   </td> <td align="center">                                                           </td> </tr>
+<tr><td align="center">   Week 42          </td> <td align="center">   Introduction to Monte Carlo methods                       </td> <td align="center">   <b>Project 4, deadline November 14</b>     </td> <td align="center">   Sections 11.3-11.5                                   </td> <td align="center">   Parallelization with MPI                                </td> </tr>
+<tr><td align="center">                    </td> <td align="center">   Random walks and the Metropolis algorithm                 </td> <td align="center">                                              </td> <td align="center">   Sections 12.1-12.3                                   </td> <td align="center">   Finalize project 3                                      </td> </tr>
+<tr><td align="center">   Week 43          </td> <td align="center">   Random walks and the Metropolis algorithm                 </td> <td align="center">                                              </td> <td align="center">   Sections 12.4-12.5                                   </td> <td align="center">   Start project 4                                         </td> </tr>
+<tr><td align="center">                    </td> <td align="center">   Discussion of project 4 and statistical mechanics         </td> <td align="center">                                              </td> <td align="center">   Sections 13.1-13.3                                   </td> <td align="center">   More OO                                                 </td> </tr>
+<tr><td align="center">   Week 44          </td> <td align="center">   Project 4 and statistical mechanics                       </td> <td align="center">                                              </td> <td align="center">   Sections 13.4-13.7                                   </td> <td align="center">   Parallelization and high-performance computing          </td> </tr>
+<tr><td align="center">   Week 45          </td> <td align="center">   Variational Monte Carlo                                   </td> <td align="center">   <b>Project 5, deadline December 9</b>      </td> <td align="center">   Sections 14.1-14.4                                   </td> <td align="center">   Finalize project 4                                      </td> </tr>
+<tr><td align="center">   Week 46          </td> <td align="center">   Variational Monte Carlo                                   </td> <td align="center">                                              </td> <td align="center">   Section 14.5                                         </td> <td align="center">   Work on project 5                                       </td> </tr>
+<tr><td align="center">                    </td> <td align="center">   Presentation of final projects                            </td> <td align="center">                                              </td> <td align="center">                                                        </td> <td align="center">                                                           </td> </tr>
+<tr><td align="center">                    </td> <td align="center">   Partial differential equations                            </td> <td align="center">                                              </td> <td align="center">   Sections 10.1-10.2                                   </td> <td align="center">                                                           </td> </tr>
+<tr><td align="center">   Week 47          </td> <td align="center">   Partial differential equations                            </td> <td align="center">                                              </td> <td align="center">   Sections 10.1-10.2                                   </td> <td align="center">   Work on project 5                                       </td> </tr>
+<tr><td align="center">   Week 48          </td> <td align="center">   Partial differential equations                            </td> <td align="center">                                              </td> <td align="center">   Sections 10.3-10.4                                   </td> <td align="center">   Finalize project 5                                      </td> </tr>
+<tr><td align="center">                    </td> <td align="center">   Summary of course and discussions                         </td> <td align="center">                                              </td> <td align="center">                                                        </td> </tr>
+</tbody>
+</table>
+<p>
+<!-- !split -->
+
+<h2 id="___sec27">Basic Syllabus </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+The syllabus for this course consists of the lecture notes on the webpage (chapters 2-15) and 5 compulsory projects. The last three projects
+are graded and count 1/3 each of the final mark.
+
+<ul>
+ <li> Monte Carlo methods in physics (<a href="https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Lectures" target="_self">Lecture notes chapters 11, 12, 13 and 14</a>)</li>
+ <li> Partial differential equations (<a href="https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Lectures" target="_self">Lecture notes chapter 10</a>)</li>
+ <li> Ordinary differential equations (<a href="https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Lectures" target="_self">Lecture notes chapter 8</a>)</li>
+ <li> Numerical integration, standard methods and Monte Carlo methods (<a href="https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Lectures" target="_self">Lecture notes chapters 5.1-5.5 and 11</a>)</li>
+ <li> Linear algebra and eigenvalue problems. (<a href="https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Lectures" target="_self">Lecture notes chapters 6 and 7</a>)</li>
+</ul>
+
+A good text that can be used (with more math plus much material on parallelization) is <a href="http://www.cambridge.org/us/academic/subjects/computer-science/scientific-computing-scientific-software/parallel-scientific-computing-c-and-mpi-seamless-approach-parallel-algorithms-and-their-implementation" target="_self">Parallel Scientific Computing in C++ and MPI, of Karniadakis and Kirby III</a>.
+</div>
+
+
+<h2 id="___sec28">Additional literature </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+In addition we recommend highly the texts on Numerical Recipes in C++ or Fortran90 by Press et al. The C, F77 and
+Fortran90 can be downloaded down for free, follow the links at <a href="http://www.nr.com/" target="_self">Numerical Recipes</a>.
+
+<p>
+The program library in C++ and Fortran2008 used in this course is a rewritten version of the Numerical Recipes codes.
+</div>
+
+
+<p>
+<!-- !split -->
+
+<h2 id="___sec29">Programs in C++, Fortran and Python discussed in lecture notes </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+All programs are available at the github address of the <a href="https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Programs" target="_self">course</a>
+</div>
+
+
+<p>
+
+<!-- ------------------- end of main content --------------- -->
+
+
+</body>
+</html>
+    
+
