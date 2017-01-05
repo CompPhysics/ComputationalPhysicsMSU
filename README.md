@@ -1,4 +1,4 @@
-=== Computational Physics ===
+#Computational Physics 
 
 This repository contains all material pertinent to FYS3150/4150 at the University of Oslo, Norway and PHY480/905 at Michigan State University.
 
