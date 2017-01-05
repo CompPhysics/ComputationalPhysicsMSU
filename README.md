@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+=== Computational Physics ===
 
-You can use the [editor on GitHub](https://github.com/CompPhysics/ComputationalPhysicsMSU/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This repository contains all material pertinent to FYS3150/4150 at the University of Oslo, Norway and PHY480/905 at Michigan State University.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This material gives an introduction to several of the most used algorithms from numerical analysis to solve problems in the Sciences. These algorithms cover topics such as advanced numerical integration using Gaussian quadrature, Monte Carlo methods with applications to random processes, Markov chains, integration of multidimensional integrals and applications to problems in statistical physics and quantum mechanics. Other methods which are presented are eigenvalue problems, from the simple Jacobi method to iterative Krylov methods. Popular methods from linear algebra such as the LU-decomposition method and spline interpolation are also discussed. A large fraction of the course is also devoted to solving ordinary differential equations with or without boundary conditions and finally methods for solving partial differential equations. The student will thus develop a familiarity with some of the most used algorithms in Science.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/CompPhysics/ComputationalPhysicsMSU/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+The course is project based and through the various projects, normally four to five, the participants will be exposed to fundamental research problems in these fields, where, if possible, we aim at reproducing state of the art scientific results. The students will learn to develop and structure codes for studying these systems, develop a critical understanding of the capabilities and limits of the various numerical methods, get acquainted with supercomputing facilities and parallel computing and learn to handle scientific projects. The students will have to choose between C++, Python or Fortran as programming languages.
