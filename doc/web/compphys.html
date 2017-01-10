@@ -10,29 +10,57 @@ Automatically generated HTML file from DocOnce source
 
 <title>PHY480 and PHY905 (sec 002) preliminary survey</title>
 
-<!-- Bootstrap style: bootstrap -->
-<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- not necessary
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
--->
 
 <style type="text/css">
+/* blueish style */
 
-/* Add scrollbar to dropdown menus in bootstrap navigation bar */
-.dropdown-menu {
-   height: auto;
-   max-height: 400px;
-   overflow-x: hidden;
-}
+/* Color definitions:  http://www.december.com/html/spec/color0.html
+   CSS examples:       http://www.w3schools.com/css/css_examples.asp */
 
-/* Adds an invisible element before each target to offset for the navigation
-   bar */
-.anchor::before {
-  content:"";
-  display:block;
-  height:50px;      /* fixed header height for style bootstrap */
-  margin:-50px 0 0; /* negative fixed header height */
+body {
+  margin-top: 1.0em;
+  background-color: #ffffff;
+  font-family: Helvetica, Arial, FreeSans, san-serif;
+  color: #000000;
 }
+h1 { font-size: 1.8em; color: #1e36ce; }
+h2 { font-size: 1.6em; color: #1e36ce; }
+h3 { font-size: 1.4em; color: #1e36ce; }
+a { color: #1e36ce; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #bababa;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #f8f8f8;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_gray_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
 </style>
 
 
@@ -45,34 +73,6 @@ end of tocinfo -->
 <body>
 
     
-<!-- Bootstrap navigation bar -->
-<div class="navbar navbar-default navbar-fixed-top">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="compphys.html">PHY480 and PHY905 (sec 002) preliminary survey</a>
-  </div>
-
-  <div class="navbar-collapse collapse navbar-responsive-collapse">
-    <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
-</div> <!-- end of navigation bar -->
-
-<div class="container">
-
-<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
-
 <!-- ------------------- main content ---------------------- -->
 
 
@@ -94,7 +94,7 @@ end of tocinfo -->
 <center><h4>Spring semester 2017</h4></center> <!-- date -->
 <br>
 <p>
-An essential part of this course is to enable you to do science via numerical experiments and develop projects which allow you to study complex systems. The aim is to enhance what we call algorithminc thinking. With algorithm we mean a finite set of unambiguous instructions that, given some set of initial conditions, can be performed in a prescribed sequence to achieve a certain goal.
+An essential part of this course is to enable you to do science via numerical experiments and develop projects which allow you to study complex systems. The aim is to enhance what we call algorithmic thinking. With algorithm we mean a finite set of unambiguous instructions that, given some set of initial conditions, can be performed in a prescribed sequence to achieve a certain goal.
 
 <p>
 <b>Computing means solving scientific problems using computers. It covers numerical as well as symbolic computing. Computing is also about developing an understanding of the scientific process by enhancing algorithmic thinking when solving problems.</b>
@@ -112,13 +112,15 @@ And this  competence is about:
 </ul>
 
 All these elements (and many more) will hopefully aid you in maturing and gaining a better understanding of the scientific process <em>per se</em>.    <b>Writing good reports is a central element in achieving such insights</b>.
-When we use the words computing or computations in this course, it is the above topics we have in mnind.
+When we use the words computing or computations in this course, it is the above topics we have in mind.
 
 <p>
 What follows here are some simple questions about your computing competences, your background and your interests. Hopefully this information will allow us to tailor the course to your interests and background.
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
+<p>
 Which programming background do you have?
 
 <ol>
@@ -131,7 +133,9 @@ Which programming background do you have?
 
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
+<p>
 Which programming languages have you used and/or are familiar with?
 
 <ol>
@@ -158,7 +162,9 @@ Which programming languages have you used and/or are familiar with?
 
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
+<p>
 Have you used so-called IDEs, that is integrated development environments? Examples are
 
 <ol>
@@ -177,13 +183,17 @@ Have you used so-called IDEs, that is integrated development environments? Examp
 
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
+<p>
 Are you familiar with object orientation? If so, have you written code that is object oriented?
 </div>
 
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
+<p>
 Are you familiar with version control software? Examples are
 
 <ol>
@@ -198,47 +208,59 @@ Are you familiar with version control software? Examples are
 
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
+<p>
 Are you familiar with Unit tests? If so, do you use unit tests when writing code?
 
-<p>
+
 </div>
 
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
-What is field of specialization and which degree are you aiming at (Bachelor, Master, PhD)?  Feel free also to list the courses you are following and which year of study you are presently at.
-
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
 <p>
+What is your field of specialization and which degree are you aiming at (Bachelor, Master, PhD)?  Feel free also to list the courses you are following this semester and which year of study you are presently at.
+
+
 </div>
 
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
+<p>
 Which mathematics courses have you taken and/or are attending this semester?
 
-<p>
+
 </div>
 
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
+<p>
 If you have followed or plan to follow some computational science course, please feel free to list them as well.
 
-<p>
+
 </div>
 
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
+<p>
 Have you done any research? And if so, have you done computations which involded writing smaller or larger fractions of code?
 
-<p>
+
 </div>
 
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
+<p>
 How important do you think computation is for your own development as a scientist?
 
 <ol>
@@ -252,7 +274,9 @@ How important do you think computation is for your own development as a scientis
 
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
+<p>
 How important is computation in your research (undergraduate and graduate level)?
 
 <ol>
@@ -266,25 +290,16 @@ How important is computation in your research (undergraduate and graduate level)
 
 
 <p>
-<div class="alert alert-block alert-info alert-text-normal"><b>Question.</b>
+<div class="alert alert-block alert-question alert-text-normal">
+<b>Question.</b>
+<p>
 Which expectations do you have to the course? Are there any specific topics you want to work with? And to see exposed via projects and lectures?
 
-<p>
+
 </div>
 
 
 <!-- ------------------- end of main content --------------- -->
-
-</div>  <!-- end container -->
-<!-- include javascript, jQuery *first* -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
-<!-- Bootstrap footer
-<footer>
-<a href="http://..."><img width="250" align=right src="http://..."></a>
-</footer>
--->
 
 
 </body>
