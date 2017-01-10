@@ -1,0 +1,142 @@
+TITLE: PHY480 and PHY905 (sec 002) preliminary survey
+AUTHOR: Department of Physics and Astronomy, Michigan State University
+DATE: Spring semester 2017
+
+
+An essential part of this course is to enable you to do science via numerical experiments and develop projects which allow you to study complex systems. The aim is to enhance what we call algorithmic thinking. With algorithm we mean a finite set of unambiguous instructions that, given some set of initial conditions, can be performed in a prescribed sequence to achieve a certain goal.
+
+_Computing means solving scientific problems using computers. It covers numerical as well as symbolic computing. Computing is also about developing an understanding of the scientific process by enhancing algorithmic thinking when solving problems._
+
+And this  competence is about:
+
+* derivation, verification, and implementation of algorithms
+* understanding what can go wrong with algorithms
+* overview of important, known algorithms
+* understanding how algorithms are used to solve complicated problems
+* reproducible science and ethics
+* algorithmic thinking for gaining deeper insights about scientific problems
+
+All these elements (and many more) will hopefully aid you in maturing and gaining a better understanding of the scientific process *per se*.    _Writing good reports is a central element in achieving such insights_.
+When we use the words computing or computations in this course, it is the above topics we have in mind. 
+
+What follows here are some simple questions about your computing competences, your background and your interests. Hopefully this information will allow us to tailor the course to your interests and background.
+
+!bquestion
+Which programming background do you have?
+ o No experience
+ o Made smaller program, typically some few hundred lines
+ o Made programs with 1000-10000 lines
+ o Made programs with more than 10000 lines
+!equestion
+
+
+!bquestion
+Which programming languages have you used and/or are familiar with?
+ o Basic
+ o Fortran 77
+ o Fortran 90/95/2003/2008
+ o High-performance Fortran (HPF)
+ o C
+ o C++  (specify if you have experience with C++11 and C++14)
+ o Matlab/Octave
+ o Maple
+ o Mathematica
+ o Tcl
+ o Perl
+ o Python/ipython
+ o Common Lisp
+ o Smalltalk
+ o Julia
+ o Java
+ o Other (please specify)
+ o I have not used any programming language
+!equestion
+
+
+!bquestion
+Have you used so-called IDEs, that is integrated development environments? Examples are
+ o Qt Creator
+ o Visual C++
+ o DevC++
+ o NetBeans
+ o Eclipse
+ o Xcode
+ o Julia Studio
+ o Ipython notebook and Jupyter
+ o Other (please specify)
+ o I have not used any IDE
+!equestion
+
+!bquestion
+Are you familiar with object orientation? If so, have you written code that is object oriented?
+!equestion
+
+!bquestion
+Are you familiar with version control software? Examples are
+ o Git and repositories like Github and Bitbucket
+ o Dropbox
+ o CVS
+ o GNU arch
+ o Other (please specify)
+ o I am not familiar with version control
+!equestion
+
+
+!bquestion
+Are you familiar with Unit tests? If so, do you use unit tests when writing code?
+
+!equestion
+
+
+
+!bquestion
+What is your field of specialization and which degree are you aiming at (Bachelor, Master, PhD)?  Feel free also to list the courses you are following this semester and which year of study you are presently at. 
+
+
+
+
+!equestion
+
+!bquestion
+Which mathematics courses have you taken and/or are attending this semester?
+
+
+
+!equestion
+
+!bquestion
+If you have followed or plan to follow some computational science course, please feel free to list them as well.
+ 
+
+!equestion
+
+
+!bquestion
+Have you done any research? And if so, have you done computations which involded writing smaller or larger fractions of code? 
+
+!equestion
+
+!bquestion
+How important do you think computation is for your own development as a scientist?
+ o Extremely important
+ o Very important
+ o Moderately important
+ o Slightly important
+ o Not all important
+!equestion
+
+
+!bquestion
+How important is computation in your research (undergraduate and graduate level)?
+ o Extremely important
+ o Very important
+ o Moderately important
+ o Slightly important
+ o Not all important
+!equestion
+
+!bquestion
+Which expectations do you have to the course? Are there any specific topics you want to work with? And to see exposed via projects and lectures?
+ 
+
+!equestion

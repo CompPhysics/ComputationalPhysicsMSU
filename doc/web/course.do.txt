@@ -1,12 +1,5 @@
-# Strange way of testing for vortex...
-# #ifdef NON_VORTEX
-TITLE: Overview of course material: Computational Physics
-
-TOC: off
-# #else
 TITLE: Overview of course material: Computational Physics
 AUTHOR: "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/" at Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University, USA &  Department of Physics, University of Oslo, Norway
-# #endif
 
 <%
 pub_url = 'http://compphysics.github.io/ComputationalPhysicsMSU/doc/pub'
@@ -110,7 +103,7 @@ ${text_types(ch)}
 ===== Teaching schedule Spring 2017 =====
 
 |----------------------------------------------------------------------------------------------------------------------------|
-|  Week and days  |  Topics to be covered | Projects and deadlines | Reading assignments|  Lab  activities                   |
+|  Week   |  Topics to be covered | Projects and deadlines | Reading assignments|  Lab  activities                   |
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 2|   Introduction to programming  | Warm-up exercise  |    Chapters 2 and 3.1 and 3.2  | presentation of Git and github|
 |        |   Numerical derivation         |                   |    From lecture notes          | Installing c++              |
@@ -158,7 +151,11 @@ ${text_types(ch)}
 | Week 18 | Finals, Oral exam                     | Schedule to be determined                                  |   |    |
 |----------------------------------------------------------------------------------------------------------------------------|
 
-
+!split
+===== Take the survey =====
+!bblock
+"Here are some simple questions about your computing competences, your background and your interests. Hopefully this information will allow us to tailor the course to your interests and background.":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/web/compphys.html"
+!eblock
 
 !split
 ===== Basic Syllabus =====

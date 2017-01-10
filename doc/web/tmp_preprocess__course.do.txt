@@ -152,7 +152,11 @@ ${text_types(ch)}
 | Week 18 | Finals, Oral exam                     | Schedule to be determined                                  |   |    |
 |----------------------------------------------------------------------------------------------------------------------------|
 
-
+!split
+===== Take the survey =====
+!bblock
+"Here are some simple questions about your computing competences, your background and your interests. Hopefully this information will allow us to tailor the course to your interests and background.":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/web/compphys.html"
+!eblock
 
 !split
 ===== Basic Syllabus =====
