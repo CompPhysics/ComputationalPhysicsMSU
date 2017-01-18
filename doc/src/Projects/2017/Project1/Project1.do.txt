@@ -199,10 +199,10 @@ Compute the relative error  in the data set $i=1,\dots, n$,by setting up
 !et
 as function of $log_{10}(h)$ for the function values $u_i$ and $v_i$.
 For each step length extract the max value of the relative error.  
-Try to increase $n$ to $n=10^7$.  Make a table of the results and 
-comment your results. You can use either the algorithm from b) or c). 
+Try to increase $n$ to $n=10^7$ or higher.  Make a table of the results and 
+comment your results. 
 
-=== Project 1 d): === 
+=== Project 1 e): === 
 Compare your results with those from the LU decomposition codes for the matrix of sizes $10\times 10$, $100\times 100$ and
 $1000\times 1000$. Here you should use the library functions provided  on the webpage of the course. Alternatively, if you use armadillo as a library, you can use the similar function for LU decomposition.  The armadillo function for the LU decomposition is called $LU$ while the function for solving linear sets of equations is called $solve$.
 Use for example the unix function *time* when you run your codes 
@@ -289,15 +289,15 @@ project.
 
 The preferred format for the report is a PDF file. You can also use DOC or postscript formats or as an ipython notebook file.  As programming language we prefer that you choose between C/C++, Fortran2008 or Python. The following prescription should be followed when preparing the report:
 
-  * Use Devilry to hand in your projects, log in  at  URL:"http://devilry.ifi.uio.no" with your normal UiO username and password and choose either 'fys3150' or 'fys4150'. There you can load up the files within the deadline.
 
-  * Upload _only_ the report file!  For the source code file(s) you have developed please provide us with your link to your github domain.  The report file should include all of your discussions and a list of the codes you have developed.  Do not include library files which are available at the course homepage, unless you have made specific changes to them.
+  * Use your github repository to upload your report. Indicate where the report is by creating for example a _Report_ folder. Please send us as soon as possible your github username.
+  * Place your programs in a folder called for example _Programs_ or _src_, in order to indicate where your programs are. You can use a README file to tell us how your github folders are organized. 
 
   * In your git repository, please include a folder which contains selected results. These can be in the form of output from your code for a selected set of runs and input parameters.
 
   * In this and all later projects, you should include tests (for example unit tests) of your code(s).
 
-  * Comments  from us on your projects, approval or not, corrections to be made  etc can be found under your Devilry domain and are only visible to you and the teachers of the course.
+  * Comments  from us on your projects, with score and detailed feedback will be emailed to you. 
 
 
 
