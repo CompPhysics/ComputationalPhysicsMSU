@@ -324,7 +324,7 @@ Comment your results.
 
 
 To compute the elapsed time in c++ you can use the following statements
-\begin{print}
+\begin{verbatim}
 ...
 #include "time.h"   //  you have to include the time.h header
 int main()
@@ -337,9 +337,9 @@ int main()
     finish = clock();
     ( (finish - start)/CLOCKS_PER_SEC );
 ...
-\end{print}
+\end{verbatim}
 Similarly, in Fortran, this simple example shows how to compute the elapsed time.
-\begin{print}
+\begin{verbatim}
 PROGRAM time
  REAL :: etime          ! Declare the type of etime()
  REAL :: elapsed(2)     ! For receiving user and system time
@@ -357,7 +357,7 @@ PROGRAM time
               ' system=', elapsed(2)
 
 END PROGRAM time
-\end{print}
+\end{verbatim}
 
 
 
