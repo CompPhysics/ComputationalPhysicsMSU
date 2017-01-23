@@ -1,11 +1,11 @@
 TITLE: PHY 480 and PHY 905 Computational Physics,  Syllabus/achievement requirements 
 AUTHOR: Department of Physics and Astronomy, Michigan State University
-DATE: Spring 2016
+DATE: Spring 2017
 
 
 ===== Basic Syllabus =====
 
-The syllabus for this course consists of the lecture notes on the webpage (chapters 2-15) and 4 compulsory projects. The projects will be graded and count 20% each of the final mark. A final oral exam/presentation which counts 20% is also part of the total evaluation.
+The syllabus for this course consists of the lecture notes on the webpage (chapters 2-15) and 4 compulsory projects. Projects 2-4 will be graded and count 25% each of the final mark. Project 1 is not graded but extensive feedback is given. A final oral exam/presentation which counts 25% is also part of the total evaluation.
 
  * Monte Carlo methods in physics ("Lecture notes chapters 12 and 13":"https://github.com/CompPhysics/ComputationalPhysics1/tree/master/doc/Lectures")
 
