@@ -1,12 +1,10 @@
-GCC= c++ 
-PROG= invers
+GCC= c++ -O3
+PROG= program2
 
-${PROG} :	   ${PROG}.o lib.o
-		   ${GCC} ${PROG}.o lib.o -o ${PROG}
+${PROG} :	   ${PROG}.o 
+		   ${GCC} ${PROG}.o ${PROG}
 
 ${PROG}.o :	   ${PROG}.cpp
 		   ${GCC} -c ${PROG}.cpp
 
-lib.o :		   lib.cpp lib.h
-		   ${GCC} -c lib.cpp
 
