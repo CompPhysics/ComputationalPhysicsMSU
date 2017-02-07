@@ -6,6 +6,7 @@
 #include <cmath>
 #include <string>
 #include <armadillo>
+#include <cstdlib>
 // use namespace for output and input
 using namespace std;
 using namespace arma;
