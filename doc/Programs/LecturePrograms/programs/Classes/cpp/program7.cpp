@@ -15,7 +15,7 @@ int main (int argc, char* argv[])
   clock_t start, finish;
   start = clock();
 // Allocate space for the vectors to be used
-    a = new double [n]; b = new double [n]; c = new double [n];
+  a = new double [n]; b = new double [n]; c = new double [n];
   // Define parallel region
   // Set up values for vectors  a and b
   for (int i = 0; i < n; i++){
