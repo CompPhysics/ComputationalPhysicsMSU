@@ -641,7 +641,7 @@ while ( maxnondiag > tolerance && iterations <= maxiter)
 Finding the max nondiagonal element
 !bc cppcod
 //  the offdiag function, using Armadillo
-double offdiag(mat A, int p, int q, int n);
+double offdiag(mat A, int p, int q, int n)
 {
    double max;
    for (int i = 0; i < n; ++i)
