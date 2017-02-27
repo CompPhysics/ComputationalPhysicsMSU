@@ -3,8 +3,33 @@
 %% (https://github.com/hplgit/doconce/)
 %%
 %%
+% #ifdef PTEX2TEX_EXPLANATION
+%%
+%% The file follows the ptex2tex extended LaTeX format, see
+%% ptex2tex: http://code.google.com/p/ptex2tex/
+%%
+%% Run
+%%      ptex2tex myfile
+%% or
+%%      doconce ptex2tex myfile
+%%
+%% to turn myfile.p.tex into an ordinary LaTeX file myfile.tex.
+%% (The ptex2tex program: http://code.google.com/p/ptex2tex)
+%% Many preprocess options can be added to ptex2tex or doconce ptex2tex
+%%
+%%      ptex2tex -DMINTED myfile
+%%      doconce ptex2tex myfile envir=minted
+%%
+%% ptex2tex will typeset code environments according to a global or local
+%% .ptex2tex.cfg configure file. doconce ptex2tex will typeset code
+%% according to options on the command line (just type doconce ptex2tex to
+%% see examples). If doconce ptex2tex has envir=minted, it enables the
+%% minted style without needing -DMINTED.
+% #endif
 
+% #define PREAMBLE
 
+% #ifdef PREAMBLE
 %-------------------- begin preamble ----------------------
 
 \documentclass[%
@@ -88,6 +113,7 @@ final,                   % draft: marks overfull hboxes, figures with paths
 \begin{document}
 
 % matching end for #ifdef PREAMBLE
+% #endif
 
 \newcommand{\exercisesection}[1]{\subsection*{#1}}
 
@@ -130,7 +156,7 @@ Spring semester 2017
 \vspace{1cm}
 
 
-\subsection*{Building a model for the solar system using ordinary differential equations}
+\subsection{Building a model for the solar system using ordinary differential equations}
 
 \paragraph{Introduction.}
 The aim of this project is to develop a code for simulating the solar system using a widely popular algorithm for solving coupled ordinary differential equations, the so-called velocity Verlet
@@ -310,10 +336,10 @@ a few orders of magnitude smaller than the observed perihelion precession of Mer
 precession of Mercury be explained by the general theory of relativity?
 
 
-\subsection*{Introduction to numerical projects}
+\subsection{Introduction to numerical projects}
 
 
-\subsection*{Introduction to numerical projects}
+\subsection{Introduction to numerical projects}
 
 Here follows a brief recipe and recommendation on how to write a report for each
 project.
@@ -339,7 +365,7 @@ project.
 \end{itemize}
 
 \noindent
-\subsection*{Format for electronic delivery of report and programs}
+\subsection{Format for electronic delivery of report and programs}
 
 The preferred format for the report is a PDF file. You can also use DOC or postscript formats or as an ipython notebook file.  As programming language we prefer that you choose between C/C++, Fortran2008 or Python. The following prescription should be followed when preparing the report:
 
@@ -363,5 +389,7 @@ we encourage you to work two and two together. Optimal working groups consist of
 
 % ------------------- end of main content ---------------
 
+% #ifdef PREAMBLE
 \end{document}
+% #endif
 
