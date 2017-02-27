@@ -128,8 +128,7 @@ ${text_types(ch)}
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 6   | Jacobi's method and project 2               |       _Project 2, deadline March 6_                            |   | Finalize project 1 |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 7 | Eigenvalue problems and project 2 |  | Sections 7.4-7.5 |  |
-|   |                |                                   |  | Work on  project 2 |
+| Week 7 | Eigenvalue problems and project 2 |  | Sections 7.4-7.5 | Work on  project 2 |
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 8 | Eigenvalue problems, Householder's method and power methods | | Sections 7.4-7.7 |  Object orientation |
 |   |                |                                   | Read slides on object orientation and section 3.3 | Work on  project 2 |
@@ -140,10 +139,9 @@ ${text_types(ch)}
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 11 |  No lecture, only lab.   |   | Read Sections 8.3-8.6  |   Work on project 3 and Object orientation (OO) |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 12  |  Introduction to Monte Carlo methods              |  | Sections 11.3-11.5 |  Parallelization with MPI |
-|          |  Random walks and the Metropolis algorithm        |                                   |  Sections 12.1-12.3 |     |   
+| Week 12  |  Introduction to Monte Carlo methods              |  | Sections 11.3-11.5 |  Work on project 3 |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 12 |  Random walks and the Metropolis algorithm         |                                   | Sections 12.4-12.5  |  Finalize project 3    | 
+| Week 12 |  Random walks and the Metropolis algorithm         |                                   | Sections 12.1-12.5  |  Finalize project 3    | 
 |         |  Discussion of project 4 and statistical mechanics |                                   | Sections 13.1-13.3   |  More OO     |
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 13|   Project 4 and statistical mechanics               |   _Project 4, deadline April 17_ | Sections 13.4-13.7 |  Parallelization and high-performance computing |   
