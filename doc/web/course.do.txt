@@ -86,7 +86,7 @@ ${text_types(ch)}
    * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project1/ipynb/Project1.ipynb"
 
 
-=== Project 2, deadline February 27 ===
+=== Project 2, deadline March 6 ===
  * LaTeX and PDF:
      * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project2/pdf/Project2.tex"
      * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project2/pdf/Project2.pdf"
@@ -95,6 +95,16 @@ ${text_types(ch)}
    * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project2/html/Project2-bs.html"
  * iPython notebook:
    * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project2/ipynb/Project2.ipynb"
+
+=== Project 3, deadline March 27 ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project3/pdf/Project3.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project3/pdf/Project3.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project3/html/Project3.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project3/html/Project3-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project3/ipynb/Project3.ipynb"
 
 
 
@@ -116,22 +126,21 @@ ${text_types(ch)}
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 5 | Eigenvalue problems, Jacobi's method             |   |  Sections 7.1-7.4 | Object orientation with examples |
 |----------------------------------------------------------------------------------------------------------------------------|
-|   | Householder's and Given's methods               |                                   |  Read slides on object orientation and section 3.3 | Finalize project 1 |
+| Week 6   | Jacobi's method and project 2               |       _Project 2, deadline March 6_                            |   | Finalize project 1 |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 6 | Eigenvalue problems, iterative and power methods | _Project 2, deadline February 27_ | Sections 7.4-7.7 |  Object orientation |
-|   |                |                                   |  | Start project 2 |
+| Week 7 | Eigenvalue problems and project 2 |  | Sections 7.4-7.5 |  |
+|   |                |                                   |  | Work on  project 2 |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 7|  Ordinary differential equations  |  | Sections 8.1-8.3  |   Object orientation (OO) |
+| Week 8 | Eigenvalue problems, Householder's method and power methods | | Sections 7.4-7.7 |  Object orientation |
+|   |                |                                   | Read slides on object orientation and section 3.3 | Work on  project 2 |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 8|  Ordinary differential equations    |       |  Sections 8.3-8.7                                   | OO and  Vectorization  |
-|        |                                  |                                   | Read slides on vectorization etc |  Finalize project 2      |
-|----------------------------------------------------------------------------------------------------------------------------|
-| Week 9  |  Numerical integration  and parallelization       |  _Project 3, deadline March 27_              |  Section 5.5  | Parallelization with OpenMP  |
-|          |  Introduction to Monte Carlo methods              |                |  Sections 11.1-11.2 | Start work on project 3                      |
+| Week 9|  Ordinary differential equations  | _Project 3, deadline March 27_  | Sections 8.1-8.4  |   Object orientation (OO) |
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 10  |  Spring break       |                |    |   |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 11  |  Introduction to Monte Carlo methods              |  | Sections 11.3-11.5 |  Parallelization with MPI |
+| Week 11 |  No lecture, only lab.   |   | Read Sections 8.3-8.6  |   Work on project 3 and Object orientation (OO) |
+|----------------------------------------------------------------------------------------------------------------------------|
+| Week 12  |  Introduction to Monte Carlo methods              |  | Sections 11.3-11.5 |  Parallelization with MPI |
 |          |  Random walks and the Metropolis algorithm        |                                   |  Sections 12.1-12.3 |     |   
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 12 |  Random walks and the Metropolis algorithm         |                                   | Sections 12.4-12.5  |  Finalize project 3    | 
