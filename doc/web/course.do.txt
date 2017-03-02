@@ -133,11 +133,11 @@ ${text_types(ch)}
 | Week 8 | Eigenvalue problems, Householder's method and power methods | | Sections 7.4-7.7 |  Object orientation |
 |   |                |                                   | Read slides on object orientation and section 3.3 | Work on  project 2 |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 9|  Ordinary differential equations  | _Project 3, deadline March 27_  | Sections 8.1-8.4  |   Object orientation (OO) |
+| Week 9|  Ordinary differential equations (ODE) | _Project 3, deadline March 27_  | Sections 8.1-8.4  |   Object orientation (OO) |
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 10  |  Spring break       |                |    |   |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 11 |  No lecture, only lab.   |   | Read Sections 8.3-8.6  |   Work on project 3 and Object orientation (OO) |
+| Week 11 |  ODE with Runge Kutta methods and object orientation of project 3   |   | Read Sections 8.3-8.6  |   Work on project 3 and Object orientation (OO) |
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 12  |  Introduction to Monte Carlo methods              |  | Sections 11.3-11.5 |  Work on project 3 |
 |----------------------------------------------------------------------------------------------------------------------------|
