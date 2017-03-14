@@ -16,5 +16,7 @@ Complex& Complex:: operator= (const Complex& c)
 }
 Complex operator+ (const Complex& a, const Complex& b) { return Complex (a.re + b.re, a.im + b.im); }
 Complex operator- (const Complex& a, const Complex& b) { return Complex (a.re - b.re, a.im - b.im); }
+
 Complex operator* (const Complex& a, const Complex& b) {return Complex(a.re*b.re - a.im*b.im, a.im*b.re + a.re*b.im);}
 Complex operator/ (const Complex& a, const Complex& b) {return Complex( (a.re*b.re +a.im*b.im)/(b.re*b.re+b.im*b.im), (-a.re*b.im + a.im*b.re)/(b.re*b.re+b.im*b.im));}
+
