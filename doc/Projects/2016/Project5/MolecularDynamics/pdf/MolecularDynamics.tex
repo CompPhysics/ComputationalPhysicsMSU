@@ -80,7 +80,7 @@ final,                   % draft: marks overfull hboxes, figures with paths
 \begin{center}
 {\LARGE\bf
 \begin{spacing}{1.25}
-Project 5, deadline  December 9, 2016
+Project 4, deadline  April 30
 \end{spacing}
 }
 \end{center}
@@ -99,7 +99,7 @@ Project 5, deadline  December 9, 2016
 
 % --- begin date ---
 \begin{center}
-Fall semester 2016
+Spring semester 2017
 \end{center}
 % --- end date ---
 
@@ -255,7 +255,7 @@ where $\mathbf{r}_i(t)$ is the position of atom $i$ at time $t$. When you implem
 We can use the diffusion constant to find the melting temperature. Atoms in a solid will not diffuse much, meaning that a solid will have a diffusion constant close to zero. Now solve the Einstein relation for the diffusion constant $D$ and add a function in \emph{StatisticsSampler} thats measures this quantity. Plot the diffusion constant as a function of temperature $T$ and use this to find an estimate for the melting temperature. Use what you found earlier  to make sure you simulate temperatures both above and below the melting temperature. Also remember not to use the initial temperature, but the measured temperature after the system has reached equilibrium. You can use the builtin \emph{UnitConverter} to convert the temperature to SI units as illustrated in the top of the \emph{main} function. 
 
 
-\section*{Link with FYS2160 - what is really going on here?}
+\section*{What is really going on here?}
 The idea of an MD simulation is to sample microstates from a statistical ensemble. In our simulation, we have a constant number of atoms $N$, a constant volume $V$ and a (more or less, depending on our integrator) constant energy $E$. This corresponds to the microcanonical ensemble (NVE). 
 
 Although we produce the dynamics of atoms, we should not see MD as a model that will give the true trajectories of the atoms, but rather a model that allows us to explore the phase space according to the probabilities we can calculate with statistical mechanics. A fundamental assumption in any MD simulation is the ergodic hypothesis. It states that \emph{over long periods of time, the time spent by a system in some region of the phase space of microstates with the same energy is proportional to the volume of this region, i.e., that all accessible microstates are equiprobable over a long period of time}. This means that by evolving the atoms through time will visit microstates of the ensemble according to the true probabilities given by the ensemble.
@@ -286,6 +286,8 @@ By inserting the values above, we get
 	\text{1 unit of time } &= 1.0 \times 10^{-10}\sqrt{\frac{1.661\times 10^{-27}}{1.651\times 10^{-21}}} \text{ s} = 1.00224\times 10^{-13}\mathrm{s}.
 \end{align}
 This way, we can continue working out the values of the other units. What are the units of force? And pressure? In the project, a class that calculates these values is given.
+
+
 
 
 
@@ -321,24 +323,21 @@ project.
 The preferred format for the report is a PDF file. You can also use DOC or postscript formats or as an ipython notebook file.  As programming language we prefer that you choose between C/C++, Fortran2008 or Python. The following prescription should be followed when preparing the report:
 
 \begin{itemize}
-  \item Use Devilry to hand in your projects, log in  at  \href{{http://devilry.ifi.uio.no}}{\nolinkurl{http://devilry.ifi.uio.no}} with your normal UiO username and password and choose either 'fys3150' or 'fys4150'. There you can load up the files within the deadline.
+  \item Use your github repository to upload your report. Indicate where the report is by creating for example a \textbf{Report} folder. Please send us as soon as possible your github username.
 
-  \item Upload \textbf{only} the report file!  For the source code file(s) you have developed please provide us with your link to your github domain.  The report file should include all of your discussions and a list of the codes you have developed.  Do not include library files which are available at the course homepage, unless you have made specific changes to them.
+  \item Place your programs in a folder called for example \textbf{Programs} or \textbf{src}, in order to indicate where your programs are. You can use a README file to tell us how your github folders are organized. 
 
-  \item In your git repository, please include a folder which contains selected results. These can be in the form of output from your code for a selected set of runs and input parametxers.
+  \item In your git repository, please include a folder which contains selected results. These can be in the form of output from your code for a selected set of runs and input parameters.
 
   \item In this and all later projects, you should include tests (for example unit tests) of your code(s).
 
-  \item Comments  from us on your projects, approval or not, corrections to be made  etc can be found under your Devilry domain and are only visible to you and the teachers of the course.
+  \item Comments  from us on your projects, with score and detailed feedback will be emailed to you. 
 \end{itemize}
 
 \noindent
 Finally, 
 we encourage you to work two and two together. Optimal working groups consist of 
-2-3 students. For this specific report you can  hand in a common report.
-
-
-
+2-3 students. You can then hand in a common report. 
 
 
 % ------------------- end of main content ---------------

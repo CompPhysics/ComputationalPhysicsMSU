@@ -107,8 +107,6 @@ ${text_types(ch)}
    * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project3/ipynb/Project3.ipynb"
 
 
-
-
 !split
 ===== Teaching schedule Spring 2017 =====
 
