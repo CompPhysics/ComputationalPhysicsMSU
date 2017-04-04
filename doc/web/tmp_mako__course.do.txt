@@ -311,7 +311,7 @@ formulas in HTML or ipython notebook files.
  * iPython notebook:
    * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project2/ipynb/Project2.ipynb"
 
-=== Project 3, deadline March 27 ===
+=== Project 3, deadline April 3 ===
  * LaTeX and PDF:
      * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project3/pdf/Project3.tex"
      * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project3/pdf/Project3.pdf"
@@ -322,6 +322,51 @@ formulas in HTML or ipython notebook files.
    * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project3/ipynb/Project3.ipynb"
 
 
+
+
+=== Project 4 Variational Monte Carlo, deadline April 30  ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/QuantumMonteCarlo/pdf/QuantumMonteCarlo.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/QuantumMonteCarlo/pdf/QuantumMonteCarlo.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/QuantumMonteCarlo/html/QuantumMonteCarlo.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/QuantumMonteCarlo/html/QuantumMonteCarlo-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/QuantumMonteCarlo/ipynb/QuantumMonteCarlo.ipynb"
+
+
+=== Project 4 Molecular Dynamics, deadline April 30  ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/MolecularDynamics/pdf/MolecularDynamics.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/MolecularDynamics/pdf/MolecularDynamics.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/MolecularDynamics/html/MolecularDynamics.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/MolecularDynamics/html/MolecularDynamics-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/MolecularDynamics/ipynb/MolecularDynamics.ipynb"
+
+
+=== Project 4 Monte Carlo Modeling of Transactions, deadline April 30  ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/FinancialEngineering/pdf/FinancialEngineering.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/FinancialEngineering/pdf/FinancialEngineering.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/FinancialEngineering/html/FinancialEngineering.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/FinancialEngineering/html/FinancialEngineering-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/FinancialEngineering/ipynb/FinancialEngineering.ipynb"
+
+
+
+=== Project 4  Ising Model and statistical physics, deadline April 30 ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/pdf/Project4.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/pdf/Project4.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/html/Project4.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/html/Project4-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/ipynb/Project4.ipynb"
 
 
 !split
@@ -348,22 +393,20 @@ formulas in HTML or ipython notebook files.
 | Week 8 | Eigenvalue problems, Householder's method and power methods | | Sections 7.4-7.7 |  Object orientation |
 |   |                |                                   | Read slides on object orientation and section 3.3 | Work on  project 2 |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 9|  Ordinary differential equations (ODE) | _Project 3, deadline March 27_  | Sections 8.1-8.4  |   Object orientation (OO) |
+| Week 9|  Ordinary differential equations (ODE) | _Project 3, deadline April 3_  | Sections 8.1-8.4  |   Object orientation (OO) |
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 10  |  Spring break       |                |    |   |
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 11 |  ODE with Runge Kutta methods and object orientation of project 3   |   | Read Sections 8.3-8.6  |   Work on project 3 and Object orientation (OO) |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 12  |  Introduction to Monte Carlo methods              |  | Sections 11.3-11.5 |  Work on project 3 |
+| Week 12  | Finalize ODE part.  Introduction to Monte Carlo methods              |  |  |  Work on project 3 |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 12 |  Random walks and the Metropolis algorithm         |                                   | Sections 12.1-12.5  |  Finalize project 3    | 
+| Week 13 |  Random walks and the Metropolis algorithm         |                                   | Sections 12.1-12.5  |  Finalize project 3    | 
 |         |  Discussion of project 4 and statistical mechanics |                                   | Sections 13.1-13.3   |  More OO     |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 13|   Project 4 and statistical mechanics               |   _Project 4, deadline April 17_ | Sections 13.4-13.7 |  Parallelization and high-performance computing |   
+| Week 14|   Project 4 and statistical mechanics               |   _Project 4, deadline April 30_ | Sections 13.4-13.7 |   |   
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 14|  Variational Monte Carlo                            |  |  Sections 14.1-14.4  |   Work on project 4             |
-|----------------------------------------------------------------------------------------------------------------------------|
-| Week 15| Partial differential equations                     |                                  |  Sections 10.1-10.2 | Work on project 4   | 
+| Week 15| Partial differential equations                     |     Parallelization and high-performance computing                             |  Sections 10.1-10.2 | Work on project 4   | 
 |----------------------------------------------------------------------------------------------------------------------------|
 | Week 16 | Partial differential equations                     |                                  |  Sections 10.1-10.2 | Finalize project 4   |
 |----------------------------------------------------------------------------------------------------------------------------|

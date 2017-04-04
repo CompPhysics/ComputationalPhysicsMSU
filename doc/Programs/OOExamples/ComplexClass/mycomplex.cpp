@@ -4,11 +4,11 @@
 using namespace std;
 int main()
 {
-  Complex a(0.1,1.3);    // we declare a complex variable a
-  Complex b(3.0), c(5.0,-2.3);  // we declare  complex variables b and c
-  Complex d = a;         //  we declare  a new complex variable d
-  Complex e = d;         //  we declare  a new complex variable e
-  Complex f =0.0;
+  Complex<double> a(0.1,1.3);    // we declare a complex variable a
+  Complex<double> b(3.0), c(5.0,-2.3);  // we declare  complex variables b and c
+  Complex<double> d = a;         //  we declare  a new complex variable d
+  Complex<double> e = d;         //  we declare  a new complex variable e
+  Complex<double> f =0.0;
   d = a +c;
   e = a*c - d/b;  //   we subtract, multiply and divide two complex numbers
   f = e-d;

@@ -1,4 +1,4 @@
-TITLE: Project 3, deadline  March 27
+TITLE: Project 3, deadline  April 3
 AUTHOR: Computational Physics PHY480/905 {copyright, 1999-present|CC BY-NC} at Department of Physics and Astronomy, Michigan State University
 DATE: Spring semester 2017
 
