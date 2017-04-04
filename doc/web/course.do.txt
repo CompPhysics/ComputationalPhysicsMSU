@@ -153,6 +153,16 @@ ${text_types(ch)}
  * iPython notebook:
    * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/ipynb/IsingModel.ipynb"
 
+=== Project 4  White dwarf  and statistical physics, deadline April 30 ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/WhiteDwarf/pdf/WhiteDwarf.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/WhiteDwarf/pdf/WhiteDwarf.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/WhiteDwarf/html/WhiteDwarf.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/WhiteDwarf/html/Project4-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/WhiteDwarf/ipynb/WhiteDwarf.ipynb"
+
 
 !split
 ===== Teaching schedule Spring 2017 =====
