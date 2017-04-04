@@ -145,13 +145,13 @@ ${text_types(ch)}
 
 === Project 4  Ising Model and statistical physics, deadline April 30 ===
  * LaTeX and PDF:
-     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/pdf/Project4.tex"
-     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/pdf/Project4.pdf"
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/pdf/IsingModel.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/pdf/IsingModel.pdf"
  * HTML:
-   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/html/Project4.html"
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/html/IsingModel.html"
    * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/html/Project4-bs.html"
  * iPython notebook:
-   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/ipynb/Project4.ipynb"
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/ipynb/IsingModel.ipynb"
 
 
 !split
