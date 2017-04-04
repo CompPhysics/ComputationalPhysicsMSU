@@ -1,0 +1,555 @@
+%%
+%% Automatically generated file from DocOnce source
+%% (https://github.com/hplgit/doconce/)
+%%
+%%
+
+
+%-------------------- begin preamble ----------------------
+
+\documentclass[%
+oneside,                 % oneside: electronic viewing, twoside: printing
+final,                   % draft: marks overfull hboxes, figures with paths
+10pt]{article}
+
+\listfiles               %  print all files needed to compile this document
+
+\usepackage{relsize,makeidx,color,setspace,amsmath,amsfonts,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{bm,ltablex,microtype}
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
+
+% Hyperlinks in PDF:
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=black,
+    filecolor=black,
+    %filecolor=blue,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
+    }
+%\hyperbaseurl{}   % hyperlinks are relative to this root
+
+\setcounter{tocdepth}{2}  % levels in table of contents
+
+% prevent orhpans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+% --- end of standard preamble for documents ---
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+\usepackage[totoc]{idxlayout}   % for index in the toc
+\usepackage[nottoc]{tocbibind}  % for references/bibliography in the toc
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% matching end for #ifdef PREAMBLE
+
+\newcommand{\exercisesection}[1]{\subsection*{#1}}
+
+
+% ------------------- main content ----------------------
+
+
+
+% ----------------- title -------------------------
+
+\thispagestyle{empty}
+
+\begin{center}
+{\LARGE\bf
+\begin{spacing}{1.25}
+Project 4, deadline  April 30
+\end{spacing}
+}
+\end{center}
+
+% ----------------- author(s) -------------------------
+
+\begin{center}
+{\bf White dwarf star  project${}^{}$} \\ [0mm]
+\end{center}
+
+\begin{center}
+% List of all institutions:
+\end{center}
+    
+% ----------------- end author(s) -------------------------
+
+% --- begin date ---
+\begin{center}
+Spring semester 2017
+\end{center}
+% --- end date ---
+
+\vspace{1cm}
+
+
+\subsection*{Theoretical background and description of the physical system}
+
+This project contains a long description of the physics of compact objects such as white dwarfs.
+It serves as a background for understanding the final differential equations you need to solve.
+
+White dwarfs are cold objects which consist mainly of heavy nuclei such as $^{56}\mbox{Fe}$, with 26 protons, 30 neutrons
+and  their respective electrons.  Charge equilibrium results in an equal quantity of electrons and protons.
+You can read more about white dwarfs, neutron stars and black holes at the website of the
+\href{{http://www.jinaweb.org}}{Joint Institute for Nuclear Astrophysics} or \href{{http://www.nasa.org}}{NASA's website}.
+These stars are the endpoints of stars with masses of the size or smaller than our sun. 
+They are the outcome of standard nuclear processes and end their lives as 
+cold objects like white dwarfs when they have used up all their nuclear fuel.
+
+Where a star ends up at the end of its life depends on the mass, or amount of matter, it was born with. 
+Stars that have a lot of mass may end their lives as black holes or neutron stars. Low and medium mass stars 
+will become something called a white dwarf. A typical white dwarf is half as massive as the Sun, yet 
+only slightly bigger than the Earth. This makes white dwarfs one of the densest forms of matter, surpassed only by neutron stars.
+
+Medium mass stars, like our Sun, live by burning the hydrogen that dwells within their cores, 
+turning it into helium. This is what our Sun is doing now. The heat the Sun generates by its 
+nuclear fusion of hydrogen into helium creates an outward pressure. In another 5 billion years, 
+the Sun will have used up all the hydrogen in its core.
+
+This situation in a star is similar to a pressure cooker. Heating something 
+in a sealed container causes a build up in pressure. The same thing happens in the Sun. 
+Although the Sun may not strictly be a sealed container, gravity causes it to act like one, pulling the 
+star inward, while the pressure created by the hot gas in the core pushes to get out. 
+The balance between pressure and gravity is very delicate. 
+
+Because a white dwarf is no longer able to create internal pressure, gravity unopposedly crushes 
+it down until even the very electrons that make up a white dwarf's atoms are mashed together. 
+In normal circumstances, identical electrons (those with the same "spin") are not allowed to occupy the same energy level. 
+Since there are only two ways an electron can spin, only two electrons can occupy a single energy level. 
+This is what's know in physics as the Pauli Exclusion Principle. And in a normal gas, this isn't a problem; 
+there aren't enough electrons floating around to completely fill up all the energy levels. But in a white dwarf, 
+all of its electrons are forced close together; soon all the energy levels in its atoms are filled up with electrons. 
+If all the energy levels are filled, and it is impossible to put more than two electrons in each level, 
+then our white dwarf has become degenerate. For gravity to compress the white dwarf anymore, 
+it must force electrons where they cannot go. Once a star is degenerate, gravity cannot compress it any more 
+because quantum mechanics tells us there is no more available space to be taken up. So our white dwarf survives, 
+not by internal combustion, but by quantum mechanical principles that prevent its complete collapse.
+
+
+
+With a surface gravity of 100000 times that of the earth, the atmosphere of 
+a white dwarf is very strange. The heavier atoms in its atmosphere sink and the lighter ones remain at the surface. 
+Some white dwarfs have almost pure hydrogen or helium atmospheres, the lightest of elements. 
+Also, the very strong gravity pulls the atmosphere close around it in a very thin layer, that, 
+if were it on earth, would be lower than the tops of our skyscrapers!
+
+\subsection*{Equilibrium equations}
+
+We assume that the star is in thermal equilibrium. It exhibits also charge equilibrium, meaning the number of electrons has to balance the number of protons. The gravitational pull 
+on every element of volume is balanced by the pressure set up by a degenerate gas of electrons
+at $T=0$, since the temperature of the star is well below the so-called Fermi temperature of the 
+electrons. 
+The electrons are assumed to be relativistic and since the protons and neutrons have much lower
+kinetic energy, we assume that the pressure which balances the gravitational force is mainly
+set up by the relativistic electrons. The kinetic energy of the electrons is also much larger
+than the electron-electron repulsion or the attraction from the nuclei. This means that we can treat 
+the system as a gas of free degenerate electrons at $T=0$ moving in between a lattice of nuclei like  
+iron. This is our ansatz. 
+Based on this we can derive the pressure which counterbalances the gravitational force given by
+(for every element of volume in a distance $r$ from the center of the star)
+
+\begin{equation*}
+F_{Grav}=-\frac{Gm(r)}{r^{2}}\rho(r),
+\end{equation*}
+with $G$ being the  gravitational constant, $\rho (r)$ the mass density  (mass per volume) of a volume
+element a distance $r$ from the center of the star,
+and  $m(r)$ is the integrated mass within a radius $r$. The latter reads
+
+\begin{equation*}
+m(r)=4\pi\int_{0}^{r}\rho (r')r'^{2}dr'
+\end{equation*}
+which yields a differential equation between the total mass and the mass density
+
+\begin{equation*}
+\frac{dm}{dr}=4\pi r^{2}\rho (r).
+\end{equation*}
+In equilibrium, the pressure $P$ balances the gravitational force
+
+\begin{equation*}
+\frac{dP}{dr}=-\frac{Gm(r)}{r^{2}}\rho (r),
+\end{equation*}
+and using $dP/d\rho = (d\rho/dr)(dP/d\rho)$ we obtain
+
+\begin{equation*}
+\frac{d\rho}{dr}=-\left(\frac{dP}{d\rho}\right)^{-1}\frac{Gm}{r^{2}}\rho.
+\end{equation*}
+Together with $\frac{dm}{dr}=4\pi r^{2}\rho (r)$
+we have now two coupled first-order ordinary differential equations
+which determine the structure of the white dwarf given an equation of state
+$P(\rho )$.
+The total radius is given by the condition 
+$\rho (R)=0$. 
+Similarly, the mass for $r=0$
+is $m=0$.  
+The density at $r=0$ is given by the central density $\rho_{c}$, a parameter you will have to play with 
+as input parameter.
+
+By integrating the last equation, we find the density profile of the star.
+The radius $R$ is determined by the point where 
+the density distribution
+is $\rho =0$. 
+The mass is then given by $M=m(R)$.
+Since both the total mass and the radius $R$ will depend on the central density
+$\rho_{c}$, a variation of this parameter will allow us to study stars 
+with different masses.
+However, before we can proceed, we need the pressure for a relativistic gas of electrons.
+
+\subsection*{Equation of state for a white dwarf}
+
+We will treat the electrons as a relativistic gas of fermions at $T=0$.
+From statistical physics we can then obtain the particle density as
+
+\begin{equation*}
+n=N/V=\frac{1}{\pi^{2}}\int_{0}^{k_{F}}k^{2}dk=\frac{k_{F}^{3}}{3\pi^{2}},
+\end{equation*}
+where $k_F$ is the Fermi momentum, here represented by the wave number $k_F$.
+The wave number is connected to the momentum via $k_F=p_F/\hbar$.
+The energy density is given by
+
+\begin{equation*}
+\varepsilon=E/V=\frac{1}{\pi^{2}}\int_{0}^{k_{F}}k^{2}dk
+\sqrt{(\hbar ck)^{2}+m_{e}^{2}c^{4}}.
+\end{equation*}
+This expression is of the form $\int y^2\sqrt{y^2+a^2}$. Performing the integration we obtain
+
+\begin{equation*}
+E/V=n_0m_ec^2x^3\epsilon (x),
+\end{equation*}
+where we have defined
+
+\begin{equation*}
+\epsilon (x) =
+\frac{3}{8x^3}\left( x(1+2x^2)\sqrt{1+x^2}-ln(x+\sqrt{1+x^2})\right),
+\end{equation*}
+with the variable $x$ defined as
+
+\begin{equation*}
+x=\frac{\hbar k_F}{m_ec}.
+\end{equation*}
+We can rewrite $x$ in terms of the particle density as well
+
+\begin{equation*}
+n=N/V=\frac{k_{F}^{3}}{3\pi^{2}},
+\end{equation*}
+so that
+
+\begin{equation*}
+\frac{\hbar k_F}{m_ec}=\left(\frac{n\hbar 3\pi^2}{m_e^3c^3}\right)^{1/3},
+\end{equation*}
+where we define
+$n_{0}=\frac{(mc)^{3}_{e}}{3\pi^2(\hbar)^{3}}$ with $m_{e}$ the electron mass.
+Using the constant $n_0$ results finally in
+
+\begin{equation*}
+x=\frac{\hbar k_F}{m_ec}=\left(\frac{n}{n_{0}}\right)^{1/3}.
+\end{equation*}
+Since the mass of the protons and neutrons are larger by a factor $10^3$ than the mass
+of the electrons $m_e$, 
+we can approximate the total mass of the star by the mass density of the nucleons (protons and neutrons).
+This mass density is given by
+
+\begin{equation*}
+\rho = M_p n_p,
+\end{equation*}
+with $M_{p}$ being the  mass of the proton and $n_p$ the particle density of the nucleons.
+The mass of the proton and the neutron are almost equal and we have set them equal here.
+The particle density  $n_p$ can be related to the electron density $n$, which is the quantity
+we can calculate. The relation is simple,
+
+\begin{equation*}
+n_p = n/Y_e ,
+\end{equation*}
+where $Y_{e}$ is the number of electrons per nucleon.  For $^{56}\mbox{Fe}$  we get $Y_{e}=\frac{26}{56}=0.464$, since we 
+need to have as many electrons as protons in order to obtain a total charge of zero. Inserting numerical values
+for the electron mass we get
+
+\begin{equation*}
+n_{0}=5.89\times 10^{29} \mathrm{cm}^{-3}.
+\end{equation*}
+The mass density is now
+
+\begin{equation*}
+\rho = M_p n/Y_e,
+\end{equation*}
+and with
+
+\begin{equation*}
+x=\left(\frac{n}{n_{0}}\right)^{1/3}=\left(\frac{\rho}{\rho_{0}}\right)^{1/3},
+\end{equation*}
+and inserting the numerical value for the proton mass we obtain
+
+\begin{equation*}
+\rho_{0}=\frac{M_{p}n_{0}}{Y_{e}}=9.79\times 10^{5}Y_{e}^{-1} \mathrm{g}\hspace{1mm}
+\mathrm{cm}^{-3}.
+\end{equation*}
+Using the parameter $Y_{e}$ we can then study stars with different compositions.
+The only input parameters to your code are then $\rho_c$ and $Y_e$.
+
+Now we want the equation for the pressure, based on the energy density.
+Using the thermodynamical relation
+
+\begin{equation*}
+P=-\frac{\partial E}{\partial V}=-\frac{\partial E}{\partial x}
+\frac{\partial x}{\partial V},
+\end{equation*}
+we can find the pressure as a function of the mass density $\rho$.
+Thereafter we can find $\frac{dP}{d\rho}$, which allows us to 
+determine the mass and the radius of the star. 
+
+The term
+
+\begin{equation*}
+\frac{\partial x}{\partial V},
+\end{equation*}
+can be found using the fact that  $x\propto n^{1/3} \propto V^{-3}$. This results in
+
+\begin{equation*}
+\frac{\partial x}{\partial V}= -\frac{x}{3V}.
+\end{equation*}
+Taking the derivative with respect to $x$ we obtain
+
+\begin{equation*}
+P=\frac{1}{3}n_0m_ec^2 x^4\frac{d\epsilon}{dx}.
+\end{equation*}
+We want the derivative of  $P$ in terms of the mass density $\rho$. Using
+$x=\left(\frac{\rho}{\rho_{0}}\right)^{1/3}$, we obtain
+
+\begin{equation*}
+\frac{dP}{d\rho}=\frac{dP}{dx}\frac{dx}{d\rho}.
+\end{equation*}
+With
+
+\begin{equation*}
+\frac{dP}{dx}=\frac{1}{3}n_0m_e
+\left(\frac{dx^4\frac{d\epsilon}{dx}}{dx}\right),
+\end{equation*}
+and
+
+\begin{equation*}
+\frac{dx}{d\rho}=\frac{1\rho_0^{2/3}}{3\rho_0\rho^{2/3}}
+=\frac{1}{3\rho_0 x^2},
+\end{equation*}
+we find
+
+\begin{equation*}
+\frac{dP}{d\rho}=Y_{e}\frac{m_{e}c^2}{M_{p}}\gamma (x),
+\end{equation*}
+where we defined
+
+\begin{equation*}
+\gamma (x)=\frac{x^{2}}{3\sqrt{1+x^{2}}}.
+\end{equation*}
+This is the equation for the derivative of the pressure to be used to find
+
+\begin{equation*}
+\frac{d\rho}{dr}=-\left(\frac{dP}{d\rho}\right)^{-1}\frac{Gm}{r^{2}}\rho.
+\end{equation*}
+
+Note that $x$ and $\gamma(x)$ are dimensionless quantities.
+
+\subsection*{Dimensionless form of the differential equations}
+
+In the numerical treatment of the two differential equations we need
+to rescale our equations in terms of dimensionless quantities, since several of the
+involved constants are either extremely large or very small.
+Furthermore, the total mass is of the order of the mass of the sun, approximately
+$2\times 10^{30}$kg while the mass of the electron is $9\times 10^{-31}$ kg.
+
+We introduce therefore a dimensionless radius $\overline{r}=r/R_{0}$, a dimensionless density
+$\overline{\rho}=\rho /\rho_{0}$ (recall that $x^{3}=\rho /\rho_{0}$)
+and a dimensionless mass $\overline{m}=m/M_{0}$.
+
+We determine below the constants  $M_{0}$ and $R_{0}$ by requiring that the equations
+for $\frac{dm}{dr}$ and $\frac{d\rho}{dr}$ have to be dimensionless.  
+We get then
+
+\begin{equation*}
+\frac{dM_0\overline{m}}{dR_0\overline{r}}=
+4\pi R_0^2\overline{r}^{2}\rho_0\overline{\rho},
+\end{equation*}
+resulting in
+
+\begin{equation*}
+\frac{d\overline{m}}{d\overline{r}}=
+4\pi R_0^3\overline{r}^{2}\rho_0\overline{\rho}/M_0.
+\end{equation*}
+If we want this equation to be dimensionless, we must require
+
+\begin{equation*}
+4\pi R_{0}^{3}\rho_{0}/M_0=1.
+\end{equation*}
+Correspondingly, we have
+
+\begin{equation*}
+\frac{d\rho_0\overline{\rho}}{dR_0\overline{r}}=
+-\left(\frac{GM_0M_p}{Y_em_ec^2 }\right)\frac{\overline{m}}
+{\gamma R_0^2\overline{r}^{2}}
+\rho_0\overline{\rho},
+\end{equation*}
+with $R_0$
+
+\begin{equation*}
+R_{0}=\left(\frac{Y_{e}m_{e}c^2}{4\pi\rho_{0} GM_{p}}\right)^{1/2}
+=7.72\times 10^{8} Y_{e} \mathrm{cm}.
+\end{equation*}
+in order to yield a dimensionless equation. This results in
+
+\begin{equation*}
+M_{0}=4\pi R_{0}^{3}\rho_{0}=5.67 \times 10^{33}Y_{e}^{2} \mathrm{g}.
+\end{equation*}
+The radius of the sun is $R_{\odot}=6.95\times 10^{10}$ cm 
+and the mass of the sun is 
+$M_{\odot}=1.99\times 10^{33}$ g.
+
+Our final differential equations 
+$\overline{\rho}$ and
+$\overline{m}$ read
+
+\begin{equation*}
+\frac{d\overline{\rho}}{d\overline{r}}=-\frac{\overline{m}}{\gamma}\frac{\overline{\rho}}
+{\overline{r}^{2}},
+\hspace{5mm}\frac{d\overline{m}}{d\overline{r}}=
+\overline{r}^{2}\overline{\rho}.
+\end{equation*}
+These are the equations you need to code.
+
+
+\paragraph{Project 4a): Getting started.}
+Verify the steps in the above derivations. Write a program which solves the two coupled
+differential equations
+
+\begin{equation*}
+\frac{d\overline{\rho}}{d\overline{r}}=-\frac{\overline{m}}{\gamma}\frac{\overline{\rho}}
+{\overline{r}^{2}},
+\end{equation*}
+and
+
+\begin{equation*}
+\frac{d\overline{m}}{d\overline{r}}=
+\overline{r}^{2}\overline{\rho},
+\end{equation*}
+using the fourth order Runge-Kutta method by integrating outward from $\overline{r}=0$.
+Choose $Y_e=1$ and calculate the mass and radius of the star by varying the central density $\overline{\rho}_c$
+ranging from $10^{-1}$ to $10^6$. 
+Check the stability of your solutions by varying the radial step $h$. 
+Discuss your results.
+
+\paragraph{Project 4b): Density profiles and energies.}
+Compute also the density profiles for the above input parameters and calculate the total kinetic energy and rest energy
+of the electrons given by
+
+\begin{equation*}
+   U=\int_0^R4\pi \left( \frac{E}{V}\right )r^2dr,
+\end{equation*}
+where we have defined
+
+\begin{equation*}
+E/V=n_0m_ec^2x^3\epsilon (x),
+\end{equation*}
+with
+
+\begin{equation*}
+\epsilon (x) =
+\frac{3}{8x^3}\left( x(1+2x^2)\sqrt{1+x^2}-ln(x+\sqrt{1+x^2})\right),
+\end{equation*}
+and the variable $x$ defined as
+
+\begin{equation*}
+x=\frac{\hbar k_F}{m_ec}.
+\end{equation*}
+Compute also the gravitational energy
+
+\begin{equation*}
+  W=-\int_0^R\frac{Gm(r)\rho(r)}{r}4\pi r^2dr.
+\end{equation*}
+You need to make these equations dimensionless. 
+
+Try to discuss your results and trends through simple
+physical reasoning.
+
+\paragraph{Project 4c): Comparing with data.}
+Scale the mass-radius relation you found in a) to the cases corresponding to $^{56}\mbox{Fe}$ and
+$^{12}\mbox{C}$. Three white dwarf stars, Sirius B, 40 Eri B and Stein 2051, have masses and radii
+in units of solar values determined from observations to be
+$(1.053\pm0.028 M_{\odot},0.0074\pm 0.0006 R_{\odot})$, $(0.48\pm0.02 M_{\odot},0.0124\pm 0.0005 R_{\odot})$,
+and $(0.72\pm0.08 M_{\odot},0.0115\pm 0.0012 R_{\odot})$, respectively.
+Verify that these values are consistent with the model you have developed. Can you say something about the
+compositions of these stars?
+
+
+
+\subsection*{Introduction to numerical projects}
+
+Here follows a brief recipe and recommendation on how to write a report for each
+project.
+
+\begin{itemize}
+  \item Give a short description of the nature of the problem and the eventual  numerical methods you have used.
+
+  \item Describe the algorithm you have used and/or developed. Here you may find it convenient to use pseudocoding. In many cases you can describe the algorithm in the program itself.
+
+  \item Include the source code of your program. Comment your program properly.
+
+  \item If possible, try to find analytic solutions, or known limits in order to test your program when developing the code.
+
+  \item Include your results either in figure form or in a table. Remember to        label your results. All tables and figures should have relevant captions        and labels on the axes.
+
+  \item Try to evaluate the reliabilty and numerical stability/precision of your results. If possible, include a qualitative and/or quantitative discussion of the numerical stability, eventual loss of precision etc.
+
+  \item Try to give an interpretation of you results in your answers to  the problems.
+
+  \item Critique: if possible include your comments and reflections about the  exercise, whether you felt you learnt something, ideas for improvements and  other thoughts you've made when solving the exercise. We wish to keep this course at the interactive level and your comments can help us improve it.
+
+  \item Try to establish a practice where you log your work at the  computerlab. You may find such a logbook very handy at later stages in your work, especially when you don't properly remember  what a previous test version  of your program did. Here you could also record  the time spent on solving the exercise, various algorithms you may have tested or other topics which you feel worthy of mentioning.
+\end{itemize}
+
+\noindent
+\subsection*{Format for electronic delivery of report and programs}
+
+The preferred format for the report is a PDF file. You can also use DOC or postscript formats or as an ipython notebook file.  As programming language we prefer that you choose between C/C++, Fortran2008 or Python. The following prescription should be followed when preparing the report:
+
+\begin{itemize}
+  \item Use your github repository to upload your report. Indicate where the report is by creating for example a \textbf{Report} folder. Please send us as soon as possible your github username.
+
+  \item Place your programs in a folder called for example \textbf{Programs} or \textbf{src}, in order to indicate where your programs are. You can use a README file to tell us how your github folders are organized. 
+
+  \item In your git repository, please include a folder which contains selected results. These can be in the form of output from your code for a selected set of runs and input parameters.
+
+  \item In this and all later projects, you should include tests (for example unit tests) of your code(s).
+
+  \item Comments  from us on your projects, with score and detailed feedback will be emailed to you. 
+\end{itemize}
+
+\noindent
+Finally, 
+we encourage you to work two and two together. Optimal working groups consist of 
+2-3 students. You can then hand in a common report. 
+
+
+% ------------------- end of main content ---------------
+
+\end{document}
+
