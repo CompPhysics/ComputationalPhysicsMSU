@@ -120,7 +120,7 @@ ${text_types(ch)}
    * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/QuantumMonteCarlo/ipynb/QuantumMonteCarlo.ipynb"
 
 
-=== Project 4 Molecular Dynamics, deadline April 30  ===
+=== Project 4 Molecular Dynamics and statistical physics, deadline April 30  ===
  * LaTeX and PDF:
      * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/MolecularDynamics/pdf/MolecularDynamics.tex"
      * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/MolecularDynamics/pdf/MolecularDynamics.pdf"
@@ -131,7 +131,7 @@ ${text_types(ch)}
    * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/MolecularDynamics/ipynb/MolecularDynamics.ipynb"
 
 
-=== Project 4 Monte Carlo Modeling of Transactions, deadline April 30  ===
+=== Project 4 Monte Carlo Modeling of Financial Transactions, deadline April 30  ===
  * LaTeX and PDF:
      * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/FinancialEngineering/pdf/FinancialEngineering.tex"
      * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/FinancialEngineering/pdf/FinancialEngineering.pdf"
@@ -143,7 +143,7 @@ ${text_types(ch)}
 
 
 
-=== Project 4  Ising Model and statistical physics, deadline April 30 ===
+=== Project 4  Ising Model and Statistical Physics, deadline April 30 ===
  * LaTeX and PDF:
      * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/pdf/IsingModel.tex"
      * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/pdf/IsingModel.pdf"
@@ -153,7 +153,7 @@ ${text_types(ch)}
  * iPython notebook:
    * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/IsingModel/ipynb/IsingModel.ipynb"
 
-=== Project 4  White dwarf  and statistical physics, deadline April 30 ===
+=== Project 4  White Dwarf Star and Statistical Physics, deadline April 30 ===
  * LaTeX and PDF:
      * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/WhiteDwarf/pdf/WhiteDwarf.tex"
      * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project4/WhiteDwarf/pdf/WhiteDwarf.pdf"
