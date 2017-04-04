@@ -25,9 +25,6 @@ ordering, viz $J> 0$.  We will use periodic boundary conditions and
 the Metropolis algorithm only. The material on the Ising model can be found in chapter 13 of the lecture notes. The Metropolis algorithm is discussed in chapter 12. 
 
 
-_For this project you can collaborate with fellow students but you have to hand in an individual report._
-This project (together with projects 3 and 5) counts 1/3 of the final mark.
-
 === Project 4a): A simple $2\times 2$ lattice, analytical expressions  ===
 Assume we have only two spins in each dimension, that is $L=2$.
 Find the analytical expression 
@@ -166,16 +163,14 @@ We wish to study the behavior of the Ising model
 in two dimensions close to the critical temperature as a function of
 the lattice size $L\times L$. Calculate the expectation values for
 $\langle E\rangle$ and $\langle \vert M\vert \rangle$, the specific heat
-$C_V$ and the susceptibility $\chi$ as functions of $T$ for $L=40$,
-$L=60$, $L=100$ and $L=140$ for $T\in [2.0,2.3]$ with a step in
-temperature $\Delta T=0.05$ or smaller.  You may find it convenient narrow the domain for $T$. 
+$C_V$ and the susceptibility $\chi$ as functions of $T$ for $L=20$, $L=40$,
+$L=60$, and $L=80$ for $T\in [2.1,2.4]$ with a step in
+temperature $\Delta T=0.05$ or smaller.  You may find it convenient to narrow the domain for $T$. 
 
 Plot $\langle E\rangle$,
 $\langle \vert M\vert\rangle$, $C_V$ and $\chi$ as functions of $T$. Can
 you see an indication of a phase transition?  Use the absolute value
-$\langle \vert M\vert\rangle$ when you evaluate $\chi$.  For these production runs you should
-parallelize the code using MPI (recommended). Alternatively OpenMP can be used. Use optimization flags when compiling. Perform a timing analysis of some selected runs in order to see that you get an optimal speedup when parallelizing your code. 
-
+$\langle \vert M\vert\rangle$ when you evaluate $\chi$.  
 
 
 === Project 4f): Extracting the critical temperature  ===

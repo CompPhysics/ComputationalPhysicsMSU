@@ -72,10 +72,7 @@ several runs of the above simulations, at least $10^3-10^4$ runs (experiments).
 
 
 
-_For this project you can collaborate with fellow students and you can  hand in a common report._
-This project (together with projects 3 and 4) counts 1/3 of the final mark.
-
-=== Project 5a): Simulation of Transactions   ===
+=== Project 4a): Simulation of Transactions   ===
 Your task is to first set up an algorithm which simulates the above transactions with an initial
   amount $m_0$.
   The challenge here is to figure out a Monte Carlo  simulation  based on the
@@ -87,12 +84,12 @@ Your task is to first set up an algorithm which simulates the above transactions
   $m,m+\Delta m$. The number of times you register this income, represents the value that enters the histogram.
   You will also need to find a criterion for when the equilibrium situation has been reached.
 
-=== Project 5b): Recognizing the distribution   ===
+=== Project 4b): Recognizing the distribution   ===
 Make thereafter a plot of  $\log{(w_m)}$ as function of $m$
   and see if you get a straight line.
   Comment the result.
 
-=== Project 5c): Transactions and savings   ===
+=== Project 4c): Transactions and savings   ===
 We can then change our model to allow for a saving criterion, meaning that the agents save
   a fraction $\lambda$ of the money they have before the transaction is made. The final distribution will then no longer be given by Gibbs distribution. It could also include a taxation on financial transactions.
 
@@ -137,7 +134,7 @@ We can then change our model to allow for a saving criterion, meaning that the a
   equilibrium distributions and compare these with the Gibbs distribution. Comment your results.
 Extract a parametrization of the above curves, see for example "Patriarca and collaborators":"http://www.sciencedirect.com/science/article/pii/S0378437104004327" and see if you can parametrize the high-end tails of the distributions in terms of power laws. Comment your results.
 
-=== Project 5d): Nearest neighbor interactions   ===
+=== Project 4d): Nearest neighbor interactions   ===
 In the rest of this project we will follow the work of "Goswami and Sen":"http://www.sciencedirect.com/science/article/pii/S0378437114006967". 
 In the studies above the agents were selected randomly, irrespective of whether we allowed for
 saving or not during a transaction. What is often observed is that various agents tend to make preferences for for whom to interact with. We will now study the evolution of the distribution of wealth $w_m$ by assuming that there is a likelihood 
@@ -158,7 +155,7 @@ w_m\propto m^{-1-\alpha}.
 What happens if $\alpha \gg 1$?
 
 Perform the analysis with and without a saving $\lambda$ on each transaction and comment your results. 
-=== Project 5e): Nearest neighbors and former  transactions  ===
+=== Project 4e): Nearest neighbors and former  transactions  ===
 We add to the previous probability the possibility that two agents who interact have performed similar transactions earlier. That is, in addition to being financially close, we assume that the likelihood for interacting increases if two agents have interacted earlier. 
 We add this feature by modifying the previous likelihood to
 !bt
