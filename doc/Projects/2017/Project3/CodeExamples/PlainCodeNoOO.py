@@ -1,12 +1,12 @@
 def computerdoitforme(t, planet1, planet2, planet3, planet4, planet5, planet6, planet7, planet8, planet9):
-#These are the verlate equations for making the position value update
+#These are the Verlet equations for making the position value update
     def coorx(xi, h,vxi, axi):
         return xi + h*vxi+h**2*axi/2
     def coory(yi, h,vyi, ayi):
         return yi + h*vyi+h**2*ayi/2
     def coorz(zi, h,vzi, azi):
         return zi + h*vzi+h**2*azi/2
-#These are the verlate equations for updating velocity of the planet
+#These are the Verlet equations for updating velocity of the planet
     def velx(vxi, h, ax_i_1,ax_i):
         return vxi + (h/2)*(ax_i_1+ax_i)
     def vely(vyi, h, ay_i_1,ay_i):
