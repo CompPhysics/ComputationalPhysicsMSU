@@ -69,8 +69,31 @@ int main(int argc, char* argv[])
   Covariance *=  2.0/((double) MonteCarloCycles);
   // Compute now the total variance, including the covariance, and obtain the standard deviation
   double TotalVariance = (Variance/((double) MonteCarloCycles ))+Covariance;
-  cout << " Covariance = " << Covariance << " Totalvariance= " << TotalVariance << " Sample Variance/n= " << (Variance/((double) MonteCarloCycles )) << endl;
+  cout << "Covariance =" << Covariance << "Totalvariance= " << TotalVariance << "Sample Variance/n= " << (Variance/((double) MonteCarloCycles )) << endl;
   cout << " STD from sample variance= " << sqrt(Variance/((double) MonteCarloCycles )) << " STD with covariance = " << sqrt(TotalVariance) << endl;
+
+  // Finally we start the blocking procedure and compute only the sample variance and the mean (to check that it ispreserved)
+  int n = MonteCarloCycles;
+  for (int i = 1; i <= 14; i++) {
+     n /= 2; 
+     cout << n << endl;
+     vec Xp = zeros<vec>(n);
+     Xp(0) = 0.5*(X(0)+X(1));
+     for (int j = 1; j < n; j++){
+       Xp(j) = 0.5*(X(2*j-1)+X(2*j));     
+     }
+     double MCint = 0.0; double MCintsqr2 =0.0;
+     for (int i = 0;  i < n; i++){
+       MCint += Xp(i);
+       MCintsqr2 += Xp(i)*Xp(i);
+     }
+     double Mean = MCint/((double) n );
+     MCintsqr2 = MCintsqr2/((double) n );
+     double STDev = sqrt(MCintsqr2-Mean*Mean);
+     cout << " " << Mean << " " << STDev/sqrt((double) n) << endl;
+     vec X =  zeros<vec>(n); X = Xp;
+  }
+
   ofile.close();  // close output file
   return 0;
 }  // end of main program 
