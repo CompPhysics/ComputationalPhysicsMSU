@@ -13,6 +13,9 @@ using namespace arma;
 // output file
 ofstream ofile;
 
+//     this function defines the function to integrate  
+double func(double x);
+
 //     Main function begins here     
 int main(int argc, char* argv[])
 {
@@ -39,9 +42,9 @@ int main(int argc, char* argv[])
   std::uniform_real_distribution<double> RandomNumberGenerator(0.0,1.0);
   for (int i = 0;  i < MonteCarloCycles; i++){
     double x =   RandomNumberGenerator(gen); 
-    X(i) = x;
-    MCint += x;
-    MCintsqr2 += x*x;
+    X(i) = func(x);
+    MCint += X(i);
+    MCintsqr2 += X(i)*X(i);
   }
   double Mean = MCint/((double) MonteCarloCycles );
   MCintsqr2 = MCintsqr2/((double) MonteCarloCycles );
@@ -75,3 +78,10 @@ int main(int argc, char* argv[])
   return 0;
 }  // end of main program 
 
+
+double func(double x)
+{
+  double value;
+  value = 4/(1.+x*x);
+  return value;
+} // end of function to evaluate 
