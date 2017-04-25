@@ -453,7 +453,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._mcint-bs044.html#___sec43" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Probability Distribution Functions, the normal distribution</a></li>
      <!-- navigation toc: --> <li><a href="._mcint-bs045.html#___sec44" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Probability Distribution Functions, the cumulative distribution</a></li>
      <!-- navigation toc: --> <li><a href="._mcint-bs046.html#___sec45" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Probability Distribution Functions, other important distribution</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec46" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Probability Distribution Functions, the binomial distribution</a></li>
+     <!-- navigation toc: --> <li><a href="._mcint-bs047.html#___sec46" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Probability Distribution Functions, the binomial distribution</a></li>
      <!-- navigation toc: --> <li><a href="._mcint-bs048.html#___sec47" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Probability Distribution Functions, Poisson's  distribution</a></li>
      <!-- navigation toc: --> <li><a href="._mcint-bs049.html#___sec48" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Probability Distribution Functions, Poisson's  distribution</a></li>
      <!-- navigation toc: --> <li><a href="._mcint-bs050.html#___sec49" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Meet the  covariance!</a></li>
@@ -526,7 +526,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._mcint-bs117.html#___sec116" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Brute Force Integration</a></li>
      <!-- navigation toc: --> <li><a href="._mcint-bs118.html#___sec117" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Importance Sampling</a></li>
      <!-- navigation toc: --> <li><a href="._mcint-bs119.html#___sec118" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Python codes</a></li>
-     <!-- navigation toc: --> <li><a href="._mcint-bs120.html#___sec119" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Python codes, importance sampling</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec119" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Python codes, importance sampling</a></li>
 
         </ul>
       </li>
@@ -539,88 +539,87 @@ MathJax.Hub.Config({
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0047"></a>
+<a name="part0120"></a>
 <!-- !split -->
 
-<h2 id="___sec46" class="anchor">Probability Distribution Functions, the binomial distribution </h2>
+<h2 id="___sec119" class="anchor">Python codes, importance sampling </h2>
 <div class="panel panel-default">
 <div class="panel-body">
 <p> <!-- subsequent paragraphs come in larger fonts, so start with a paragraph -->
-
+The second code, displayed here, uses importance sampling and random numbers that follow the normal distribution
+the brute force approach
 <p>
-In order to compute the mean and variance we need to recall Newton's binomial
-formula
-$$
-\begin{equation*}
-   (a+b)^m=\sum_{n=0}^m \left(\begin{array}{c} m \\ n\end{array}\right)a^nb^{m-n},
-\end{equation*}
-$$
 
-which can be used to show that
 
-$$
-\begin{equation*}
-\sum_{x=0}^n\left(\begin{array}{c} n \\ x\end{array}\right)y^x(1-y)^{n-x} = (y+1-y)^n = 1,
-\end{equation*}
-$$
+<div class="compute"><script type="text/x-sage">
+#Monte Carlo integration with importance sampling
 
-the PDF is normalized to one. 
-The mean value is
-$$
-\begin{equation*}
-\mu = \sum_{x=0}^n x\left(\begin{array}{c} n \\ x\end{array}\right)y^x(1-y)^{n-x} =
-\sum_{x=0}^n x\frac{n!}{x!(n-x)!}y^x(1-y)^{n-x}, 
-\end{equation*}
-$$
+import numpy,math
+import sys
 
-resulting in
-$$
-\begin{equation*}
-\mu = 
-\sum_{x=0}^n x\frac{(n-1)!}{(x-1)!(n-1-(x-1))!}y^{x-1}(1-y)^{n-1-(x-1)},
-\end{equation*}
-$$
+def integrand(x):
+    """Calculates the integrand
+    exp(-b*[(x1-x4)^2+...+(x3-x6)^2])
+    from the values in the 6-dimensional array x."""
+    b = 0.5
 
-which we rewrite as
+    xy = (x[0]-x[3])**2 + (x[1]-x[4])**2 + (x[2]-x[5])**2
+    return numpy.exp(-b*xy)
 
-$$
-\begin{equation*}
-\mu=ny\sum_{\nu=0}^n\left(\begin{array}{c} n-1 \\ \nu\end{array}\right)y^{\nu}(1-y)^{n-1-\nu} =ny(y+1-y)^{n-1}=ny. 
-\end{equation*}
-$$
+#Main program
+
+#Jacobi determinant
+jacobi = math.acos(-1.0)**3
+sqrt2  = 1.0/math.sqrt(2)
+
+N = 100000
+
+#Evaluate the integral
+sum  = 0.0
+sum2 = 0.0
+for i in xrange(N):
+    #Generate random, gaussian distributed coordinates to sample at
+    x = numpy.array([numpy.random.normal()*sqrt2 for j in xrange(6)])
+
+    fx         = integrand(x)
+    sum       += fx
+    sum2      += fx**2
+#Calculate expt. values for fx and fx^2
+sum /=float(N)
+sum2/=float(N)
+
+#Result
+int_mc  = jacobi*sum;
+#Gaussian standard deviation
+sigma   = jacobi*math.sqrt((sum2-sum**2)/float(N))
+
+#Output
+print "Montecarlo result = %10.8E" % int_mc
+print "Sigma             = %10.8E" % sigma
+
+</script></div>
+<p>
 </div>
 </div>
 
-The variance is slightly trickier to get. It reads \( \sigma^2=ny(1-y) \).
 
 <p>
+
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-<li><a href="._mcint-bs046.html">&laquo;</a></li>
+<li><a href="._mcint-bs119.html">&laquo;</a></li>
   <li><a href="._mcint-bs000.html">1</a></li>
   <li><a href="">...</a></li>
-  <li><a href="._mcint-bs039.html">40</a></li>
-  <li><a href="._mcint-bs040.html">41</a></li>
-  <li><a href="._mcint-bs041.html">42</a></li>
-  <li><a href="._mcint-bs042.html">43</a></li>
-  <li><a href="._mcint-bs043.html">44</a></li>
-  <li><a href="._mcint-bs044.html">45</a></li>
-  <li><a href="._mcint-bs045.html">46</a></li>
-  <li><a href="._mcint-bs046.html">47</a></li>
-  <li class="active"><a href="._mcint-bs047.html">48</a></li>
-  <li><a href="._mcint-bs048.html">49</a></li>
-  <li><a href="._mcint-bs049.html">50</a></li>
-  <li><a href="._mcint-bs050.html">51</a></li>
-  <li><a href="._mcint-bs051.html">52</a></li>
-  <li><a href="._mcint-bs052.html">53</a></li>
-  <li><a href="._mcint-bs053.html">54</a></li>
-  <li><a href="._mcint-bs054.html">55</a></li>
-  <li><a href="._mcint-bs055.html">56</a></li>
-  <li><a href="._mcint-bs056.html">57</a></li>
-  <li><a href="">...</a></li>
-  <li><a href="._mcint-bs120.html">121</a></li>
-  <li><a href="._mcint-bs048.html">&raquo;</a></li>
+  <li><a href="._mcint-bs112.html">113</a></li>
+  <li><a href="._mcint-bs113.html">114</a></li>
+  <li><a href="._mcint-bs114.html">115</a></li>
+  <li><a href="._mcint-bs115.html">116</a></li>
+  <li><a href="._mcint-bs116.html">117</a></li>
+  <li><a href="._mcint-bs117.html">118</a></li>
+  <li><a href="._mcint-bs118.html">119</a></li>
+  <li><a href="._mcint-bs119.html">120</a></li>
+  <li class="active"><a href="._mcint-bs120.html">121</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 
