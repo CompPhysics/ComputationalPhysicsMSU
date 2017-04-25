@@ -1,4 +1,4 @@
-TITLE: Summary of course and the final exam
+TITLE: Summary of course and the final oral exam
 AUTHOR: Morten Hjorth-Jensen  {copyright, 1999-present|CC BY-NC} Email morten.hjorth-jensen@fys.uio.no at Department of Physics and Center of Mathematics for Applications, University of Oslo & National Superconducting Cyclotron Laboratory, Michigan State University
 DATE: Spring 2017
 
@@ -14,14 +14,16 @@ FIGURE: [figures/exam2.jpg, width=500 frac=0.6]
 
 !split
 ===== Topics we have covered this year =====
+* Introduction to c++ programming and object orientation
+* How to write scientific reports
 * Linear algebra and eigenvalue problems. (Lecture notes chapters 6.1-6.5  and 7.1-7.5 and projects 1 and 2).
 * Ordinary differential equations (Lecture notes chapter 8  and projects 3 and 4 )
-* Partial differential equations (Lecture notes chapter 10 and project 4)
 * Monte Carlo methods in physics (Lecture notes chapters 11, 12 and 13, project 4)
 
 !split
 ===== Linear algebra and eigenvalue problems, chapters 6.1-6.5 and 7.1-7.5 =====
-* Know Gaussian elimination and LU decomposition   (project 1)
+* How to handle vectors and matrices
+* Gaussian elimination and LU decomposition   (project 1)
 * How to solve linear equations   (project 1)
 * How to obtain the inverse and the determinant of a real symmetric matrix
 * Cubic spline
@@ -32,8 +34,13 @@ FIGURE: [figures/exam2.jpg, width=500 frac=0.6]
 !split
 ===== Monte Carlo methods in physics (Chapters 11, 12 and 13) =====
 * Random walks and Markov chains
+* Generation of random numbers
+* Monte Carlo integration
+* Probability distributions and their properties
+* Errors in Monte Carlo calculations (statistical errors)
 * Metropolis algorithm (project 4)
 * Applications to statistical physics systems (project 4)
+* Brief excursion into quantum mechanical systems (project 4)
 
 
 !split
@@ -46,7 +53,7 @@ FIGURE: [figures/exam2.jpg, width=500 frac=0.6]
 * How to make your equations dimensionless.
 
 !split
-===== Partial differential equations, chapter 10 =====
+===== Partial differential equations, chapter 10, not covered this year =====
 * Set up diffusion, Poisson and wave equations up to 2 spatial dimensions and time  
 * Set up the mathematical model and algorithms for these equations, with boundary and initial conditions. The stability conditions for the diffusion equation.
 * Explicit, implicit and Crank-Nicolson schemes, and how to solve them. Remember that they result in triangular matrices (project 4).  
@@ -55,12 +62,17 @@ FIGURE: [figures/exam2.jpg, width=500 frac=0.6]
 
 !split
 ===== Final presentation =====
+Select the project you liked the most among projects 2-4. Alternatively, if there are other topics of relevance you would like to present, feel free to suggest (send me an email however). Your presentation (bring your own laptop)
+should include
+
 * Introduction with motivation
-* Give a short overview of the theory and numerical algorithms employed
-* Discuss the implementation of your algorithm and how you verified it and validated it
+* Give an overview of the theory and numerical algorithms employed
+* Discuss the implementation of your algorithm and how you verified it and validated it. Discuss for example various tests you made. 
 * Present and discuss your results
 * Summary, conclusions and perspectives
 * Anything else you think is important. Useful to have backup slides
+
+
 
 In total your talk should have a duration of 20-25 minutes, but longer is also ok. The style for the final presentation follows very much the way the lay out your reports. 
 
