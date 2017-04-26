@@ -72,7 +72,7 @@ int main(int argc, char* argv[])
   Covariance *=  2.0/((double) MonteCarloCycles);
   // Compute now the total variance, including the covariance, and obtain the standard deviation
   double TotalVariance = (Variance/((double) MonteCarloCycles ))+Covariance;
-  cout << " Covariance = " << Covariance << " Totalvariance= " << TotalVariance << " Sample Variance/n= " << (Variance/((double) MonteCarloCycles )) << endl;
+  cout << " Totalvariance= " << TotalVariance << " Sample Variance/n= " << (Variance/((double) MonteCarloCycles )) << endl;
   cout << " STD from sample variance= " << sqrt(Variance/((double) MonteCarloCycles )) << " STD with covariance = " << sqrt(TotalVariance) << endl;
   ofile.close();  // close output file
   return 0;
