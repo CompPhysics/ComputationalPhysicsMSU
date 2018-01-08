@@ -56,14 +56,14 @@ final,                   % draft: marks overfull hboxes, figures with paths
 % Ensure copyright on titlepage (article style) and chapter pages (book style)
 \fancypagestyle{plain}{
   \fancyhf{}
-  \fancyfoot[C]{{\footnotesize \copyright\ 1999-2017, Computational Physics PHY480/905. Released under CC Attribution-NonCommercial 4.0 license}}
+  \fancyfoot[C]{{\footnotesize \copyright\ 1999-2018, Computational Physics PHY480/905. Released under CC Attribution-NonCommercial 4.0 license}}
 %  \renewcommand{\footrulewidth}{0mm}
   \renewcommand{\headrulewidth}{0mm}
 }
 % Ensure copyright on titlepages with \thispagestyle{empty}
 \fancypagestyle{empty}{
   \fancyhf{}
-  \fancyfoot[C]{{\footnotesize \copyright\ 1999-2017, Computational Physics PHY480/905. Released under CC Attribution-NonCommercial 4.0 license}}
+  \fancyfoot[C]{{\footnotesize \copyright\ 1999-2018, Computational Physics PHY480/905. Released under CC Attribution-NonCommercial 4.0 license}}
   \renewcommand{\footrulewidth}{0mm}
   \renewcommand{\headrulewidth}{0mm}
 }
@@ -125,7 +125,7 @@ Project 1, deadline  February 6
 
 % --- begin date ---
 \begin{center}
-Spring semester 2017
+Spring semester 2018
 \end{center}
 % --- end date ---
 
@@ -324,7 +324,7 @@ Comment your results.
 
 
 To compute the elapsed time in c++ you can use the following statements
-\begin{verbatim}
+\begin{print}
 ...
 #include "time.h"   //  you have to include the time.h header
 int main()
@@ -337,9 +337,9 @@ int main()
     finish = clock();
     ( (finish - start)/CLOCKS_PER_SEC );
 ...
-\end{verbatim}
+\end{print}
 Similarly, in Fortran, this simple example shows how to compute the elapsed time.
-\begin{verbatim}
+\begin{print}
 PROGRAM time
  REAL :: etime          ! Declare the type of etime()
  REAL :: elapsed(2)     ! For receiving user and system time
@@ -357,7 +357,7 @@ PROGRAM time
               ' system=', elapsed(2)
 
 END PROGRAM time
-\end{verbatim}
+\end{print}
 
 
 

@@ -1,6 +1,6 @@
 TITLE: Computational Physics Lectures: Introduction to the course
 AUTHOR: Morten Hjorth-Jensen  {copyright, 1999-present|CC BY-NC} at Department of Physics, University of Oslo & Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University
-DATE: 2017
+DATE: 2018
 
 
 
@@ -10,7 +10,7 @@ DATE: 2017
 !bblock
   * Tuesday (most likely):
    o Presentation of the course, aims and content
-   o Introduction to C++ programming and numerical precision. Exercises for first week. 
+   o Introduction to C++ programming and numerical precision. Discussion of first project
    o Numerical differentiation and loss of numerical precision (chapter 3 lecture notes)
   * Computer lab: Thursday (most likely)
    o The first two weeks we focus on simple programming tasks, start to look at project 1 and to set up the software "Git":"https://git-scm.com/" and a repository at "Github":"https://github.com/" as well as  "Qt Creator":"https://www.qt.io/ide/" as one possible IDE. This week we discuss how to set up Git and obtain a Github account.
@@ -34,11 +34,11 @@ DATE: 2017
 ===== Lectures and ComputerLab =====
 
 !bblock
-  * Lectures: Most likely Tuesdays from 3pm to 5pm (As of now not determined)
+  * Lectures: Most likely Wednesdays from 4pm to 530pm (As of now not determined)
   * Weekly reading assignments needed to solve projects.
   * First hour of each lab session may be used to discuss technicalities, address questions etc linked with projects.
   * Detailed lecture notes, exercises, all programs presented, projects etc can be found at the Github address of the course.
-  * Computerlab: Most likely Thursdays. We have reserved a time slot from 3pm to 7pm.
+  * Computerlab: Most likely Fridays. We have reserved a time slot from 4pm to 8pm.
   * Weekly plans and all other information are the github address of the course.
   * Four projects, all have to be approved. The first project is pass/not passed only while the last three projects are graded and count 25% each of the final mark.  The course ends with a final oral exam where you present a project of your choice. The final oral exam accounts for the remaining 25% of the final grade.
 !eblock
@@ -88,7 +88,7 @@ DATE: 2017
   * Householder's tridiagonalization technique and finding eigenvalues based on this
   * Jacobi's method for finding eigenvalues
   * Singular value decomposition
-  * Qubic Spline interpolation
+  * Cubic Spline interpolation
 !eblock
 
 
@@ -195,8 +195,8 @@ FIGURE: [fig-intro/Nebbdyr2.pdf, width=500 frac=0.6]
 ===== Extremely useful tools, strongly recommended =====
 
 !bblock and discussed at the lab sessions
-  * "Git":"https://git-scm.com/" and a repository at "Github":"https://github.com/", this week and next weeks. 
-  * ipython notebook
+  * "Git":"https://git-scm.com/" and a repository at "Github":"https://github.com/", this and next week (and later weeks as well). 
+  * ipython notebook (Jupiter notebook, a great tool)
   * "Qt Creator":"https://www.qt.io/ide/" as one possible IDE for editing and mastering computational projects (for C++ codes, see webpage of course), discussed during the whole semester. You can however use other IDEs as well such as "VisualC++":"https://www.microsoft.com/en-us/download/details.aspx?id=48145".
   * Armadillo as a useful numerical library for C++, highly recommended, discussed in connection with LinAlgebra lectures
   * Unit tests, discussed throughout the whole semester
