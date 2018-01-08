@@ -1,6 +1,6 @@
 TITLE: Computational Physics  Lectures: Eigenvalue problems
 AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} at Department of Physics, University of Oslo & Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University
-DATE: 2017
+DATE: today
 
 !split
 ===== Overview of eigenvalue discussion =====
@@ -252,7 +252,7 @@ $n \sim 10^5$ or smaller. A brief historical overview
 |  1965 | $n=200$      |(Forsythe et al.)|
 |  1980 | $n=2000$     |Linpack          |
 |  1995 | $n=20000$    |Lapack           |
-|  2012 | $n\sim 10^5$ |Lapack           |
+|  2017 | $n\sim 10^5$ |Lapack           |
 |----------------------------------------|
 
 shows that in the course of 60 years the dimension that  direct diagonalization methods can handle  has increased by almost a factor of
@@ -626,7 +626,7 @@ int iterations = 0;
 while ( maxnondiag > tolerance && iterations <= maxiter)
 {
    int p, q;
-   maxnondiag  = offdiag(A, p, q, n);
+   offdiag(A, &p, &q, n);
    Jacobi_rotate(A, R, p, q, n);
    iterations++;
 }
@@ -641,7 +641,7 @@ while ( maxnondiag > tolerance && iterations <= maxiter)
 Finding the max nondiagonal element
 !bc cppcod
 //  the offdiag function, using Armadillo
-double offdiag(mat A, int p, int q, int n)
+void offdiag(mat A, int *p, int *q, int n);
 {
    double max;
    for (int i = 0; i < n; ++i)
@@ -655,7 +655,6 @@ double offdiag(mat A, int p, int q, int n)
            }
        }
    }
-   return max;
 }
 // more statements
 !ec

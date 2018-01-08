@@ -15,7 +15,7 @@ Automatically generated HTML file from DocOnce source
 <script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
+<link href="https://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
 <style type="text/css">
 h1 {color: #b58900;}  /* yellow */
 /* h1 {color: #cb4b16;}  orange */
@@ -99,7 +99,8 @@ div { text-align: justify; text-justify: inter-word; }
                2,
                None,
                '___sec20'),
-              ('"The first attempt at solving the Helium atom":"https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Programs/LecturePrograms/programs/VMC/cpp"',
+              ('"The first attempt at solving the Helium '
+               'atom":"https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Programs/LecturePrograms/programs/VMC/cpp"',
                2,
                None,
                '___sec21'),
@@ -148,8 +149,8 @@ MathJax.Hub.Config({
   }
 });
 </script>
-<script type="text/javascript"
- src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" async
+ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
@@ -175,7 +176,7 @@ MathJax.Hub.Config({
 <center>[2] <b>Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
 <br>
 <p>
-<center><h4>2017</h4></center> <!-- date -->
+<center><h4>Jan 8, 2018 </h4></center> <!-- date -->
 <br>
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
@@ -785,7 +786,7 @@ With some practice this allows one to be able to check one's own calculation and
 <span style="color: #1e889b">#include</span> <span style="color: #228B22">&lt;iostream&gt;</span><span style="color: #1e889b"></span>
 <span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span> std;
 
-<span style="color: #a7a7a7; font-weight: bold">int</span> <span style="color: #008b45">main</span>()
+<span style="color: #00688B; font-weight: bold">int</span> <span style="color: #008b45">main</span>()
 {
     VMCSolver *solver = <span style="color: #8B008B; font-weight: bold">new</span> VMCSolver();
     solver-&gt;runMonteCarloIntegration();
@@ -815,20 +816,20 @@ With some practice this allows one to be able to check one's own calculation and
 {
 <span style="color: #8B008B; font-weight: bold">public</span>:
     VMCSolver();
-    <span style="color: #a7a7a7; font-weight: bold">void</span> <span style="color: #008b45">runMonteCarloIntegration</span>();
+    <span style="color: #00688B; font-weight: bold">void</span> <span style="color: #008b45">runMonteCarloIntegration</span>();
 
 <span style="color: #8B008B; font-weight: bold">private</span>:
-    <span style="color: #a7a7a7; font-weight: bold">double</span> waveFunction(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r);
-    <span style="color: #a7a7a7; font-weight: bold">double</span> <span style="color: #008b45">localEnergy</span>(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r);
-    <span style="color: #a7a7a7; font-weight: bold">int</span> nDimensions;
-    <span style="color: #a7a7a7; font-weight: bold">int</span> charge;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> stepLength;
-    <span style="color: #a7a7a7; font-weight: bold">int</span> nParticles;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> h;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> h2;
-    <span style="color: #a7a7a7; font-weight: bold">long</span> idum;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> alpha;
-    <span style="color: #a7a7a7; font-weight: bold">int</span> nCycles;
+    <span style="color: #00688B; font-weight: bold">double</span> waveFunction(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r);
+    <span style="color: #00688B; font-weight: bold">double</span> <span style="color: #008b45">localEnergy</span>(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r);
+    <span style="color: #00688B; font-weight: bold">int</span> nDimensions;
+    <span style="color: #00688B; font-weight: bold">int</span> charge;
+    <span style="color: #00688B; font-weight: bold">double</span> stepLength;
+    <span style="color: #00688B; font-weight: bold">int</span> nParticles;
+    <span style="color: #00688B; font-weight: bold">double</span> h;
+    <span style="color: #00688B; font-weight: bold">double</span> h2;
+    <span style="color: #00688B; font-weight: bold">long</span> idum;
+    <span style="color: #00688B; font-weight: bold">double</span> alpha;
+    <span style="color: #00688B; font-weight: bold">int</span> nCycles;
     mat rOld;
     mat rNew;
 };
@@ -884,41 +885,41 @@ VMCSolver::VMCSolver() :
 <p>
 
 <!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span></span><span style="color: #a7a7a7; font-weight: bold">void</span> VMCSolver::runMonteCarloIntegration()
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span></span><span style="color: #00688B; font-weight: bold">void</span> VMCSolver::runMonteCarloIntegration()
 {
     rOld = zeros&lt;mat&gt;(nParticles, nDimensions);
     rNew = zeros&lt;mat&gt;(nParticles, nDimensions);
-    <span style="color: #a7a7a7; font-weight: bold">double</span> waveFunctionOld = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> waveFunctionNew = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> energySum = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> energySquaredSum = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> deltaE;
+    <span style="color: #00688B; font-weight: bold">double</span> waveFunctionOld = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> waveFunctionNew = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> energySum = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> energySquaredSum = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> deltaE;
     <span style="color: #228B22">// initial trial positions</span>
-    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
-        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
+        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
             rOld(i,j) = stepLength * (ran2(&amp;idum) - <span style="color: #B452CD">0.5</span>);
         }
     }
     rNew = rOld;
     <span style="color: #228B22">// loop over Monte Carlo cycles</span>
-    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> cycle = <span style="color: #B452CD">0</span>; cycle &lt; nCycles; cycle++) {
+    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> cycle = <span style="color: #B452CD">0</span>; cycle &lt; nCycles; cycle++) {
         <span style="color: #228B22">// Store the current value of the wave function</span>
         waveFunctionOld = waveFunction(rOld);
         <span style="color: #228B22">// New position to test</span>
-        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
-            <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
+            <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
                 rNew(i,j) = rOld(i,j) + stepLength*(ran2(&amp;idum) - <span style="color: #B452CD">0.5</span>);
             }
             <span style="color: #228B22">// Recalculate the value of the wave function</span>
             waveFunctionNew = waveFunction(rNew);
             <span style="color: #228B22">// Check for step acceptance (if yes, update position, if no, reset position)</span>
             <span style="color: #8B008B; font-weight: bold">if</span>(ran2(&amp;idum) &lt;= (waveFunctionNew*waveFunctionNew) / (waveFunctionOld*waveFunctionOld)) {
-                <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+                <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
                     rOld(i,j) = rNew(i,j);
                     waveFunctionOld = waveFunctionNew;
                 }
             } <span style="color: #8B008B; font-weight: bold">else</span> {
-                <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+                <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
                     rNew(i,j) = rOld(i,j);
                 }
             }
@@ -928,8 +929,8 @@ VMCSolver::VMCSolver() :
             energySquaredSum += deltaE*deltaE;
         }
     }
-    <span style="color: #a7a7a7; font-weight: bold">double</span> energy = energySum/(nCycles * nParticles);
-    <span style="color: #a7a7a7; font-weight: bold">double</span> energySquared = energySquaredSum/(nCycles * nParticles);
+    <span style="color: #00688B; font-weight: bold">double</span> energy = energySum/(nCycles * nParticles);
+    <span style="color: #00688B; font-weight: bold">double</span> energySquared = energySquaredSum/(nCycles * nParticles);
     cout &lt;&lt; <span style="color: #CD5555">&quot;Energy: &quot;</span> &lt;&lt; energy &lt;&lt; <span style="color: #CD5555">&quot; Energy (squared sum): &quot;</span> &lt;&lt; energySquared &lt;&lt; endl;
 }
 </pre></div>
@@ -948,18 +949,18 @@ VMCSolver::VMCSolver() :
 <p>
 
 <!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span></span><span style="color: #a7a7a7; font-weight: bold">double</span> VMCSolver::localEnergy(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r)
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span></span><span style="color: #00688B; font-weight: bold">double</span> VMCSolver::localEnergy(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r)
 {
     mat rPlus = zeros&lt;mat&gt;(nParticles, nDimensions);
     mat rMinus = zeros&lt;mat&gt;(nParticles, nDimensions);
     rPlus = rMinus = r;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> waveFunctionMinus = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> waveFunctionPlus = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> waveFunctionCurrent = waveFunction(r);
+    <span style="color: #00688B; font-weight: bold">double</span> waveFunctionMinus = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> waveFunctionPlus = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> waveFunctionCurrent = waveFunction(r);
     <span style="color: #228B22">// Kinetic energy, brute force derivations</span>
-    <span style="color: #a7a7a7; font-weight: bold">double</span> kineticEnergy = <span style="color: #B452CD">0</span>;
-    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
-        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+    <span style="color: #00688B; font-weight: bold">double</span> kineticEnergy = <span style="color: #B452CD">0</span>;
+    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
+        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
             rPlus(i,j) += h;
             rMinus(i,j) -= h;
             waveFunctionMinus = waveFunction(rMinus);
@@ -971,21 +972,21 @@ VMCSolver::VMCSolver() :
     }
     kineticEnergy = <span style="color: #B452CD">0.5</span> * h2 * kineticEnergy / waveFunctionCurrent;
     <span style="color: #228B22">// Potential energy</span>
-    <span style="color: #a7a7a7; font-weight: bold">double</span> potentialEnergy = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> rSingleParticle = <span style="color: #B452CD">0</span>;
-    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
+    <span style="color: #00688B; font-weight: bold">double</span> potentialEnergy = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> rSingleParticle = <span style="color: #B452CD">0</span>;
+    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
         rSingleParticle = <span style="color: #B452CD">0</span>;
-        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
             rSingleParticle += r(i,j)*r(i,j);
         }
         potentialEnergy -= charge / sqrt(rSingleParticle);
     }
     <span style="color: #228B22">// Contribution from electron-electron potential</span>
-    <span style="color: #a7a7a7; font-weight: bold">double</span> r12 = <span style="color: #B452CD">0</span>;
-    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
-        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = i + <span style="color: #B452CD">1</span>; j &lt; nParticles; j++) {
+    <span style="color: #00688B; font-weight: bold">double</span> r12 = <span style="color: #B452CD">0</span>;
+    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
+        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = i + <span style="color: #B452CD">1</span>; j &lt; nParticles; j++) {
             r12 = <span style="color: #B452CD">0</span>;
-            <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> k = <span style="color: #B452CD">0</span>; k &lt; nDimensions; k++) {
+            <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> k = <span style="color: #B452CD">0</span>; k &lt; nDimensions; k++) {
                 r12 += (r(i,k) - r(j,k)) * (r(i,k) - r(j,k));
             }
             potentialEnergy += <span style="color: #B452CD">1</span> / sqrt(r12);
@@ -1009,12 +1010,12 @@ VMCSolver::VMCSolver() :
 <p>
 
 <!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span></span><span style="color: #a7a7a7; font-weight: bold">double</span> VMCSolver::waveFunction(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r)
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span></span><span style="color: #00688B; font-weight: bold">double</span> VMCSolver::waveFunction(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r)
 {
-    <span style="color: #a7a7a7; font-weight: bold">double</span> argument = <span style="color: #B452CD">0</span>;
-    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
-        <span style="color: #a7a7a7; font-weight: bold">double</span> rSingleParticle = <span style="color: #B452CD">0</span>;
-        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+    <span style="color: #00688B; font-weight: bold">double</span> argument = <span style="color: #B452CD">0</span>;
+    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
+        <span style="color: #00688B; font-weight: bold">double</span> rSingleParticle = <span style="color: #B452CD">0</span>;
+        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
             rSingleParticle += r(i,j) * r(i,j);
         }
         argument += sqrt(rSingleParticle);
@@ -1041,26 +1042,26 @@ VMCSolver::VMCSolver() :
 <span style="color: #1e889b">#include</span> <span style="color: #228B22">&lt;iostream&gt;</span><span style="color: #1e889b"></span>
 <span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span> arma;
 <span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span> std;
-<span style="color: #a7a7a7; font-weight: bold">double</span> <span style="color: #008b45">ran2</span>(<span style="color: #a7a7a7; font-weight: bold">long</span> *);
+<span style="color: #00688B; font-weight: bold">double</span> <span style="color: #008b45">ran2</span>(<span style="color: #00688B; font-weight: bold">long</span> *);
 
 <span style="color: #8B008B; font-weight: bold">class</span> <span style="color: #008b45; font-weight: bold">VMCSolver</span>
 {
 <span style="color: #8B008B; font-weight: bold">public</span>:
     VMCSolver();
-    <span style="color: #a7a7a7; font-weight: bold">void</span> <span style="color: #008b45">runMonteCarloIntegration</span>();
+    <span style="color: #00688B; font-weight: bold">void</span> <span style="color: #008b45">runMonteCarloIntegration</span>();
 
 <span style="color: #8B008B; font-weight: bold">private</span>:
-    <span style="color: #a7a7a7; font-weight: bold">double</span> waveFunction(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r);
-    <span style="color: #a7a7a7; font-weight: bold">double</span> <span style="color: #008b45">localEnergy</span>(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r);
-    <span style="color: #a7a7a7; font-weight: bold">int</span> nDimensions;
-    <span style="color: #a7a7a7; font-weight: bold">int</span> charge;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> stepLength;
-    <span style="color: #a7a7a7; font-weight: bold">int</span> nParticles;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> h;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> h2;
-    <span style="color: #a7a7a7; font-weight: bold">long</span> idum;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> alpha;
-    <span style="color: #a7a7a7; font-weight: bold">int</span> nCycles;
+    <span style="color: #00688B; font-weight: bold">double</span> waveFunction(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r);
+    <span style="color: #00688B; font-weight: bold">double</span> <span style="color: #008b45">localEnergy</span>(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r);
+    <span style="color: #00688B; font-weight: bold">int</span> nDimensions;
+    <span style="color: #00688B; font-weight: bold">int</span> charge;
+    <span style="color: #00688B; font-weight: bold">double</span> stepLength;
+    <span style="color: #00688B; font-weight: bold">int</span> nParticles;
+    <span style="color: #00688B; font-weight: bold">double</span> h;
+    <span style="color: #00688B; font-weight: bold">double</span> h2;
+    <span style="color: #00688B; font-weight: bold">long</span> idum;
+    <span style="color: #00688B; font-weight: bold">double</span> alpha;
+    <span style="color: #00688B; font-weight: bold">int</span> nCycles;
     mat rOld;
     mat rNew;
 };
@@ -1078,41 +1079,41 @@ VMCSolver::VMCSolver() :
 {
 }
 
-<span style="color: #a7a7a7; font-weight: bold">void</span> VMCSolver::runMonteCarloIntegration()
+<span style="color: #00688B; font-weight: bold">void</span> VMCSolver::runMonteCarloIntegration()
 {
     rOld = zeros&lt;mat&gt;(nParticles, nDimensions);
     rNew = zeros&lt;mat&gt;(nParticles, nDimensions);
-    <span style="color: #a7a7a7; font-weight: bold">double</span> waveFunctionOld = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> waveFunctionNew = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> energySum = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> energySquaredSum = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> deltaE;
+    <span style="color: #00688B; font-weight: bold">double</span> waveFunctionOld = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> waveFunctionNew = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> energySum = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> energySquaredSum = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> deltaE;
     <span style="color: #228B22">// initial trial positions</span>
-    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
-        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
+        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
             rOld(i,j) = stepLength * (ran2(&amp;idum) - <span style="color: #B452CD">0.5</span>);
         }
     }
     rNew = rOld;
     <span style="color: #228B22">// loop over Monte Carlo cycles</span>
-    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> cycle = <span style="color: #B452CD">0</span>; cycle &lt; nCycles; cycle++) {
+    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> cycle = <span style="color: #B452CD">0</span>; cycle &lt; nCycles; cycle++) {
         <span style="color: #228B22">// Store the current value of the wave function</span>
         waveFunctionOld = waveFunction(rOld);
         <span style="color: #228B22">// New position to test</span>
-        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
-            <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
+            <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
                 rNew(i,j) = rOld(i,j) + stepLength*(ran2(&amp;idum) - <span style="color: #B452CD">0.5</span>);
             }
             <span style="color: #228B22">// Recalculate the value of the wave function</span>
             waveFunctionNew = waveFunction(rNew);
             <span style="color: #228B22">// Check for step acceptance (if yes, update position, if no, reset position)</span>
             <span style="color: #8B008B; font-weight: bold">if</span>(ran2(&amp;idum) &lt;= (waveFunctionNew*waveFunctionNew) / (waveFunctionOld*waveFunctionOld)) {
-                <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+                <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
                     rOld(i,j) = rNew(i,j);
                     waveFunctionOld = waveFunctionNew;
                 }
             } <span style="color: #8B008B; font-weight: bold">else</span> {
-                <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+                <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
                     rNew(i,j) = rOld(i,j);
                 }
             }
@@ -1122,23 +1123,23 @@ VMCSolver::VMCSolver() :
             energySquaredSum += deltaE*deltaE;
         }
     }
-    <span style="color: #a7a7a7; font-weight: bold">double</span> energy = energySum/(nCycles * nParticles);
-    <span style="color: #a7a7a7; font-weight: bold">double</span> energySquared = energySquaredSum/(nCycles * nParticles);
+    <span style="color: #00688B; font-weight: bold">double</span> energy = energySum/(nCycles * nParticles);
+    <span style="color: #00688B; font-weight: bold">double</span> energySquared = energySquaredSum/(nCycles * nParticles);
     cout &lt;&lt; <span style="color: #CD5555">&quot;Energy: &quot;</span> &lt;&lt; energy &lt;&lt; <span style="color: #CD5555">&quot; Energy (squared sum): &quot;</span> &lt;&lt; energySquared &lt;&lt; endl;
 }
 
-<span style="color: #a7a7a7; font-weight: bold">double</span> VMCSolver::localEnergy(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r)
+<span style="color: #00688B; font-weight: bold">double</span> VMCSolver::localEnergy(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r)
 {
     mat rPlus = zeros&lt;mat&gt;(nParticles, nDimensions);
     mat rMinus = zeros&lt;mat&gt;(nParticles, nDimensions);
     rPlus = rMinus = r;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> waveFunctionMinus = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> waveFunctionPlus = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> waveFunctionCurrent = waveFunction(r);
+    <span style="color: #00688B; font-weight: bold">double</span> waveFunctionMinus = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> waveFunctionPlus = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> waveFunctionCurrent = waveFunction(r);
     <span style="color: #228B22">// Kinetic energy, brute force derivations</span>
-    <span style="color: #a7a7a7; font-weight: bold">double</span> kineticEnergy = <span style="color: #B452CD">0</span>;
-    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
-        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+    <span style="color: #00688B; font-weight: bold">double</span> kineticEnergy = <span style="color: #B452CD">0</span>;
+    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
+        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
             rPlus(i,j) += h;
             rMinus(i,j) -= h;
             waveFunctionMinus = waveFunction(rMinus);
@@ -1150,21 +1151,21 @@ VMCSolver::VMCSolver() :
     }
     kineticEnergy = <span style="color: #B452CD">0.5</span> * h2 * kineticEnergy / waveFunctionCurrent;
     <span style="color: #228B22">// Potential energy</span>
-    <span style="color: #a7a7a7; font-weight: bold">double</span> potentialEnergy = <span style="color: #B452CD">0</span>;
-    <span style="color: #a7a7a7; font-weight: bold">double</span> rSingleParticle = <span style="color: #B452CD">0</span>;
-    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
+    <span style="color: #00688B; font-weight: bold">double</span> potentialEnergy = <span style="color: #B452CD">0</span>;
+    <span style="color: #00688B; font-weight: bold">double</span> rSingleParticle = <span style="color: #B452CD">0</span>;
+    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
         rSingleParticle = <span style="color: #B452CD">0</span>;
-        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
             rSingleParticle += r(i,j)*r(i,j);
         }
         potentialEnergy -= charge / sqrt(rSingleParticle);
     }
     <span style="color: #228B22">// Contribution from electron-electron potential</span>
-    <span style="color: #a7a7a7; font-weight: bold">double</span> r12 = <span style="color: #B452CD">0</span>;
-    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
-        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = i + <span style="color: #B452CD">1</span>; j &lt; nParticles; j++) {
+    <span style="color: #00688B; font-weight: bold">double</span> r12 = <span style="color: #B452CD">0</span>;
+    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
+        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = i + <span style="color: #B452CD">1</span>; j &lt; nParticles; j++) {
             r12 = <span style="color: #B452CD">0</span>;
-            <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> k = <span style="color: #B452CD">0</span>; k &lt; nDimensions; k++) {
+            <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> k = <span style="color: #B452CD">0</span>; k &lt; nDimensions; k++) {
                 r12 += (r(i,k) - r(j,k)) * (r(i,k) - r(j,k));
             }
             potentialEnergy += <span style="color: #B452CD">1</span> / sqrt(r12);
@@ -1173,12 +1174,12 @@ VMCSolver::VMCSolver() :
     <span style="color: #8B008B; font-weight: bold">return</span> kineticEnergy + potentialEnergy;
 }
 
-<span style="color: #a7a7a7; font-weight: bold">double</span> VMCSolver::waveFunction(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r)
+<span style="color: #00688B; font-weight: bold">double</span> VMCSolver::waveFunction(<span style="color: #8B008B; font-weight: bold">const</span> mat &amp;r)
 {
-    <span style="color: #a7a7a7; font-weight: bold">double</span> argument = <span style="color: #B452CD">0</span>;
-    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
-        <span style="color: #a7a7a7; font-weight: bold">double</span> rSingleParticle = <span style="color: #B452CD">0</span>;
-        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
+    <span style="color: #00688B; font-weight: bold">double</span> argument = <span style="color: #B452CD">0</span>;
+    <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> i = <span style="color: #B452CD">0</span>; i &lt; nParticles; i++) {
+        <span style="color: #00688B; font-weight: bold">double</span> rSingleParticle = <span style="color: #B452CD">0</span>;
+        <span style="color: #8B008B; font-weight: bold">for</span>(<span style="color: #00688B; font-weight: bold">int</span> j = <span style="color: #B452CD">0</span>; j &lt; nDimensions; j++) {
             rSingleParticle += r(i,j) * r(i,j);
         }
         argument += sqrt(rSingleParticle);
@@ -1214,14 +1215,14 @@ VMCSolver::VMCSolver() :
 <span style="color: #1e889b">#define EPS 1.2e-7</span>
 <span style="color: #1e889b">#define RNMX (1.0-EPS)</span>
 
-<span style="color: #a7a7a7; font-weight: bold">double</span> ran2(<span style="color: #a7a7a7; font-weight: bold">long</span> *idum)
+<span style="color: #00688B; font-weight: bold">double</span> ran2(<span style="color: #00688B; font-weight: bold">long</span> *idum)
 {
-  <span style="color: #a7a7a7; font-weight: bold">int</span>            j;
-  <span style="color: #a7a7a7; font-weight: bold">long</span>           k;
-  <span style="color: #8B008B; font-weight: bold">static</span> <span style="color: #a7a7a7; font-weight: bold">long</span>    idum2 = <span style="color: #B452CD">123456789</span>;
-  <span style="color: #8B008B; font-weight: bold">static</span> <span style="color: #a7a7a7; font-weight: bold">long</span>    iy=<span style="color: #B452CD">0</span>;
-  <span style="color: #8B008B; font-weight: bold">static</span> <span style="color: #a7a7a7; font-weight: bold">long</span>    iv[NTAB];
-  <span style="color: #a7a7a7; font-weight: bold">double</span>         temp;
+  <span style="color: #00688B; font-weight: bold">int</span>            j;
+  <span style="color: #00688B; font-weight: bold">long</span>           k;
+  <span style="color: #8B008B; font-weight: bold">static</span> <span style="color: #00688B; font-weight: bold">long</span>    idum2 = <span style="color: #B452CD">123456789</span>;
+  <span style="color: #8B008B; font-weight: bold">static</span> <span style="color: #00688B; font-weight: bold">long</span>    iy=<span style="color: #B452CD">0</span>;
+  <span style="color: #8B008B; font-weight: bold">static</span> <span style="color: #00688B; font-weight: bold">long</span>    iv[NTAB];
+  <span style="color: #00688B; font-weight: bold">double</span>         temp;
 
   <span style="color: #8B008B; font-weight: bold">if</span>(*idum &lt;= <span style="color: #B452CD">0</span>) {
     <span style="color: #8B008B; font-weight: bold">if</span>(-(*idum) &lt; <span style="color: #B452CD">1</span>) *idum = <span style="color: #B452CD">1</span>;
@@ -1269,7 +1270,7 @@ VMCSolver::VMCSolver() :
 <span style="color: #1e889b">#include</span> <span style="color: #228B22">&lt;iostream&gt;</span><span style="color: #1e889b"></span>
 <span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span> std;
 
-<span style="color: #a7a7a7; font-weight: bold">int</span> <span style="color: #008b45">main</span>()
+<span style="color: #00688B; font-weight: bold">int</span> <span style="color: #008b45">main</span>()
 {
     VMCSolver *solver = <span style="color: #8B008B; font-weight: bold">new</span> VMCSolver();
     solver-&gt;runMonteCarloIntegration();
@@ -1458,7 +1459,7 @@ magnitude, and all other eigenvalues are smaller.
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 1999-2017, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright --> &copy; 1999-2018, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
 </center>
 
 

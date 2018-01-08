@@ -1,6 +1,6 @@
 TITLE: Computational Physics Lectures: How to write a scientific project, with examples
 AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} at Department of Physics, University of Oslo & Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University
-DATE: 2017
+DATE: today
 
 !split
 ===== Overarching aims first  =====
@@ -94,7 +94,6 @@ The conventions and techniques outlined here will save you a lot of time when yo
  * An abstract where you give the main summary of your work
  * An introduction where you explain the aims and rationale for the physics case and  what you have done. At the end of the introduction you should give a brief summary of the structure of the report
  * Theoretical models and technicalities. This is the methods section
- * Code and implementation part. How the code is structured and the algorithms were implemented, selected benchmarks results
  * Results and discussion
  * Conclusions and perspectives
  * Appendix with extra material
@@ -124,7 +123,7 @@ You don't need to answer all questions in a chronological order.  When you write
 
 
 !split
-===== The report, discussion of methods and implementation part =====
+===== The report, discussion of methods =====
 !bblock What should I focus on? Methods sections
  * Describe the methods and algorithms
  * You need to explain how you implemented the methods and also say something about the structure of your algorithm and present some parts of your code
@@ -173,9 +172,9 @@ You can consider moving parts of the material from the methods section to the ap
 !split
 ===== Where do I find scientific articles, books etc and examples of reports  =====
 !bblock 
- * With an MSU IP number you can access freely all books and scientific journals available at our "University library":"http://www.lib.msu.edu/"
+ * With a UiO IP number you can access freely all books and scientific journals available at our "University library":"http://www.ub.uio.no/"
  * For scientific articles, go to for example the journal "Physical Review Letters of the American Physical Society":"http://journals.aps.org/prl/issues/117/10"
- * For project examples and how we give feedback on projects, go to the project folder of the course and click on the "ProjectExample link":"https://github.com/CompPhysics/ComputationalPhysicsMSU/tree/master/doc/Projects/ProjectExample".
+ * For project examples and how we give feedback on projects, go to the project folder of the course and click on the "ProjectExample link":"https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Projects/ProjectExample".
 !eblock
   
 

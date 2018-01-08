@@ -1,6 +1,6 @@
 TITLE: Summary of course and the final oral exam
 AUTHOR: Morten Hjorth-Jensen  {copyright, 1999-present|CC BY-NC} Email morten.hjorth-jensen@fys.uio.no at Department of Physics and Center of Mathematics for Applications, University of Oslo & National Superconducting Cyclotron Laboratory, Michigan State University
-DATE: Spring 2017
+DATE: Spring 2018
 
 
 

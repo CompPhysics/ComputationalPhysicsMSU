@@ -15,7 +15,7 @@ Automatically generated HTML file from DocOnce source
 <script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<link href="http://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
+<link href="https://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
 <style type="text/css">
 h1 {color: #b58900;}  /* yellow */
 /* h1 {color: #cb4b16;}  orange */
@@ -56,8 +56,8 @@ div { text-align: justify; text-justify: inter-word; }
 </style>
 
 
-<script src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
-<script src="http://sagecell.sagemath.org/embedded_sagecell.js"></script>
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script>
 <link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
 <script>
 $(function () {
@@ -75,16 +75,19 @@ $(function () {
 
 <!-- tocinfo
 {'highest level': 2,
- 'sections': [('Why Markov chains, Brownian motion and the Metropolis algorithm',
+ 'sections': [('Why Markov chains, Brownian motion and the Metropolis '
+               'algorithm',
                2,
                None,
                '___sec0'),
-              ('Why Markov chains, Brownian motion and the Metropolis algorithm',
+              ('Why Markov chains, Brownian motion and the Metropolis '
+               'algorithm',
                2,
                None,
                '___sec1'),
               ('Brownian motion and Markov processes', 2, None, '___sec2'),
-              ('Brownian motion and Markov processes, Ergodicity and Detailed balance',
+              ('Brownian motion and Markov processes, Ergodicity and Detailed '
+               'balance',
                2,
                None,
                '___sec3'),
@@ -115,10 +118,7 @@ $(function () {
                2,
                None,
                '___sec15'),
-              ('An Illustrative Example, iterative steps',
-               2,
-               None,
-               '___sec16'),
+              ('An Illustrative Example, iterative steps', 2, None, '___sec16'),
               ('An Illustrative Example, what does it mean?',
                2,
                None,
@@ -227,10 +227,7 @@ $(function () {
               ('Brief Summary', 2, None, '___sec44'),
               ('Diffusion', 2, None, '___sec45'),
               ('Diffusion Equation', 2, None, '___sec46'),
-              ('Diffusion Equation, continuity equation',
-               2,
-               None,
-               '___sec47'),
+              ('Diffusion Equation, continuity equation', 2, None, '___sec47'),
               ('Diffusion Equation, expectation values', 2, None, '___sec48'),
               ('Diffusion Equation, other expectation values',
                2,
@@ -247,16 +244,14 @@ $(function () {
                None,
                '___sec53'),
               ('Diffusion Equation, interpretation', 2, None, '___sec54'),
-              ('Diffusion Equation, simple illustration',
-               2,
-               None,
-               '___sec55'),
+              ('Diffusion Equation, simple illustration', 2, None, '___sec55'),
               ('Random Walks', 2, None, '___sec56'),
               ('Random Walks', 2, None, '___sec57'),
               ('Random Walks', 2, None, '___sec58'),
               ('Random Walks, simple program', 2, None, '___sec59'),
               ('Random walk', 2, None, '___sec60'),
-              ('Simple python code with visualization of one-dimensional random walk',
+              ('Simple python code with visualization of one-dimensional '
+               'random walk',
                2,
                None,
                '___sec61')]}
@@ -274,8 +269,8 @@ MathJax.Hub.Config({
   }
 });
 </script>
-<script type="text/javascript"
- src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" async
+ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
@@ -301,7 +296,7 @@ MathJax.Hub.Config({
 <center>[2] <b>Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
 <br>
 <p>
-<center><h4>2017</h4></center> <!-- date -->
+<center><h4>Jan 8, 2018</h4></center> <!-- date -->
 <br>
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
@@ -889,9 +884,9 @@ for, in this case, a \( 5\times 5 \) matrix. The largest eigenvalue is \( 1 \).
 <span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span> arma;
 <span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span> std;
 
-<span style="color: #a7a7a7; font-weight: bold">int</span> <span style="color: #008b45">main</span>()
+<span style="color: #00688B; font-weight: bold">int</span> <span style="color: #008b45">main</span>()
 {
-  <span style="color: #a7a7a7; font-weight: bold">int</span> dim = <span style="color: #B452CD">5</span>;
+  <span style="color: #00688B; font-weight: bold">int</span> dim = <span style="color: #B452CD">5</span>;
   mat W = zeros&lt;mat&gt;(dim,dim);
   vec wold = zeros&lt;mat&gt;(dim);
   vec wnew = zeros&lt;mat&gt;(dim);
@@ -904,10 +899,10 @@ for, in this case, a \( 5\times 5 \) matrix. The largest eigenvalue is \( 1 \).
   W(<span style="color: #B452CD">2</span>,<span style="color: #B452CD">0</span>) = <span style="color: #B452CD">0.5</span>; W(<span style="color: #B452CD">2</span>,<span style="color: #B452CD">1</span>) = <span style="color: #B452CD">1.0</span>; W(<span style="color: #B452CD">2</span>,<span style="color: #B452CD">2</span>) = <span style="color: #B452CD">0.</span>; W(<span style="color: #B452CD">2</span>,<span style="color: #B452CD">3</span>) = <span style="color: #B452CD">0.5</span>; W(<span style="color: #B452CD">2</span>,<span style="color: #B452CD">4</span>) = <span style="color: #B452CD">0.</span>;       
   W(<span style="color: #B452CD">3</span>,<span style="color: #B452CD">0</span>) = <span style="color: #B452CD">0.0</span>; W(<span style="color: #B452CD">3</span>,<span style="color: #B452CD">1</span>) = <span style="color: #B452CD">0.</span>; W(<span style="color: #B452CD">3</span>,<span style="color: #B452CD">2</span>) = <span style="color: #B452CD">0.25</span>; W(<span style="color: #B452CD">3</span>,<span style="color: #B452CD">3</span>) = <span style="color: #B452CD">0.</span>;  W(<span style="color: #B452CD">3</span>,<span style="color: #B452CD">4</span>) = <span style="color: #B452CD">0.</span>;      
   W(<span style="color: #B452CD">4</span>,<span style="color: #B452CD">0</span>) = <span style="color: #B452CD">0.5</span>; W(<span style="color: #B452CD">4</span>,<span style="color: #B452CD">1</span>) = <span style="color: #B452CD">0.</span>; W(<span style="color: #B452CD">4</span>,<span style="color: #B452CD">2</span>) = <span style="color: #B452CD">0.25</span>; W(<span style="color: #B452CD">4</span>,<span style="color: #B452CD">3</span>) = <span style="color: #B452CD">0.5</span>;  W(<span style="color: #B452CD">4</span>,<span style="color: #B452CD">4</span>) = <span style="color: #B452CD">1.0</span>;      
-  <span style="color: #a7a7a7; font-weight: bold">double</span> eps = <span style="color: #B452CD">1.0E-10</span>;
+  <span style="color: #00688B; font-weight: bold">double</span> eps = <span style="color: #B452CD">1.0E-10</span>;
   W.print(<span style="color: #CD5555">&quot;W =&quot;</span>);
-  <span style="color: #a7a7a7; font-weight: bold">double</span> difference  = norm(wold-wnew, <span style="color: #B452CD">2</span>);
-  <span style="color: #a7a7a7; font-weight: bold">int</span> count = <span style="color: #B452CD">0</span>; 
+  <span style="color: #00688B; font-weight: bold">double</span> difference  = norm(wold-wnew, <span style="color: #B452CD">2</span>);
+  <span style="color: #00688B; font-weight: bold">int</span> count = <span style="color: #B452CD">0</span>; 
   <span style="color: #8B008B; font-weight: bold">do</span>{
     <span style="color: #228B22">// Multiplying the old vector with the transition probability</span>
     count += <span style="color: #B452CD">1</span>; 
@@ -2168,21 +2163,21 @@ random walk (not listed in the main text) is found under programs/chapter12/prog
 <span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span>  std;
 
 <span style="color: #228B22">// Function to read in data from screen, note call by reference</span>
-<span style="color: #a7a7a7; font-weight: bold">void</span> <span style="color: #008b45">initialise</span>(<span style="color: #a7a7a7; font-weight: bold">int</span>&amp;, <span style="color: #a7a7a7; font-weight: bold">int</span>&amp;, <span style="color: #a7a7a7; font-weight: bold">double</span>&amp;) ;
+<span style="color: #00688B; font-weight: bold">void</span> <span style="color: #008b45">initialise</span>(<span style="color: #00688B; font-weight: bold">int</span>&amp;, <span style="color: #00688B; font-weight: bold">int</span>&amp;, <span style="color: #00688B; font-weight: bold">double</span>&amp;) ;
 <span style="color: #228B22">// The Mc sampling for random walks</span>
-<span style="color: #a7a7a7; font-weight: bold">void</span>  <span style="color: #008b45">mc_sampling</span>(<span style="color: #a7a7a7; font-weight: bold">int</span>, <span style="color: #a7a7a7; font-weight: bold">int</span>, <span style="color: #a7a7a7; font-weight: bold">double</span>, <span style="color: #a7a7a7; font-weight: bold">int</span> *, <span style="color: #a7a7a7; font-weight: bold">int</span> *);
+<span style="color: #00688B; font-weight: bold">void</span>  <span style="color: #008b45">mc_sampling</span>(<span style="color: #00688B; font-weight: bold">int</span>, <span style="color: #00688B; font-weight: bold">int</span>, <span style="color: #00688B; font-weight: bold">double</span>, <span style="color: #00688B; font-weight: bold">int</span> *, <span style="color: #00688B; font-weight: bold">int</span> *);
 <span style="color: #228B22">// prints to screen the results of the calculations </span>
-<span style="color: #a7a7a7; font-weight: bold">void</span>  <span style="color: #008b45">output</span>(<span style="color: #a7a7a7; font-weight: bold">int</span>, <span style="color: #a7a7a7; font-weight: bold">int</span>, <span style="color: #a7a7a7; font-weight: bold">int</span> *, <span style="color: #a7a7a7; font-weight: bold">int</span> *);
+<span style="color: #00688B; font-weight: bold">void</span>  <span style="color: #008b45">output</span>(<span style="color: #00688B; font-weight: bold">int</span>, <span style="color: #00688B; font-weight: bold">int</span>, <span style="color: #00688B; font-weight: bold">int</span> *, <span style="color: #00688B; font-weight: bold">int</span> *);
 
-<span style="color: #a7a7a7; font-weight: bold">int</span> <span style="color: #008b45">main</span>()
+<span style="color: #00688B; font-weight: bold">int</span> <span style="color: #008b45">main</span>()
 {
-  <span style="color: #a7a7a7; font-weight: bold">int</span> max_trials, number_walks; 
-  <span style="color: #a7a7a7; font-weight: bold">double</span> move_probability;
+  <span style="color: #00688B; font-weight: bold">int</span> max_trials, number_walks; 
+  <span style="color: #00688B; font-weight: bold">double</span> move_probability;
   <span style="color: #228B22">// Read in data </span>
   initialise(max_trials, number_walks, move_probability) ;
-  <span style="color: #a7a7a7; font-weight: bold">int</span> *walk_cumulative = <span style="color: #8B008B; font-weight: bold">new</span> <span style="color: #a7a7a7; font-weight: bold">int</span> [number_walks+<span style="color: #B452CD">1</span>];
-  <span style="color: #a7a7a7; font-weight: bold">int</span> *walk2_cumulative = <span style="color: #8B008B; font-weight: bold">new</span> <span style="color: #a7a7a7; font-weight: bold">int</span> [number_walks+<span style="color: #B452CD">1</span>];
-  <span style="color: #8B008B; font-weight: bold">for</span> (<span style="color: #a7a7a7; font-weight: bold">int</span> walks = <span style="color: #B452CD">1</span>; walks &lt;= number_walks; walks++){   
+  <span style="color: #00688B; font-weight: bold">int</span> *walk_cumulative = <span style="color: #8B008B; font-weight: bold">new</span> <span style="color: #00688B; font-weight: bold">int</span> [number_walks+<span style="color: #B452CD">1</span>];
+  <span style="color: #00688B; font-weight: bold">int</span> *walk2_cumulative = <span style="color: #8B008B; font-weight: bold">new</span> <span style="color: #00688B; font-weight: bold">int</span> [number_walks+<span style="color: #B452CD">1</span>];
+  <span style="color: #8B008B; font-weight: bold">for</span> (<span style="color: #00688B; font-weight: bold">int</span> walks = <span style="color: #B452CD">1</span>; walks &lt;= number_walks; walks++){   
     walk_cumulative[walks] = walk2_cumulative[walks] = <span style="color: #B452CD">0</span>;
   } <span style="color: #228B22">// end initialization of vectors</span>
   <span style="color: #228B22">// Do the mc sampling  </span>
@@ -2198,7 +2193,7 @@ random walk (not listed in the main text) is found under programs/chapter12/prog
 <span style="color: #a61717; background-color: #e3d2d2">\</span>end{lstlisting}
 The  input and output functions are 
 <span style="color: #a61717; background-color: #e3d2d2">\</span>begin{lstlisting} 
-<span style="color: #a7a7a7; font-weight: bold">void</span> initialise(<span style="color: #a7a7a7; font-weight: bold">int</span>&amp; max_trials, <span style="color: #a7a7a7; font-weight: bold">int</span>&amp; number_walks, <span style="color: #a7a7a7; font-weight: bold">double</span>&amp; move_probability) 
+<span style="color: #00688B; font-weight: bold">void</span> initialise(<span style="color: #00688B; font-weight: bold">int</span>&amp; max_trials, <span style="color: #00688B; font-weight: bold">int</span>&amp; number_walks, <span style="color: #00688B; font-weight: bold">double</span>&amp; move_probability) 
 {
   cout &lt;&lt; <span style="color: #CD5555">&quot;Number of Monte Carlo trials =&quot;</span>; 
   cin &gt;&gt; max_trials;
@@ -2224,15 +2219,15 @@ of moving to the left or to the right by generating a random number.
 <p>
 
 <!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span></span><span style="color: #a7a7a7; font-weight: bold">void</span> <span style="color: #008b45">mc_sampling</span>(<span style="color: #a7a7a7; font-weight: bold">int</span> max_trials, <span style="color: #a7a7a7; font-weight: bold">int</span> number_walks, 
-                 <span style="color: #a7a7a7; font-weight: bold">double</span> move_probability, <span style="color: #a7a7a7; font-weight: bold">int</span> *walk_cumulative, 
-                 <span style="color: #a7a7a7; font-weight: bold">int</span> *walk2_cumulative)
+<div class="highlight" style="background: #eee8d5"><pre style="line-height: 125%"><span></span><span style="color: #00688B; font-weight: bold">void</span> <span style="color: #008b45">mc_sampling</span>(<span style="color: #00688B; font-weight: bold">int</span> max_trials, <span style="color: #00688B; font-weight: bold">int</span> number_walks, 
+                 <span style="color: #00688B; font-weight: bold">double</span> move_probability, <span style="color: #00688B; font-weight: bold">int</span> *walk_cumulative, 
+                 <span style="color: #00688B; font-weight: bold">int</span> *walk2_cumulative)
 {
-  <span style="color: #a7a7a7; font-weight: bold">long</span> idum;
+  <span style="color: #00688B; font-weight: bold">long</span> idum;
   idum=-<span style="color: #B452CD">1</span>;  <span style="color: #228B22">// initialise random number generator</span>
-  <span style="color: #8B008B; font-weight: bold">for</span> (<span style="color: #a7a7a7; font-weight: bold">int</span> trial=<span style="color: #B452CD">1</span>; trial &lt;= max_trials; trial++){
-    <span style="color: #a7a7a7; font-weight: bold">int</span> position = <span style="color: #B452CD">0</span>;
-    <span style="color: #8B008B; font-weight: bold">for</span> (<span style="color: #a7a7a7; font-weight: bold">int</span> walks = <span style="color: #B452CD">1</span>; walks &lt;= number_walks; walks++){   
+  <span style="color: #8B008B; font-weight: bold">for</span> (<span style="color: #00688B; font-weight: bold">int</span> trial=<span style="color: #B452CD">1</span>; trial &lt;= max_trials; trial++){
+    <span style="color: #00688B; font-weight: bold">int</span> position = <span style="color: #B452CD">0</span>;
+    <span style="color: #8B008B; font-weight: bold">for</span> (<span style="color: #00688B; font-weight: bold">int</span> walks = <span style="color: #B452CD">1</span>; walks &lt;= number_walks; walks++){   
       <span style="color: #8B008B; font-weight: bold">if</span> (ran0(&amp;idum) &lt;= move_probability) {
 	position += <span style="color: #B452CD">1</span>;
       } 
@@ -2354,7 +2349,7 @@ plt.show()
 
 
 <center style="font-size:80%">
-<!-- copyright --> &copy; 1999-2017, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright --> &copy; 1999-2018, Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
 </center>
 
 

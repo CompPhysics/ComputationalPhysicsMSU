@@ -1,6 +1,6 @@
 TITLE: Computational Physics Lectures: Programming aspects, object orientation in C++ and Fortran
 AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} at Department of Physics, University of Oslo & Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University
-DATE: 2017
+DATE: today
 
 
 !split
@@ -153,7 +153,7 @@ imaginary part and performing algebraic operations such as adding or
 multiplying two complex numbers.
 
 !split
-===== "Programming classes":"https://github.com/CompPhysics/ComputationalPhysicsMSU/tree/master/doc/Programs/OOExamples/ComplexClass" =====
+===== Programming classes =====
 
 !bc cppcod
 #include "Complex.h"
@@ -178,7 +178,7 @@ zero), $c=5.0-\imath 2.3$ and $d=b$.  Thereafter we have defined standard algebr
 of the class which allows us to print out the real and imaginary part of a given variable.
 
 !split
-===== "Programming classes":"https://github.com/CompPhysics/ComputationalPhysicsMSU/tree/master/doc/Programs/OOExamples/ComplexClass" =====
+===== Programming classes =====
 
 !bc cppcod
 class Complex
@@ -195,7 +195,7 @@ public:
 !ec
 
 !split
-===== "Programming classes":"https://github.com/CompPhysics/ComputationalPhysicsMSU/tree/master/doc/Programs/OOExamples/ComplexClass" =====
+===== Programming classes =====
 
 !bc cppcod
   ~Complex () {}                        // destructor
@@ -336,7 +336,7 @@ more readable and close to eventual equations we want to code.  To
 achieve this we need to extend the definition of operators.
 
 !split
-===== "Programming classes":"https://github.com/CompPhysics/ComputationalPhysicsMSU/tree/master/doc/Programs/OOExamples/ComplexClass" =====
+===== Programming classes =====
 
 Let us study the declarations in our complex class.
 In our main function we have a statement like `d = b;`, which means
@@ -611,13 +611,13 @@ int main(){
 
 
 !split
-===== "A matrix-vector class, first its usage":"https://github.com/CompPhysics/ComputationalPhysicsMSU/tree/master/doc/Programs/OOExamples/MatrixVectorClass" =====
+===== A matrix-vector class, first its usage =====
 !bc cppcod
 #include <cmath>
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include "vectorclass.h"
+#include "/Users/hjensen/Teaching/fys4411/programs/cgm/vectorclass.h"
 
 using namespace  std;
 
@@ -721,7 +721,7 @@ int main(int  argc, char * argv[]){
 
 
 !split
-===== "A matrix-vector class, the class definitions themselves":"https://github.com/CompPhysics/ComputationalPhysicsMSU/tree/master/doc/Programs/OOExamples/MatrixVectorClass" =====
+===== A matrix-vector class, the class definitions themselves =====
 
 !bc cppcod
 #ifndef _vectorclass
