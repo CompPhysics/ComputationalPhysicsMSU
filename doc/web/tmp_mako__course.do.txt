@@ -290,7 +290,7 @@ formulas in HTML or ipython notebook files.
 !split
 ===== Projects Spring 2018 =====
 
-=== Project 1, deadline February 6 ===
+=== Project 1, deadline February 5 ===
  * LaTeX and PDF:
      * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project1/pdf/Project1.tex"
      * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project1/pdf/Project1.pdf"
