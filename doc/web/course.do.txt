@@ -73,6 +73,11 @@ ${text_types(ch)}
 
 
 !split
+===== Teach yourself C++ =====
+ * HTML format only:
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysics/doc/pub/learningcpp/html/learningcpp-bs.html"
+
+!split
 ===== Projects Spring 2018 =====
 
 === Project 1, deadline February 5 ===
