@@ -1,13 +1,14 @@
 TITLE: PHY480 and PHY905 (sec 002) preliminary survey
 AUTHOR: Department of Physics and Astronomy, Michigan State University
-DATE: Spring semester 2017
+DATE: Spring semester 2018
 
 
 An essential part of this course is to enable you to do science via numerical experiments and develop projects which allow you to study complex systems. The aim is to enhance what we call algorithmic thinking. With algorithm we mean a finite set of unambiguous instructions that, given some set of initial conditions, can be performed in a prescribed sequence to achieve a certain goal.
 
 _Computing means solving scientific problems using computers. It covers numerical as well as symbolic computing. Computing is also about developing an understanding of the scientific process by enhancing algorithmic thinking when solving problems._
+"By 2020, it is expected that one of every two jobs in the STEM fields will be in computing":"http://pathways.acm.org/executive-summary.html" (Association for Computing Machinery, 2013). Computation is an essential and cross-cutting element of all STEM disciplines
 
-And this  competence is about:
+Competence about computing and computations is thus an important part of your education. This competence includes topics like (the list here is buy no means exhaustive):
 
 * derivation, verification, and implementation of algorithms
 * understanding what can go wrong with algorithms
@@ -17,7 +18,6 @@ And this  competence is about:
 * algorithmic thinking for gaining deeper insights about scientific problems
 
 All these elements (and many more) will hopefully aid you in maturing and gaining a better understanding of the scientific process *per se*.    _Writing good reports is a central element in achieving such insights_.
-When we use the words computing or computations in this course, it is the above topics we have in mind. 
 
 What follows here are some simple questions about your computing competences, your background and your interests. Hopefully this information will allow us to tailor the course to your interests and background.
 
@@ -31,23 +31,27 @@ Which programming background do you have?
 
 
 !bquestion
-Which programming languages have you used and/or are familiar with?
- o Basic
- o Fortran 77
- o Fortran 90/95/2003/2008
- o High-performance Fortran (HPF)
+Which programming languages have you used and/or are familiar with? For a list over the top programming languages in industry and research, see the monthly list made the "German company TIOBE":"https://www.tiobe.com/tiobe-index/". Here we included both compiled and interpreted languages.
  o C
- o C++  (specify if you have experience with C++11 and C++14)
+ o C++  (specify if you have experience with C++11, C++14 and C++17)
+ o Java
+ o Python
+ o R
+ o PHP
+ o Ruby
+ o Swift
  o Matlab/Octave
  o Maple
  o Mathematica
  o Tcl
  o Perl
- o Python/ipython
  o Common Lisp
  o Smalltalk
  o Julia
- o Java
+ o Basic
+ o Fortran 77
+ o Fortran 90/95/2003/2008
+ o High-performance Fortran (HPF)
  o Other (please specify)
  o I have not used any programming language
 !equestion
@@ -112,7 +116,7 @@ If you have followed or plan to follow some computational science course, please
 
 
 !bquestion
-Have you done any research? And if so, have you done computations which involded writing smaller or larger fractions of code? 
+Have you done any research which involves computations? And if so, have you done computations which involed writing smaller or larger fractions of code? 
 
 !equestion
 
