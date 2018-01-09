@@ -292,13 +292,13 @@ formulas in HTML or ipython notebook files.
 
 === Project 1, deadline February 6 ===
  * LaTeX and PDF:
-     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project1/pdf/Project1.tex"
-     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project1/pdf/Project1.pdf"
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project1/pdf/Project1.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project1/pdf/Project1.pdf"
  * HTML:
-   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project1/html/Project1.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project1/html/Project1-bs.html"
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project1/html/Project1.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project1/html/Project1-bs.html"
  * iPython notebook:
-   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2017/Project1/ipynb/Project1.ipynb"
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project1/ipynb/Project1.ipynb"
 
 
 
