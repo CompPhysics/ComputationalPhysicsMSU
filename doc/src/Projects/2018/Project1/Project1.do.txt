@@ -130,6 +130,11 @@ solution in the Poisson equation).  We will compare
 our numerical solution with this result in the next exercise. 
 
 === Project 1 b): ===
+
+Before we proceed with the solution of the differential equation, you should now plan the organization of your data flow. Here you will find it convenient to define vectors that will contain the matrix elements, the solution to the problem and the function $f(x)$ when discretized. You should also plan on to read input data, whether you do this from the command line or from a selected file. We recommend strongly that you use dynamical memory allocation.
+An example of a C++ program which reads from the command line various input parameters can "be found here":"https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Projects/2018/Project1/CodeExamples/TridiagonalSimple.cpp"
+
+=== Project 1 c): ===
  
 We can rewrite our matrix $\mathbf{A}$ in terms of one-dimensional vectors $a,b,c$  
 of length $1:n$. 
@@ -182,12 +187,12 @@ $n=1000$ grid points.
 Compare your results (make plots) with the closed-form solution for the different number of grid points  in the 
 interval $x\in(0,1)$.  The different number of grid points corresponds to different step lengths $h$.
 
-=== Project 1 c): === 
+=== Project 1 d): === 
 
 Use thereafter the fact that the matrix has identical matrix elements along the diagonal and identical (but different) values for the non-diagonal elements. Specialize your algorithm to the special case and find the number of floating point operations
 for this specific tri-diagonal matrix. Compare the CPU time with the general algorithm from the previous point for matrices up to  $n=10^6$ grid points. 
 
-=== Project 1 d): === 
+=== Project 1 e): === 
 
 Compute the relative error  in the data set $i=1,\dots, n$,by setting up
 
@@ -202,9 +207,9 @@ For each step length extract the max value of the relative error.
 Try to increase $n$ to $n=10^7$ or higher.  Make a table of the results and 
 comment your results. 
 
-=== Project 1 e): === 
+=== Project 1 f): === 
 Compare your results with those from the LU decomposition codes for the matrix of sizes $10\times 10$, $100\times 100$ and
-$1000\times 1000$. Here you should use the library functions provided  on the webpage of the course. Alternatively, if you use armadillo as a library, you can use the similar function for LU decomposition.  The armadillo function for the LU decomposition is called $LU$ while the function for solving linear sets of equations is called $solve$.
+$1000\times 1000$. Here you should use the library functions provided  at "the webpage of the course":"https://github.com/CompPhysics/ComputationalPhysicsMSU/tree/master/doc/Programs/LecturePrograms/programs/cppLibrary". Alternatively, if you use armadillo as a library, you can use the similar function for LU decomposition.  The armadillo function for the LU decomposition is called $LU$ while the function for solving linear sets of equations is called $solve$.
 Use for example the unix function *time* when you run your codes 
 and compare the time usage between LU decomposition and  your
 tridiagonal solver.   Alternatively, you can use the functions in C++, Fortran or Python that measure the time used. 

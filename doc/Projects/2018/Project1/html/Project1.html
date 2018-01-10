@@ -45,11 +45,12 @@ div { text-align: justify; text-justify: inter-word; }
               ('Project 1 c):', 3, None, '___sec3'),
               ('Project 1 d):', 3, None, '___sec4'),
               ('Project 1 e):', 3, None, '___sec5'),
-              ('Introduction to numerical projects', 2, None, '___sec6'),
+              ('Project 1 f):', 3, None, '___sec6'),
+              ('Introduction to numerical projects', 2, None, '___sec7'),
               ('Format for electronic delivery of report and programs',
                2,
                None,
-               '___sec7')]}
+               '___sec8')]}
 end of tocinfo -->
 
 <body>
@@ -230,6 +231,12 @@ our numerical solution with this result in the next exercise.
 <h3 id="___sec2">Project 1 b): </h3>
 
 <p>
+Before we proceed with the solution of the differential equation, you should now plan the organization of your data flow. Here you will find it convenient to define vectors that will contain the matrix elements, the solution to the problem and the function \( f(x) \) when discretized. You should also plan on to read input data, whether you do this from the command line or from a selected file. We recommend strongly that you use dynamical memory allocation.
+An example of a C++ program which reads from the command line various input parameters can <a href="https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Projects/2018/Project1/CodeExamples/TridiagonalSimple.cpp" target="_blank">be found here</a>
+
+<h3 id="___sec3">Project 1 c): </h3>
+
+<p>
 We can rewrite our matrix \( \mathbf{A} \) in terms of one-dimensional vectors \( a,b,c \)  
 of length \( 1:n \). 
 Our linear equation reads
@@ -281,13 +288,13 @@ Then you should code the above algorithm and solve the problem for matrices of t
 Compare your results (make plots) with the closed-form solution for the different number of grid points  in the 
 interval \( x\in(0,1) \).  The different number of grid points corresponds to different step lengths \( h \).
 
-<h3 id="___sec3">Project 1 c): </h3>
+<h3 id="___sec4">Project 1 d): </h3>
 
 <p>
 Use thereafter the fact that the matrix has identical matrix elements along the diagonal and identical (but different) values for the non-diagonal elements. Specialize your algorithm to the special case and find the number of floating point operations
 for this specific tri-diagonal matrix. Compare the CPU time with the general algorithm from the previous point for matrices up to  \( n=10^6 \) grid points.
 
-<h3 id="___sec4">Project 1 d): </h3>
+<h3 id="___sec5">Project 1 e): </h3>
 
 <p>
 Compute the relative error  in the data set \( i=1,\dots, n \),by setting up
@@ -302,10 +309,10 @@ For each step length extract the max value of the relative error.
 Try to increase \( n \) to \( n=10^7 \) or higher.  Make a table of the results and 
 comment your results.
 
-<h3 id="___sec5">Project 1 e): </h3>
+<h3 id="___sec6">Project 1 f): </h3>
 
 Compare your results with those from the LU decomposition codes for the matrix of sizes \( 10\times 10 \), \( 100\times 100 \) and
-\( 1000\times 1000 \). Here you should use the library functions provided  on the webpage of the course. Alternatively, if you use armadillo as a library, you can use the similar function for LU decomposition.  The armadillo function for the LU decomposition is called \( LU \) while the function for solving linear sets of equations is called \( solve \).
+\( 1000\times 1000 \). Here you should use the library functions provided  at <a href="https://github.com/CompPhysics/ComputationalPhysicsMSU/tree/master/doc/Programs/LecturePrograms/programs/cppLibrary" target="_blank">the webpage of the course</a>. Alternatively, if you use armadillo as a library, you can use the similar function for LU decomposition.  The armadillo function for the LU decomposition is called \( LU \) while the function for solving linear sets of equations is called \( solve \).
 Use for example the unix function <em>time</em> when you run your codes 
 and compare the time usage between LU decomposition and  your
 tridiagonal solver.   Alternatively, you can use the functions in C++, Fortran or Python that measure the time used.
@@ -360,7 +367,7 @@ Similarly, in Fortran, this simple example shows how to compute the elapsed time
 <span style="color: #008000; font-weight: bold">END PROGRAM </span><span style="color: #008000">time</span>
 </pre></div>
 
-<h2 id="___sec6">Introduction to numerical projects </h2>
+<h2 id="___sec7">Introduction to numerical projects </h2>
 
 <p>
 Here follows a brief recipe and recommendation on how to write a report for each
@@ -378,7 +385,7 @@ project.
   <li> Try to establish a practice where you log your work at the  computerlab. You may find such a logbook very handy at later stages in your work, especially when you don't properly remember  what a previous test version  of your program did. Here you could also record  the time spent on solving the exercise, various algorithms you may have tested or other topics which you feel worthy of mentioning.</li>
 </ul>
 
-<h2 id="___sec7">Format for electronic delivery of report and programs </h2>
+<h2 id="___sec8">Format for electronic delivery of report and programs </h2>
 
 <p>
 The preferred format for the report is a PDF file. You can also use DOC or postscript formats or as an ipython notebook file.  As programming language we prefer that you choose between C/C++, Fortran2008 or Python. The following prescription should be followed when preparing the report:
