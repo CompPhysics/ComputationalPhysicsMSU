@@ -305,6 +305,16 @@ formulas in HTML or ipython notebook files.
  * iPython notebook:
    * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project1/ipynb/Project1.ipynb"
 
+=== Project 2, deadline March 5 ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project2/pdf/Project2.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project2/pdf/Project2.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project2/html/Project2.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project2/html/Project2-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project2/ipynb/Project2.ipynb"
+
 
 
 !split
