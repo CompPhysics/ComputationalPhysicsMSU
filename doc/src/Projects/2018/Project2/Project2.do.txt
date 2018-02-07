@@ -4,21 +4,46 @@ DATE: Spring semester 2018
 
 
 
-===== Schroedinger's equation for two electrons in a three-dimensional harmonic oscillator well  =====
+===== Eigenvalue problems, from the equations of a buckling beam to Schroedinger's equation for two electrons in a three-dimensional harmonic oscillator well  =====
 
 === Introduction ===
-The aim of this project is to solve Schroedinger's equation for two
-electrons in a three-dimensional harmonic oscillator well with and
-without a repulsive Coulomb interaction.  Your task is to solve this
-equation by reformulating it in a discretized form as an eigenvalue
-equation to be solved with Jacobi's method. To achieve this you will
-have to write your own code which implements Jacobi's method.
+
+The aim of this project is to develop your own code for solving eigenvalue problems. The matrix to diagonalize is the same as the one we encountered in project one, a so-called tridiagonal Toeplitz matrix. This matrix has analytical eigenpairs (eigenvalues and eigenvectors) and gives us an excellent testing ground for our algorithms. In this project we will develop an eigenvalue solver based on Jacobi's method. The project will also introduce you to units tests and we will compare our results against other eigenvalue solvers (from LAPACK and/or numpy). 
+
+This project aims also at introducing to you the concept of scaling the equations. This means often either making various variables dimensionless or introducing units which are more convenient. 
+
+We will start with the two-point boundary value problem of a buckling beam or a spring fastened at both ends. This is the problem which has analytical solutions. Thereafter, by simply adding a new variable along the diagonal elements, we can study quantum mechanical problems. In particular, we will study the harmonic oscillator problem in three dimensions, with one or two electrons. For the latter case we can study the role of the repulsive Coulomb interaction and extract interesting physics results. 
 
 Electrons confined in small areas in semiconductors, so-called quantum
 dots, form a hot research area in modern solid-state physics, with
 applications spanning from such diverse fields as quantum
 nano-medicine to the contruction of quantum gates. 
 The article on quantum computing with quantum dots by "Loss and DiVincenzo":"http://journals.aps.org/pra/abstract/10.1103/PhysRevA.57.120" is an excellent read.
+
+
+
+=== The buckling beam problem ===
+
+We start with the following differential equation, namely 
+!bt
+\[
+\gamma \frac{d^2 u(x)}{dx^2} = -F u(x),
+\]
+!et
+where $u(x)$ is the vertical displacement of the beam in the $y$ direction. 
+The beam has length $L$, $x\in [0,L]$ and $F$ is a force applied at $(L,0)$ in the direction towards the origin. 
+The parameter $\gamma$ is a constant defined by properties like the rigidity of the beam while $F$. 
+We apply again so-called Dirichlet boundary conditions and set $u(0)=u(L)=0$.
+
+In this specific case all parameters $\gamma$, $F$ and $L$ are known. We define then a dimensional variable
+!bt
+\[
+ \rho = \frac{x}{L}, 
+\]
+!et
+meaning that we have $\rho \in [0,1]$. 
+
+=== Extending our machinery to quantum mechanics ===
 
 Here we will assume that these electrons move in a three-dimensional harmonic
 oscillator potential (they are confined by for example quadrupole fields)
