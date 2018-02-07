@@ -48,7 +48,8 @@ div { text-align: justify; text-justify: inter-word; }
               ('Introduction', 3, None, '___sec1'),
               ('The buckling beam problem', 3, None, '___sec2'),
               ('Project 2 a): Mathematical intermezzo', 3, None, '___sec3'),
-              ('Project 2 b): Setting up a code for the non-interacting case',
+              ('Project 2 b): Setting up a code for tridiagonal Toeplitz '
+               'matrix',
                3,
                None,
                '___sec4'),
@@ -151,7 +152,7 @@ $$
 
 where \( u(x) \) is the vertical displacement of the beam in the \( y \) direction. 
 The beam has length \( L \), \( x\in [0,L] \) and \( F \) is a force applied at \( (L,0) \) in the direction towards the origin. 
-The parameter \( \gamma \) is a constant defined by properties like the rigidity of the beam while \( F \). 
+The parameter \( \gamma \) is a constant defined by properties like the rigidity of the beam. 
 We apply again so-called Dirichlet boundary conditions and set \( u(0)=u(L)=0 \).
 
 <p>
@@ -162,7 +163,7 @@ $$
 
 meaning that we have \( \rho \in [0,1] \).    By reordering the equation as 
 $$
- \frac{d^2 u(\rho)}{d\rho^2} = -\frac{FL^2}{R} u(\rho)=\lambda u(\rho),
+ \frac{d^2 u(\rho)}{d\rho^2} = -\frac{FL^2}{R} u(\rho)=-\lambda u(\rho),
 $$
 
 with \( \lambda= FL^2/R \) we have an equation that when discretized, becomes an eigenvalue problem.
@@ -205,21 +206,19 @@ Following our approach from project 1, we can rewrite this equation in a more a 
 as an eigenvalue problem, that is
 $$
 \begin{equation}
-    \begin{bmatrix} \frac{2}{h^2}& -\frac{1}{h^2} & 0   & 0    & \dots  &0     & 0 \\
-                                -\frac{1}{h^2} & \frac{2}{h^2} & -\frac{1}{h^2} & 0    & \dots  &0     &0 \\
-                                0   & -\frac{1}{h^2} & \frac{2}{h^2} & -\frac{1}{h^2}  &0       &\dots & 0\\
+    \begin{bmatrix} d& a & 0   & 0    & \dots  &0     & 0 \\
+                                a & d & a & 0    & \dots  &0     &0 \\
+                                0   & a & d & a  &0       &\dots & 0\\
                                 \dots  & \dots & \dots & \dots  &\dots      &\dots & \dots\\
-                                0   & \dots & \dots & \dots  &-\frac{1}{h^2}  &\frac{2}{h^2} & -\frac{1}{h^2}\\
-                                0   & \dots & \dots & \dots  &\dots       &-\frac{1}{h^2} & \frac{2}{h^2}
-             \end{bmatrix} \begin{bmatrix} u_1 \\ u_2 \\ u_3 \\ \dots \\ u_{N-2} \\ u_{N-1}\end{bmatrix} = \lambda \begin{bmatrix} u_1 \\ u_2 \\ u_3 \\ \dots \\ u_{N-2} \\ u_{N-1}\end{bmatrix} . 
+                                0   & \dots & \dots & \dots  &a  &d & a\\
+                                0   & \dots & \dots & \dots  &\dots       &a & d\end{bmatrix} 
+                                 \begin{bmatrix} u_1 \\ u_2 \\ u_3 \\ \dots \\ u_{N-2} \\ u_{N-1}\end{bmatrix} = \lambda \begin{bmatrix} u_1 \\ u_2 \\ u_3 \\ \dots \\ u_{N-2} \\ u_{N-1}\end{bmatrix} . 
 \label{eq:matrixse} 
 \end{equation}
 $$
 
-As in project 1, we have not included the endpoints \( u_0 \) and \( u_N \).
-
-<p>
-If we label the diagonal elements as \( d=2/h^2 \) and the non-diagonal ones as \( a=-1/h^2 \), this eigenvalue problem has analytical eigenpairs, with eigenvalues given as 
+As in project 1, we have not included the endpoints \( u_0 \) and \( u_N \). 
+We have defined \( d=2/h^2 \) and the non-diagonal ones as \( a=-1/h^2 \). This eigenvalue problem has analytical eigenpairs, with eigenvalues given as 
 $$
 \lambda_j = d+2a\cos{(\frac{j\pi}{N+1})} \hspace{0.1cm} j=1,2,\dots N-1.
 $$
@@ -243,7 +242,7 @@ $$
 
 preserves the dot product and orthogonality.
 
-<h3 id="___sec4">Project 2 b): Setting up a code for the non-interacting case </h3>
+<h3 id="___sec4">Project 2 b): Setting up a code for tridiagonal Toeplitz matrix </h3>
 
 <p>
 Your task now is to write a function which implements Jacobi's rotation algorithm (see Lecture notes chapter 7)  in order to solve Eq. \eqref{eq:matrixse}.  
