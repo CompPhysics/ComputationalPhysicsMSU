@@ -8,19 +8,16 @@ def initialize():
     Dim = 20
     return RMin, RMax, Dim
 
-#Get the boundary, orbital momentum and number of integration points
+#Get the boundary and number of integration points
 RMin, RMax, Dim = initialize()
 
-#Initialize constants
+#Initialize constants, step size and the constant values of the diagonal and non-diagonal elements
 Step    = RMax/(Dim+1)
 DiagConst = 2.0 / (Step*Step)
 NondiagConst =  -1.0 / (Step*Step)
 
-#Calculate array of potential values
-v = np.zeros(Dim)
-r = np.linspace(RMin,RMax,Dim)
 
-#Setting up a tridiagonal matrix and finding eigenvectors and eigenvalues
+#Setting up a tridiagonal matrix
 Hamiltonian = np.zeros((Dim,Dim))
 Hamiltonian[0,0] = DiagConst
 Hamiltonian[0,1] = NondiagConst
@@ -36,7 +33,7 @@ EigValues, EigVectors = np.linalg.eig(Hamiltonian)
 permute = EigValues.argsort()
 EigValues = EigValues[permute]
 EigVectors = EigVectors[:,permute]
-# now plot the results for the three lowest lying eigenstates
+# compute  the difference between the numerical and exact eigenvalues
 for i in range(Dim):
     lambda_i = DiagConst+2*NondiagConst*cos((i+1)*pi*Step)
-    print(EigValues[i], lambda_i)
+    print(abs(EigValues[i]-lambda_i))
