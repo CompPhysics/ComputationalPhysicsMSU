@@ -1,4 +1,4 @@
-//  Diagonalizing tridiagonal Toeplitz matrix 
+//  Diagonalizing tridiagonal Toeplitz matrix  with Lapack functions
 //  Compile as c++ -O3 -o Tridiag.x TridiagToeplitz.cpp -larmadillo -llapack -lblas
 #include <cmath>
 #include <iostream>
