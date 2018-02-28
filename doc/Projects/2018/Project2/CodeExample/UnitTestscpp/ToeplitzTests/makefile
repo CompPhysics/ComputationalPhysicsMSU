@@ -12,7 +12,7 @@ ${PROG} :	   	tests-main.o  test-functions.o Tridiag.o
 tests-main.o :			tests-main.cpp 
 		        	${CPPflags} -c tests-main.cpp
 
-test-functitons.o :			test-functions.cpp
+test-functions.o :			test-functions.cpp
 		        	${CPPflags} -c test-functions.cpp
 
 Tridiag.o :		Tridiag.cpp 
