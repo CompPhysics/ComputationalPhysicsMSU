@@ -101,6 +101,17 @@ ${text_types(ch)}
    * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project2/ipynb/Project2.ipynb"
 
 
+=== Project 3, deadline April 2 ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project3/pdf/Project3.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project3/pdf/Project3.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project3/html/Project3.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project3/html/Project3-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project3/ipynb/Project3.ipynb"
+
+
 
 !split
 ===== Teaching schedule Spring 2018 =====
