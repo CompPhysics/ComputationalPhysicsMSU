@@ -13,7 +13,16 @@ private:
 public:
   Complex ();                              // Complex c;
   Complex (T re_a, T im_a) {re = re_a; im = im_a; }; // Definition of a complex variable;
+  // copy constructor
+  Complex(const Complex& c) : re(c.re), im(c.im) {}
+  // destructor
   ~Complex () {}                        // destructor
+  Complex& operator= (const Complex& c)
+    {
+      re = c.re;
+      im = c.im;
+      return *this;
+    }
   T   Re () const { return re; } //  getting the real part
   T   Im () const { return im; }        // T imag_part = a.Im();
   T   abs () const { return sqrt(re*re + im*im); }       // T m = a.abs(); // modulus

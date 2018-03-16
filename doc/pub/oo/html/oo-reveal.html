@@ -148,7 +148,7 @@ MathJax.Hub.Config({
 <center>[2] <b>Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
 <br>
 <p>&nbsp;<br>
-<center><h4>Jan 8, 2018</h4></center> <!-- date -->
+<center><h4>Mar 16, 2018</h4></center> <!-- date -->
 <br>
 <p>
 
@@ -354,21 +354,40 @@ multiplying two complex numbers.
 
 
 <section>
-<h2 id="___sec10">Programming classes </h2>
+<h2 id="___sec10"><a href="https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Programs/OOExamples/ComplexClass/NoTemplates/main.cpp" target="_blank">Programming classes</a> </h2>
 
 <p>
 
 <!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #1e889b">#include</span> <span style="color: #228B22">&quot;Complex.h&quot;</span><span style="color: #1e889b"></span>
-...  other include and declarations
-<span style="color: #00688B; font-weight: bold">int</span> main ()
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #1e889b">#include</span> <span style="color: #228B22">&lt;iostream&gt;</span><span style="color: #1e889b"></span>
+<span style="color: #1e889b">#include</span> <span style="color: #228B22">&lt;cmath&gt;</span><span style="color: #1e889b"></span>
+<span style="color: #1e889b">#include</span> <span style="color: #228B22">&quot;mycomplex.h&quot;</span><span style="color: #1e889b"></span>
+<span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span> std;
+<span style="color: #00688B; font-weight: bold">int</span> <span style="color: #008b45">main</span>()
 {
-  Complex a(<span style="color: #B452CD">0.1</span>,<span style="color: #B452CD">1.3</span>);    <span style="color: #228B22">// we declare a complex variable a</span>
-  Complex <span style="color: #008b45">b</span>(<span style="color: #B452CD">3.0</span>), c(<span style="color: #B452CD">5.0</span>,-<span style="color: #B452CD">2.3</span>);  <span style="color: #228B22">// we declare  complex variables b and c</span>
-  Complex d = b;         <span style="color: #228B22">//  we declare  a new complex variable d</span>
-  cout &lt;&lt; <span style="color: #CD5555">&quot;d=&quot;</span> &lt;&lt; d &lt;&lt; <span style="color: #CD5555">&quot;, a=&quot;</span> &lt;&lt; a &lt;&lt; <span style="color: #CD5555">&quot;, b=&quot;</span> &lt;&lt; b &lt;&lt; endl;
-  d = a*c + b/a;  <span style="color: #228B22">//   we add, multiply and divide two complex numbers</span>
-  cout &lt;&lt; <span style="color: #CD5555">&quot;Re(d)=&quot;</span> &lt;&lt; d.Re() &lt;&lt; <span style="color: #CD5555">&quot;, Im(d)=&quot;</span> &lt;&lt; d.Im() &lt;&lt; endl;  <span style="color: #228B22">// write out of the real and imaginary parts</span>
+  <span style="color: #228B22">// we declare a complex variable a</span>
+  Complex a(<span style="color: #B452CD">0.1</span>,<span style="color: #B452CD">1.3</span>);    
+  <span style="color: #228B22">// we declare  complex variables b and c</span>
+  Complex b(<span style="color: #B452CD">3.0</span>), c(<span style="color: #B452CD">5.0</span>,-<span style="color: #B452CD">2.3</span>);  
+  <span style="color: #228B22">// using the copy constructor to define a new complex variable z=c</span>
+  Complex z(c);   <span style="color: #228B22">// Could use C++11 as z{c}</span>
+  <span style="color: #228B22">// C++11 way of declaring compile with c++ -std=c++11</span>
+  Complex g{<span style="color: #B452CD">3</span>,<span style="color: #B452CD">4</span>};
+  cout &lt;&lt; g.Re() &lt;&lt; <span style="color: #CD5555">&quot; &quot;</span> &lt;&lt; g.Im() &lt;&lt; endl;
+  <span style="color: #228B22">//  we declare  a new complex variable d using the assignment operator</span>
+  Complex d = z;         
+  <span style="color: #228B22">//  we declare  a new complex variable e using the assignment operator</span>
+  Complex e = d;         
+  d = a +c;
+  e = a*c - d/b;  
+  <span style="color: #228B22">// write out of the real and imaginary parts</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;Re(d)=&quot;</span> &lt;&lt; d.Re() &lt;&lt; <span style="color: #CD5555">&quot;, Im(d)=&quot;</span> &lt;&lt; d.Im() &lt;&lt; endl;  
+  cout &lt;&lt; <span style="color: #CD5555">&quot;Re(d)=&quot;</span> &lt;&lt; e.Re() &lt;&lt; <span style="color: #CD5555">&quot;, Im(d)=&quot;</span> &lt;&lt; e.Im() &lt;&lt; endl;
+  <span style="color: #228B22">// write out absolute value</span>
+  cout &lt;&lt; <span style="color: #CD5555">&quot;Abs(d)=&quot;</span> &lt;&lt; d.abs() &lt;&lt; endl;  
+  cout &lt;&lt; <span style="color: #CD5555">&quot;Abs(e)=&quot;</span> &lt;&lt; e.abs() &lt;&lt; endl;
+  <span style="color: #8B008B; font-weight: bold">return</span> <span style="color: #B452CD">0</span>;
+}
 </pre></div>
 </section>
 
@@ -385,40 +404,72 @@ of the class which allows us to print out the real and imaginary part of a given
 
 
 <section>
-<h2 id="___sec12">Programming classes </h2>
+<h2 id="___sec12"><a href="https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Programs/OOExamples/ComplexClass/NoTemplates/mycomplex.h" target="_blank">Programming classes, the header file mycomplex.h</a> </h2>
 
 <p>
 
 <!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #8B008B; font-weight: bold">class</span> <span style="color: #008b45; font-weight: bold">Complex</span>
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #1e889b">#ifndef Complex_H</span>
+<span style="color: #1e889b">#define Complex_H</span>
+<span style="color: #228B22">//   various include statements and definitions</span>
+<span style="color: #1e889b">#include</span> <span style="color: #228B22">&lt;iostream&gt;          // Standard ANSI-C++ include files</span><span style="color: #1e889b"></span>
+<span style="color: #1e889b">#include</span> <span style="color: #228B22">&lt;new&gt;</span><span style="color: #1e889b"></span>
+
+<span style="color: #228B22">//  My own Complex class</span>
+<span style="color: #8B008B; font-weight: bold">class</span> <span style="color: #008b45; font-weight: bold">Complex</span>
 {
 <span style="color: #8B008B; font-weight: bold">private</span>:
-   <span style="color: #00688B; font-weight: bold">double</span> re, im; <span style="color: #228B22">// real and imaginary part</span>
+  <span style="color: #00688B; font-weight: bold">double</span> re, im; <span style="color: #228B22">// real and imaginary part</span>
 <span style="color: #8B008B; font-weight: bold">public</span>:
-   Complex ();                              <span style="color: #228B22">// Complex c;</span>
-   Complex (<span style="color: #00688B; font-weight: bold">double</span> re, <span style="color: #00688B; font-weight: bold">double</span> im = <span style="color: #B452CD">0.0</span>); <span style="color: #228B22">// Definition of a complex variable;</span>
-   Complex (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; c);              <span style="color: #228B22">// Usage: Complex c(a);   // equate two complex variables</span>
-   Complex&amp; <span style="color: #8B008B; font-weight: bold">operator</span>= (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; c); <span style="color: #228B22">// c = a;   //  equate two complex variables, same as previous</span>
-....
+  <span style="color: #228B22">// Constructors, default, extended and copy constructor</span>
+  Complex ();                              
+  Complex (<span style="color: #00688B; font-weight: bold">double</span> re = <span style="color: #B452CD">0.0</span>, <span style="color: #00688B; font-weight: bold">double</span> im = <span style="color: #B452CD">0.0</span>); 
+  <span style="color: #228B22">// copy constructor</span>
+  Complex(<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; c) : re(c.re), im(c.im) {}
+  <span style="color: #228B22">// destructor </span>
+  ~Complex () {}         
+  <span style="color: #00688B; font-weight: bold">double</span>   Re () <span style="color: #8B008B; font-weight: bold">const</span>;        <span style="color: #228B22">// T real_part = a.Re();</span>
+  <span style="color: #00688B; font-weight: bold">double</span>   <span style="color: #008b45">Im</span> () <span style="color: #8B008B; font-weight: bold">const</span>;        <span style="color: #228B22">// T imag_part = a.Im();</span>
+  <span style="color: #00688B; font-weight: bold">double</span>   <span style="color: #008b45">abs</span> () <span style="color: #8B008B; font-weight: bold">const</span>;       <span style="color: #228B22">// T m = a.abs(); // modulus</span>
+  <span style="color: #228B22">// assignment operator c = a; </span>
+  Complex&amp; <span style="color: #8B008B; font-weight: bold">operator</span>= (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; c);  
+  <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>+ (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b);
+  <span style="color: #8B008B; font-weight: bold">friend</span> Complex  <span style="color: #8B008B; font-weight: bold">operator</span>- (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b);
+  <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>* (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b);
+  <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>/ (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b);
+};
+<span style="color: #1e889b">#endif</span>
 </pre></div>
 </section>
 
 
 <section>
-<h2 id="___sec13">Programming classes </h2>
-
+<h2 id="___sec13"><a href="https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Programs/OOExamples/ComplexClass/NoTemplates/mycomplex.cpp" target="_blank">Programming classes, the cpp file mycomplex.cpp</a> </h2>
 <p>
 
 <!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span>  ~Complex () {}                        <span style="color: #228B22">// destructor</span>
-   <span style="color: #00688B; font-weight: bold">double</span>   Re () <span style="color: #8B008B; font-weight: bold">const</span>;        <span style="color: #228B22">// double real_part = a.Re();</span>
-   <span style="color: #00688B; font-weight: bold">double</span>   <span style="color: #008b45">Im</span> () <span style="color: #8B008B; font-weight: bold">const</span>;        <span style="color: #228B22">// double imag_part = a.Im();</span>
-   <span style="color: #00688B; font-weight: bold">double</span>   <span style="color: #008b45">abs</span> () <span style="color: #8B008B; font-weight: bold">const</span>;       <span style="color: #228B22">// double m = a.abs(); // modulus</span>
-   <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>+ (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp;  a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b);
-   <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>- (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp;  a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b);
-   <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>* (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp;  a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b);
-   <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>/ (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp;  a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b);
-};
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #1e889b">#include</span> <span style="color: #228B22">&lt;cmath&gt;</span><span style="color: #1e889b"></span>
+<span style="color: #1e889b">#include</span> <span style="color: #228B22">&quot;mycomplex.h&quot;</span><span style="color: #1e889b"></span>
+<span style="color: #228B22">// Constructors</span>
+Complex:: Complex () { re = im = <span style="color: #B452CD">0.0</span>; }
+Complex:: Complex (<span style="color: #00688B; font-weight: bold">double</span> re_a, <span style="color: #00688B; font-weight: bold">double</span> im_a) {re = re_a; im = im_a; }
+<span style="color: #00688B; font-weight: bold">double</span> Complex::  Re () <span style="color: #8B008B; font-weight: bold">const</span> { <span style="color: #8B008B; font-weight: bold">return</span> re; } <span style="color: #228B22">//  getting the real part</span>
+<span style="color: #00688B; font-weight: bold">double</span> Complex::  Im () <span style="color: #8B008B; font-weight: bold">const</span> { <span style="color: #8B008B; font-weight: bold">return</span> im; }  <span style="color: #228B22">//   and the imaginary part</span>
+<span style="color: #00688B; font-weight: bold">double</span> Complex:: abs () <span style="color: #8B008B; font-weight: bold">const</span> { <span style="color: #8B008B; font-weight: bold">return</span> sqrt(re*re + im*im); }
+<span style="color: #228B22">// All member functions not declared using the keyword static have a special pointer</span>
+<span style="color: #228B22">// called this that points to the instantiating object. When accessing members within</span>
+<span style="color: #228B22">// the class where they are defined, the this pointer is implied and can be omitted</span>
+Complex&amp; Complex:: <span style="color: #8B008B; font-weight: bold">operator</span>= (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; c)
+{
+  re = c.re;
+  im = c.im;
+  <span style="color: #8B008B; font-weight: bold">return</span> *<span style="color: #8B008B; font-weight: bold">this</span>;
+}
+Complex <span style="color: #8B008B; font-weight: bold">operator</span>+ (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b) { <span style="color: #8B008B; font-weight: bold">return</span> Complex (a.re + b.re, a.im + b.im); }
+Complex <span style="color: #8B008B; font-weight: bold">operator</span>- (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b) { <span style="color: #8B008B; font-weight: bold">return</span> Complex (a.re - b.re, a.im - b.im); }
+
+Complex <span style="color: #8B008B; font-weight: bold">operator</span>* (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b) {<span style="color: #8B008B; font-weight: bold">return</span> Complex(a.re*b.re - a.im*b.im, a.im*b.re + a.re*b.im);}
+Complex <span style="color: #8B008B; font-weight: bold">operator</span>/ (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b) {<span style="color: #8B008B; font-weight: bold">return</span> Complex( (a.re*b.re +a.im*b.im)/(b.re*b.re+b.im*b.im), (-a.re*b.im + a.im*b.re)/(b.re*b.re+b.im*b.im));}
 </pre></div>
 </section>
 
@@ -621,6 +672,8 @@ as a part of the class defined as
    <span style="color: #8B008B; font-weight: bold">return</span> *<span style="color: #8B008B; font-weight: bold">this</span>;
 }
 </pre></div>
+<p>
+Note: All member functions not declared using the keyword static have a special pointer called <b>this</b> that points to the instantiating object. When accessing members within the class where they are defined, the <b>this</b> pointer is implied and can be omitted
 </section>
 
 
@@ -642,7 +695,11 @@ We can make simple implementations in terms of the assignment
 <p>
 which  is a pointer to "this object", <code>*this</code> is the present object,
 so <code>*this = c;</code> means setting the present object equal to \( c \), that is
-<code>this-&gt;operator= (c);</code>.
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
+<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #8B008B; font-weight: bold">this</span>-&gt;<span style="color: #8B008B; font-weight: bold">operator</span>= (c);.
+</pre></div>
 </section>
 
 
@@ -678,6 +735,7 @@ Inlining is enabled by the inline keyword
 </pre></div>
 <p>
 Inline functions, with complete bodies must be written in the header file  complex.h.
+If they are included in the header file, we can skip the <b>inline</b> keyword.
 </section>
 
 
@@ -841,7 +899,7 @@ of the keyword <code>template</code> followed by a list of template arguments en
 
 
 <section>
-<h2 id="___sec36">Programming classes </h2>
+<h2 id="___sec36"><a href="https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Programs/OOExamples/ComplexClass/WithTemplates/mycomplex.h" target="_blank">Programming classes, the same class but now with templates</a> </h2>
 
 <p>
 We can therefore make a more general class by rewriting our original example as
@@ -853,40 +911,35 @@ We can therefore make a more general class by rewriting our original example as
 <span style="color: #8B008B; font-weight: bold">class</span> <span style="color: #008b45; font-weight: bold">Complex</span>
 {
 <span style="color: #8B008B; font-weight: bold">private</span>:
-   T re, im; <span style="color: #228B22">// real and imaginary part</span>
+  T re, im; <span style="color: #228B22">// real and imaginary part</span>
 <span style="color: #8B008B; font-weight: bold">public</span>:
-   Complex ();                              <span style="color: #228B22">// Complex c;</span>
-   Complex (T re, T im = <span style="color: #B452CD">0</span>); <span style="color: #228B22">// Definition of a complex variable;</span>
-   Complex (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; c);              <span style="color: #228B22">// Usage: Complex c(a);   // equate two complex variables</span>
-   Complex&amp; <span style="color: #8B008B; font-weight: bold">operator</span>= (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; c); <span style="color: #228B22">// c = a;   //  equate two complex variables, same as previous</span>
+  Complex ();                              <span style="color: #228B22">// Complex c;</span>
+  Complex (T re_a, T im_a) {re = re_a; im = im_a; }; <span style="color: #228B22">// Definition of a complex variable;</span>
+  <span style="color: #228B22">// copy constructor</span>
+  Complex(<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; c) : re(c.re), im(c.im) {}
+  <span style="color: #228B22">// destructor</span>
+  ~Complex () {}                        <span style="color: #228B22">// destructor</span>
+  Complex&amp; <span style="color: #8B008B; font-weight: bold">operator</span>= (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; c)
+    {
+      re = c.re;
+      im = c.im;
+      <span style="color: #8B008B; font-weight: bold">return</span> *<span style="color: #8B008B; font-weight: bold">this</span>;
+    }
+  T   Re () <span style="color: #8B008B; font-weight: bold">const</span> { <span style="color: #8B008B; font-weight: bold">return</span> re; } <span style="color: #228B22">//  getting the real part</span>
+  T   Im () <span style="color: #8B008B; font-weight: bold">const</span> { <span style="color: #8B008B; font-weight: bold">return</span> im; }        <span style="color: #228B22">// T imag_part = a.Im();</span>
+  T   abs () <span style="color: #8B008B; font-weight: bold">const</span> { <span style="color: #8B008B; font-weight: bold">return</span> sqrt(re*re + im*im); }       <span style="color: #228B22">// T m = a.abs(); // modulus</span>
+  <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>+ (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b) { <span style="color: #8B008B; font-weight: bold">return</span> Complex (a.re + b.re, a.im + b.im); }
+  <span style="color: #8B008B; font-weight: bold">friend</span> Complex  <span style="color: #8B008B; font-weight: bold">operator</span>- (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b) { <span style="color: #8B008B; font-weight: bold">return</span> Complex (a.re - b.re, a.im - b.im); }
+  <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>* (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b) {<span style="color: #8B008B; font-weight: bold">return</span> Complex(a.re*b.re - a.im*b.im, a.im*b.re + a.re*b.im);}
+  <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>/ (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b) {<span style="color: #8B008B; font-weight: bold">return</span> Complex( (a.re*b.re +a.im*b.im)/(b.re*b.re+b.im*b.im), (-a.re*b.im + a.im*b.re)/(b.re*b.re+b.im*b.im));}
+};
+<span style="color: #1e889b">#endif</span>
 </pre></div>
 </section>
 
 
 <section>
 <h2 id="___sec37">Programming classes </h2>
-
-<p>
-We can therefore make a more general class by rewriting our original example as
-
-<p>
-
-<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span>  ~Complex () {}                        <span style="color: #228B22">// destructor</span>
-   T   Re () <span style="color: #8B008B; font-weight: bold">const</span>;        <span style="color: #228B22">// T real_part = a.Re();</span>
-   T   <span style="color: #008b45">Im</span> () <span style="color: #8B008B; font-weight: bold">const</span>;        <span style="color: #228B22">// T imag_part = a.Im();</span>
-   T   <span style="color: #008b45">abs</span> () <span style="color: #8B008B; font-weight: bold">const</span>;       <span style="color: #228B22">// T m = a.abs(); // modulus</span>
-   <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>+ (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp;  a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b);
-   <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>- (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp;  a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b);
-   <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>* (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp;  a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b);
-   <span style="color: #8B008B; font-weight: bold">friend</span> Complex <span style="color: #8B008B; font-weight: bold">operator</span>/ (<span style="color: #8B008B; font-weight: bold">const</span> Complex&amp;  a, <span style="color: #8B008B; font-weight: bold">const</span> Complex&amp; b);
-};
-</pre></div>
-</section>
-
-
-<section>
-<h2 id="___sec38">Programming classes </h2>
 
 <p>
 What it says is that <code>Complex</code> is a parameterized type with \( T \) as a parameter and \( T \) has to be a type such as double
@@ -904,7 +957,7 @@ Complex&lt;<span style="color: #00688B; font-weight: bold">int</span>&gt; b(<spa
 
 
 <section>
-<h2 id="___sec39">Programming classes </h2>
+<h2 id="___sec38">Programming classes </h2>
 
 <p>
 Member functions of our class are defined by preceding the name of the function with the <code>template</code> keyword.
@@ -924,52 +977,7 @@ The member functions  are otherwise defined following ordinary member function d
 
 
 <section>
-<h2 id="___sec40">Programming classes </h2>
-
-<p>
-Here follows a very simple first class in the file squared.h
-
-<p>
-
-<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #228B22">// Not all declarations here</span>
-<span style="color: #228B22">// Class to compute the square of a number</span>
-<span style="color: #8B008B; font-weight: bold">template</span>&lt;<span style="color: #8B008B; font-weight: bold">class</span> <span style="color: #008b45; font-weight: bold">T</span>&gt;
-<span style="color: #8B008B; font-weight: bold">class</span> <span style="color: #008b45; font-weight: bold">Squared</span>{
-  <span style="color: #8B008B; font-weight: bold">public</span>:
-    <span style="color: #228B22">// Default constructor, not used here</span>
-    Squared(){}
-
-    <span style="color: #228B22">// Overload the function operator()</span>
-    T <span style="color: #8B008B; font-weight: bold">operator</span>()(T x){<span style="color: #8B008B; font-weight: bold">return</span> x*x;}
-
-};
-</pre></div>
-</section>
-
-
-<section>
-<h2 id="___sec41">Programming classes </h2>
-
-<p>
-and we would use it as
-
-<p>
-
-<!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
-<div class="highlight" style="background: #eeeedd"><pre style="font-size: 80%; line-height: 125%"><span></span><span style="color: #1e889b">#include</span> <span style="color: #228B22">&lt;iostream&gt;</span><span style="color: #1e889b"></span>
-<span style="color: #1e889b">#include</span> <span style="color: #228B22">&quot;squared.h&quot;</span><span style="color: #1e889b"></span>
-<span style="color: #8B008B; font-weight: bold">using</span> <span style="color: #8B008B; font-weight: bold">namespace</span> std;
-
-<span style="color: #00688B; font-weight: bold">int</span> <span style="color: #008b45">main</span>(){
-  Squared&lt;<span style="color: #00688B; font-weight: bold">double</span>&gt; s;
-  cout &lt;&lt; s(<span style="color: #B452CD">3</span>) &lt;&lt; endl;
-</pre></div>
-</section>
-
-
-<section>
-<h2 id="___sec42">A matrix-vector class, first its usage </h2>
+<h2 id="___sec39">A matrix-vector class, first its usage </h2>
 <p>
 
 <!-- code=c++ (!bc cppcod) typeset with pygments style "perldoc" -->
@@ -1081,7 +1089,7 @@ Vector <span style="color: #008b45">SteepestDescent</span>(Matrix A, Vector b, V
 
 
 <section>
-<h2 id="___sec43">A matrix-vector class, the class definitions themselves </h2>
+<h2 id="___sec40">A matrix-vector class, the class definitions themselves </h2>
 
 <p>
 
@@ -1276,7 +1284,7 @@ Vector <span style="color: #8B008B; font-weight: bold">operator</span>*(<span st
 
 
 <section>
-<h2 id="___sec44">A matrix-vector class, and finally all its functions </h2>
+<h2 id="___sec41">A matrix-vector class, and finally all its functions </h2>
 
 <p>
 
@@ -2004,7 +2012,7 @@ Vector <span style="color: #8B008B; font-weight: bold">operator</span>*(<span st
 
 
 <section>
-<h2 id="___sec45">Unit Testing </h2>
+<h2 id="___sec42">Unit Testing </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2021,7 +2029,7 @@ easier.
 
 
 <section>
-<h2 id="___sec46">Unit Testing, benefits </h2>
+<h2 id="___sec43">Unit Testing, benefits </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2046,7 +2054,7 @@ There are many benefits associated with Unit Testing, such as
 
 
 <section>
-<h2 id="___sec47">Simple example of unit test </h2>
+<h2 id="___sec44">Simple example of unit test </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2079,7 +2087,7 @@ TEST(MyMath) {
 
 
 <section>
-<h2 id="___sec48">Simple example of unit test </h2>
+<h2 id="___sec45">Simple example of unit test </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
