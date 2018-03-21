@@ -1647,14 +1647,302 @@ void IDestroyMatrix(int ** mat, int m, int n){
     delete[] mat[i];
   delete[] mat;
 }
+!ec
+
+!split
+===== "Programming classes, the vector only class but now with templates":"https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Programs/OOExamples/MatrixVectorClass/WithTemplates/main.cpp" =====
+
+!bc cppcod
+#include <cmath>
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include "vectortemplates.h"
+
+using namespace  std;
+
+
+//   Main function begins here
+int main(int  argc, char * argv[]){
+  int dim = 2;
+  Vector<double> x(dim), b(dim);
+  // Set values for x and y
+  x(0) = x(1) = 10.0;
+  Vector<double> y(dim);
+  y(0) = 2.;
+  y(1) = -2.;
+  b = x+y;
+  cout << "The vector b: " << endl;
+  b.Print();
+  cout << endl;
+  cout << "The norm of  b: " << endl;
+  cout<<  b.VectorNorm2() << endl;
+  Vector<int> z(dim);
+  z(0) = 2;
+  z(1) = -2;
+  cout << "The vector z: " << endl;
+  z.Print();
+  cout << endl;
+  return 0;
+}
+
+!ec
+
+!split
+===== "Programming classes, the vector only class but now with templates":"https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Programs/OOExamples/MatrixVectorClass/WithTemplates/vectortemplates.h" =====
+
+!bc cppcod
+//  Vector class with templates
+
+#ifndef _vectorclass
+#define _vectorclass
+#include <cmath>
+#include <iostream>
+#include <sstream>
+#include <iomanip>
+#include <cstdlib>
+using namespace std;
+
+template<class T>
+class Vector{
+ private:
+  int   dimension;
+  T *data;
+  
+ public:
+  Vector();
+  Vector(int dim);
+  Vector(const Vector<T>& v);
+  ~Vector();
+  int    Dimension() const;
+  void   Normalize();
+  T VectorNorm1();
+  T VectorNorm2();
+  T VectorNormInf();
+  T MaxMod();
+  T ElementofMaxMod();
+  int MaxModindex();
+  T operator()(const int i) const;
+  T& operator()(const int i);
+  void Print() const;
+  // overloading the equality  operator, here as a template function defned below
+  const Vector<T>  operator=(const Vector<T>& v);
+  // overloading the binary  operator, here as a friend function
+  friend  Vector<T> operator+(const Vector<T>& v1, const Vector<T>& v2){
+    int min_dim = (v1.Dimension()<v2.Dimension())?v1.Dimension():v2.Dimension();
+    Vector x(min_dim);
+    for(int i=0;i < min_dim;i++)
+      x(i) = v1(i) + v2(i);
+    return x;
+  };
+  //  You can now define many more functions
+};
+#endif
+
+
+template <class T>
+void Vector<T>::Print() const{
+  cout << endl;
+  cout << "[ ";
+  if(dimension>0)
+    cout << data[0];
+  for(int i=1;i<dimension;i++)
+    cout << "; " << data[i];
+  cout << " ]" << endl;
+}
+
+template <class T>
+Vector<T>::Vector(){
+  dimension = 0;
+  data = NULL;  // change to c++11 nullptr later
+}
+
+template <class T>
+Vector<T>::Vector(int dim){
+  dimension = dim;
+  data = new T[dimension];
+
+  for(int i=0;i<dimension;i++)
+    data[i] = 0.0;
+}
+
+template <class T>
+Vector<T>::Vector(const Vector &v){
+  dimension = v.Dimension();
+  data = new T[dimension];
+
+  for(int i=0;i<dimension;i++)
+    data[i] = v.data[i];
+}
+
+
+template <class T>
+Vector<T>::~Vector(){
+  dimension = 0;
+  delete[] data;
+  data = NULL;   //  change to c++11 nullptr
+}
+
+template <class T>
+int Vector<T>::Dimension() const{
+  return(dimension);
+}
+
+
+
+
+template <class T>
+T Vector<T>::VectorNorm1(){
+  T sum = 0.0;
+  for(int i=0; i < dimension;i++)
+    sum += fabs(data[i]);
+  return(sum);
+}
+
+template <class T>
+T Vector<T>::VectorNorm2(){
+  T sum = 0.0;
+  for(int i=0;i < dimension;i++)
+    sum += data[i]*data[i];
+  return(sqrt(sum));
+}
+
+template <class T>
+void Vector<T>::Normalize(){
+  T tmp = 1.0/VectorNorm2();
+  for(int i=0;i<dimension;i++)
+    data[i] = data[i]*tmp;
+}
+
+template <class T>
+T Vector<T>::VectorNormInf(){
+  T maxval = 0.0, tmp;
+  
+  for(int i=0;i<dimension;i++){
+    tmp = fabs(data[i]);
+    maxval = (maxval > tmp)?maxval:tmp;
+  }
+  return(maxval);
+}
+
+template <class T>
+T Vector<T>::MaxMod(){
+  T maxm = -1.0e+10;
+
+  for(int i=0; i<dimension; i++)
+    maxm = (maxm > fabs(data[i]))?maxm:fabs(data[i]);
+  
+  return maxm;
+}
+
+template <class T>
+T Vector<T>::ElementofMaxMod(){
+  return(data[MaxModindex()]);
+}
 
 
 
 
 
 
+template <class T>
+int Vector<T>::MaxModindex(){
+  T maxm = -1.0e+10;
+  int maxmindex = 0;
+
+  for(int i=0; i<dimension; i++){
+    if(maxm<fabs(data[i])){
+      maxm = fabs(data[i]);
+      maxmindex = i;
+    }
+  }
+  return maxmindex;
+}
 
 
+
+template <class T>
+T Vector<T>::operator()(const int i) const{
+  if(i>=0 && i<dimension)
+    return data[i];
+
+  cerr << "Vector::Invalid index " << i << " for Vector of dimension " << dimension << endl;
+  return(0);
+}
+
+
+template <class T>
+T& Vector<T>::operator()(const int i){
+  if(i>=0 && i<dimension)
+    return data[i];
+
+  cerr << "Vector::Invalid index " << i << " for Vector of dimension " << dimension << endl;
+  return(data[0]);
+}
+
+
+template <class T>
+const Vector<T> Vector<T>::operator=(const Vector<T>& v){
+  dimension = v.Dimension();
+  for(int i=0;i<dimension;i++)
+    data[i] = v.data[i];
+  return *this;
+};
+
+
+!ec
+
+
+!split
+===== Virtual classes =====
+!bblock
+Inheritance plays a central role in OO programming. When you derive a new class from another existing class using the _virtual_ keyword, the derived class inherits data members and member functions of the already defined classes. A virtual member is a member function that can be redefined in a derived class, while preserving its calling properties through references. The syntax for a function to become virtual is to precede its declaration with the _virtual keyword_.
+!eblock
+
+!split
+===== "Virtual classes":"http://www.cplusplus.com/doc/tutorial/polymorphism/" =====
+!bc cppcod
+// virtual members
+#include <iostream>
+using namespace std;
+
+class Polygon {
+  protected:
+    int width, height;
+  public:
+    void set_values (int a, int b)
+      { width=a; height=b; }
+    virtual int area ()
+      { return 0; }
+};
+
+class Rectangle: public Polygon {
+  public:
+    int area ()
+      { return width * height; }
+};
+
+class Triangle: public Polygon {
+  public:
+    int area ()
+      { return (width * height / 2); }
+};
+
+int main () {
+  Rectangle rect;
+  Triangle trgl;
+  Polygon poly;
+  Polygon * ppoly1 = &rect;
+  Polygon * ppoly2 = &trgl;
+  Polygon * ppoly3 = &poly;
+  ppoly1->set_values (4,5);
+  ppoly2->set_values (4,5);
+  ppoly3->set_values (4,5);
+  cout << ppoly1->area() << '\n';
+  cout << ppoly2->area() << '\n';
+  cout << ppoly3->area() << '\n';
+  return 0;
+}
 !ec
 
 
