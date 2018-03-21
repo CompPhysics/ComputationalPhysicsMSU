@@ -129,10 +129,26 @@ div { text-align: justify; text-justify: inter-word; }
                2,
                None,
                '___sec41'),
-              ('Unit Testing', 2, None, '___sec42'),
-              ('Unit Testing, benefits', 2, None, '___sec43'),
-              ('Simple example of unit test', 2, None, '___sec44'),
-              ('Simple example of unit test', 2, None, '___sec45')]}
+              ('"Programming classes, the vector only class but now with '
+               'templates":"https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Programs/OOExamples/MatrixVectorClass/WithTemplates/main.cpp"',
+               2,
+               None,
+               '___sec42'),
+              ('"Programming classes, the vector only class but now with '
+               'templates":"https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Programs/OOExamples/MatrixVectorClass/WithTemplates/vectortemplates.h"',
+               2,
+               None,
+               '___sec43'),
+              ('Virtual classes', 2, None, '___sec44'),
+              ('"Virtual '
+               'classes":"http://www.cplusplus.com/doc/tutorial/polymorphism/"',
+               2,
+               None,
+               '___sec45'),
+              ('Unit Testing', 2, None, '___sec46'),
+              ('Unit Testing, benefits', 2, None, '___sec47'),
+              ('Simple example of unit test', 2, None, '___sec48'),
+              ('Simple example of unit test', 2, None, '___sec49')]}
 end of tocinfo -->
 
 <body>
@@ -174,7 +190,7 @@ MathJax.Hub.Config({
 <center>[2] <b>Department of Physics and Astronomy and National Superconducting Cyclotron Laboratory, Michigan State University</b></center>
 <br>
 <p>
-<center><h4>Mar 16, 2018</h4></center> <!-- date -->
+<center><h4>Mar 21, 2018</h4></center> <!-- date -->
 <br>
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
@@ -2007,7 +2023,313 @@ Vector <span style="color: #008000; font-weight: bold">operator</span><span styl
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec42">Unit Testing </h2>
+<h2 id="___sec42"><a href="https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Programs/OOExamples/MatrixVectorClass/WithTemplates/main.cpp" target="_blank">Programming classes, the vector only class but now with templates</a> </h2>
+
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;cmath&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;iostream&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;fstream&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;iomanip&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&quot;vectortemplates.h&quot;</span><span style="color: #BC7A00"></span>
+
+<span style="color: #008000; font-weight: bold">using</span> <span style="color: #008000; font-weight: bold">namespace</span>  std;
+
+
+<span style="color: #408080; font-style: italic">//   Main function begins here</span>
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>(<span style="color: #B00040">int</span>  argc, <span style="color: #B00040">char</span> <span style="color: #666666">*</span> argv[]){
+  <span style="color: #B00040">int</span> dim <span style="color: #666666">=</span> <span style="color: #666666">2</span>;
+  Vector<span style="color: #666666">&lt;</span><span style="color: #B00040">double</span><span style="color: #666666">&gt;</span> x(dim), b(dim);
+  <span style="color: #408080; font-style: italic">// Set values for x and y</span>
+  x(<span style="color: #666666">0</span>) <span style="color: #666666">=</span> x(<span style="color: #666666">1</span>) <span style="color: #666666">=</span> <span style="color: #666666">10.0</span>;
+  Vector<span style="color: #666666">&lt;</span><span style="color: #B00040">double</span><span style="color: #666666">&gt;</span> y(dim);
+  y(<span style="color: #666666">0</span>) <span style="color: #666666">=</span> <span style="color: #666666">2.</span>;
+  y(<span style="color: #666666">1</span>) <span style="color: #666666">=</span> <span style="color: #666666">-2.</span>;
+  b <span style="color: #666666">=</span> x<span style="color: #666666">+</span>y;
+  cout <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&quot;The vector b: &quot;</span> <span style="color: #666666">&lt;&lt;</span> endl;
+  b.Print();
+  cout <span style="color: #666666">&lt;&lt;</span> endl;
+  cout <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&quot;The norm of  b: &quot;</span> <span style="color: #666666">&lt;&lt;</span> endl;
+  cout<span style="color: #666666">&lt;&lt;</span>  b.VectorNorm2() <span style="color: #666666">&lt;&lt;</span> endl;
+  Vector<span style="color: #666666">&lt;</span><span style="color: #B00040">int</span><span style="color: #666666">&gt;</span> z(dim);
+  z(<span style="color: #666666">0</span>) <span style="color: #666666">=</span> <span style="color: #666666">2</span>;
+  z(<span style="color: #666666">1</span>) <span style="color: #666666">=</span> <span style="color: #666666">-2</span>;
+  cout <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&quot;The vector z: &quot;</span> <span style="color: #666666">&lt;&lt;</span> endl;
+  z.Print();
+  cout <span style="color: #666666">&lt;&lt;</span> endl;
+  <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>;
+}
+</pre></div>
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec43"><a href="https://github.com/CompPhysics/ComputationalPhysicsMSU/blob/master/doc/Programs/OOExamples/MatrixVectorClass/WithTemplates/vectortemplates.h" target="_blank">Programming classes, the vector only class but now with templates</a> </h2>
+
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic">//  Vector class with templates</span>
+
+<span style="color: #BC7A00">#ifndef _vectorclass</span>
+<span style="color: #BC7A00">#define _vectorclass</span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;cmath&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;iostream&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;sstream&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;iomanip&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;cstdlib&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #008000; font-weight: bold">using</span> <span style="color: #008000; font-weight: bold">namespace</span> std;
+
+<span style="color: #008000; font-weight: bold">template</span><span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">Vector</span>{
+ <span style="color: #008000; font-weight: bold">private</span><span style="color: #666666">:</span>
+  <span style="color: #B00040">int</span>   dimension;
+  T <span style="color: #666666">*</span>data;
+  
+ <span style="color: #008000; font-weight: bold">public</span><span style="color: #666666">:</span>
+  Vector();
+  Vector(<span style="color: #B00040">int</span> dim);
+  Vector(<span style="color: #008000; font-weight: bold">const</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;&amp;</span> v);
+  <span style="color: #666666">~</span>Vector();
+  <span style="color: #B00040">int</span>    <span style="color: #0000FF">Dimension</span>() <span style="color: #008000; font-weight: bold">const</span>;
+  <span style="color: #B00040">void</span>   <span style="color: #0000FF">Normalize</span>();
+  T <span style="color: #0000FF">VectorNorm1</span>();
+  T <span style="color: #0000FF">VectorNorm2</span>();
+  T <span style="color: #0000FF">VectorNormInf</span>();
+  T <span style="color: #0000FF">MaxMod</span>();
+  T <span style="color: #0000FF">ElementofMaxMod</span>();
+  <span style="color: #B00040">int</span> <span style="color: #0000FF">MaxModindex</span>();
+  T <span style="color: #0000FF">operator</span>()(<span style="color: #008000; font-weight: bold">const</span> <span style="color: #B00040">int</span> i) <span style="color: #008000; font-weight: bold">const</span>;
+  T<span style="color: #666666">&amp;</span> <span style="color: #008000; font-weight: bold">operator</span>()(<span style="color: #008000; font-weight: bold">const</span> <span style="color: #B00040">int</span> i);
+  <span style="color: #B00040">void</span> <span style="color: #0000FF">Print</span>() <span style="color: #008000; font-weight: bold">const</span>;
+  <span style="color: #408080; font-style: italic">// overloading the equality  operator, here as a template function defned below</span>
+  <span style="color: #008000; font-weight: bold">const</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;</span>  <span style="color: #008000; font-weight: bold">operator</span><span style="color: #666666">=</span>(<span style="color: #008000; font-weight: bold">const</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;&amp;</span> v);
+  <span style="color: #408080; font-style: italic">// overloading the binary  operator, here as a friend function</span>
+  <span style="color: #008000; font-weight: bold">friend</span>  Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;</span> <span style="color: #008000; font-weight: bold">operator</span><span style="color: #666666">+</span>(<span style="color: #008000; font-weight: bold">const</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;&amp;</span> v1, <span style="color: #008000; font-weight: bold">const</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;&amp;</span> v2){
+    <span style="color: #B00040">int</span> min_dim <span style="color: #666666">=</span> (v1.Dimension()<span style="color: #666666">&lt;</span>v2.Dimension())<span style="color: #666666">?</span>v1.Dimension()<span style="color: #666666">:</span>v2.Dimension();
+    Vector <span style="color: #0000FF">x</span>(min_dim);
+    <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i<span style="color: #666666">=0</span>;i <span style="color: #666666">&lt;</span> min_dim;i<span style="color: #666666">++</span>)
+      x(i) <span style="color: #666666">=</span> v1(i) <span style="color: #666666">+</span> v2(i);
+    <span style="color: #008000; font-weight: bold">return</span> x;
+  };
+  <span style="color: #408080; font-style: italic">//  You can now define many more functions</span>
+};
+<span style="color: #BC7A00">#endif</span>
+
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+<span style="color: #B00040">void</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span>Print() <span style="color: #008000; font-weight: bold">const</span>{
+  cout <span style="color: #666666">&lt;&lt;</span> endl;
+  cout <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&quot;[ &quot;</span>;
+  <span style="color: #008000; font-weight: bold">if</span>(dimension<span style="color: #666666">&gt;0</span>)
+    cout <span style="color: #666666">&lt;&lt;</span> data[<span style="color: #666666">0</span>];
+  <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i<span style="color: #666666">=1</span>;i<span style="color: #666666">&lt;</span>dimension;i<span style="color: #666666">++</span>)
+    cout <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&quot;; &quot;</span> <span style="color: #666666">&lt;&lt;</span> data[i];
+  cout <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&quot; ]&quot;</span> <span style="color: #666666">&lt;&lt;</span> endl;
+}
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span>Vector(){
+  dimension <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
+  data <span style="color: #666666">=</span> <span style="color: #008000">NULL</span>;  <span style="color: #408080; font-style: italic">// change to c++11 nullptr later</span>
+}
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span>Vector(<span style="color: #B00040">int</span> dim){
+  dimension <span style="color: #666666">=</span> dim;
+  data <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> T[dimension];
+
+  <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i<span style="color: #666666">=0</span>;i<span style="color: #666666">&lt;</span>dimension;i<span style="color: #666666">++</span>)
+    data[i] <span style="color: #666666">=</span> <span style="color: #666666">0.0</span>;
+}
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span>Vector(<span style="color: #008000; font-weight: bold">const</span> Vector <span style="color: #666666">&amp;</span>v){
+  dimension <span style="color: #666666">=</span> v.Dimension();
+  data <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> T[dimension];
+
+  <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i<span style="color: #666666">=0</span>;i<span style="color: #666666">&lt;</span>dimension;i<span style="color: #666666">++</span>)
+    data[i] <span style="color: #666666">=</span> v.data[i];
+}
+
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::~</span>Vector(){
+  dimension <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
+  <span style="color: #008000; font-weight: bold">delete</span>[] data;
+  data <span style="color: #666666">=</span> <span style="color: #008000">NULL</span>;   <span style="color: #408080; font-style: italic">//  change to c++11 nullptr</span>
+}
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+<span style="color: #B00040">int</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span>Dimension() <span style="color: #008000; font-weight: bold">const</span>{
+  <span style="color: #008000; font-weight: bold">return</span>(dimension);
+}
+
+
+
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+T Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span>VectorNorm1(){
+  T sum <span style="color: #666666">=</span> <span style="color: #666666">0.0</span>;
+  <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i<span style="color: #666666">=0</span>; i <span style="color: #666666">&lt;</span> dimension;i<span style="color: #666666">++</span>)
+    sum <span style="color: #666666">+=</span> fabs(data[i]);
+  <span style="color: #008000; font-weight: bold">return</span>(sum);
+}
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+T Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span>VectorNorm2(){
+  T sum <span style="color: #666666">=</span> <span style="color: #666666">0.0</span>;
+  <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i<span style="color: #666666">=0</span>;i <span style="color: #666666">&lt;</span> dimension;i<span style="color: #666666">++</span>)
+    sum <span style="color: #666666">+=</span> data[i]<span style="color: #666666">*</span>data[i];
+  <span style="color: #008000; font-weight: bold">return</span>(sqrt(sum));
+}
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+<span style="color: #B00040">void</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span>Normalize(){
+  T tmp <span style="color: #666666">=</span> <span style="color: #666666">1.0/</span>VectorNorm2();
+  <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i<span style="color: #666666">=0</span>;i<span style="color: #666666">&lt;</span>dimension;i<span style="color: #666666">++</span>)
+    data[i] <span style="color: #666666">=</span> data[i]<span style="color: #666666">*</span>tmp;
+}
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+T Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span>VectorNormInf(){
+  T maxval <span style="color: #666666">=</span> <span style="color: #666666">0.0</span>, tmp;
+  
+  <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i<span style="color: #666666">=0</span>;i<span style="color: #666666">&lt;</span>dimension;i<span style="color: #666666">++</span>){
+    tmp <span style="color: #666666">=</span> fabs(data[i]);
+    maxval <span style="color: #666666">=</span> (maxval <span style="color: #666666">&gt;</span> tmp)<span style="color: #666666">?</span><span style="color: #A0A000">maxval</span>:tmp;
+  }
+  <span style="color: #008000; font-weight: bold">return</span>(maxval);
+}
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+T Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span>MaxMod(){
+  T maxm <span style="color: #666666">=</span> <span style="color: #666666">-1.0e+10</span>;
+
+  <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i<span style="color: #666666">=0</span>; i<span style="color: #666666">&lt;</span>dimension; i<span style="color: #666666">++</span>)
+    maxm <span style="color: #666666">=</span> (maxm <span style="color: #666666">&gt;</span> fabs(data[i]))<span style="color: #666666">?</span><span style="color: #A0A000">maxm</span>:fabs(data[i]);
+  
+  <span style="color: #008000; font-weight: bold">return</span> maxm;
+}
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+T Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span>ElementofMaxMod(){
+  <span style="color: #008000; font-weight: bold">return</span>(data[MaxModindex()]);
+}
+
+
+
+
+
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+<span style="color: #B00040">int</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span>MaxModindex(){
+  T maxm <span style="color: #666666">=</span> <span style="color: #666666">-1.0e+10</span>;
+  <span style="color: #B00040">int</span> maxmindex <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
+
+  <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i<span style="color: #666666">=0</span>; i<span style="color: #666666">&lt;</span>dimension; i<span style="color: #666666">++</span>){
+    <span style="color: #008000; font-weight: bold">if</span>(maxm<span style="color: #666666">&lt;</span>fabs(data[i])){
+      maxm <span style="color: #666666">=</span> fabs(data[i]);
+      maxmindex <span style="color: #666666">=</span> i;
+    }
+  }
+  <span style="color: #008000; font-weight: bold">return</span> maxmindex;
+}
+
+
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+T Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span><span style="color: #008000; font-weight: bold">operator</span>()(<span style="color: #008000; font-weight: bold">const</span> <span style="color: #B00040">int</span> i) <span style="color: #008000; font-weight: bold">const</span>{
+  <span style="color: #008000; font-weight: bold">if</span>(i<span style="color: #666666">&gt;=0</span> <span style="color: #666666">&amp;&amp;</span> i<span style="color: #666666">&lt;</span>dimension)
+    <span style="color: #008000; font-weight: bold">return</span> data[i];
+
+  cerr <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&quot;Vector::Invalid index &quot;</span> <span style="color: #666666">&lt;&lt;</span> i <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&quot; for Vector of dimension &quot;</span> <span style="color: #666666">&lt;&lt;</span> dimension <span style="color: #666666">&lt;&lt;</span> endl;
+  <span style="color: #008000; font-weight: bold">return</span>(<span style="color: #666666">0</span>);
+}
+
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+T<span style="color: #666666">&amp;</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span><span style="color: #008000; font-weight: bold">operator</span>()(<span style="color: #008000; font-weight: bold">const</span> <span style="color: #B00040">int</span> i){
+  <span style="color: #008000; font-weight: bold">if</span>(i<span style="color: #666666">&gt;=0</span> <span style="color: #666666">&amp;&amp;</span> i<span style="color: #666666">&lt;</span>dimension)
+    <span style="color: #008000; font-weight: bold">return</span> data[i];
+
+  cerr <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&quot;Vector::Invalid index &quot;</span> <span style="color: #666666">&lt;&lt;</span> i <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&quot; for Vector of dimension &quot;</span> <span style="color: #666666">&lt;&lt;</span> dimension <span style="color: #666666">&lt;&lt;</span> endl;
+  <span style="color: #008000; font-weight: bold">return</span>(data[<span style="color: #666666">0</span>]);
+}
+
+
+<span style="color: #008000; font-weight: bold">template</span> <span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">T</span><span style="color: #666666">&gt;</span>
+<span style="color: #008000; font-weight: bold">const</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;::</span><span style="color: #008000; font-weight: bold">operator</span><span style="color: #666666">=</span>(<span style="color: #008000; font-weight: bold">const</span> Vector<span style="color: #666666">&lt;</span>T<span style="color: #666666">&gt;&amp;</span> v){
+  dimension <span style="color: #666666">=</span> v.Dimension();
+  <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i<span style="color: #666666">=0</span>;i<span style="color: #666666">&lt;</span>dimension;i<span style="color: #666666">++</span>)
+    data[i] <span style="color: #666666">=</span> v.data[i];
+  <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">*</span><span style="color: #008000; font-weight: bold">this</span>;
+};
+</pre></div>
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec44">Virtual classes </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+Inheritance plays a central role in OO programming. When you derive a new class from another existing class using the <b>virtual</b> keyword, the derived class inherits data members and member functions of the already defined classes. A virtual member is a member function that can be redefined in a derived class, while preserving its calling properties through references. The syntax for a function to become virtual is to precede its declaration with the <b>virtual keyword</b>.
+</div>
+
+
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec45"><a href="http://www.cplusplus.com/doc/tutorial/polymorphism/" target="_blank">Virtual classes</a> </h2>
+<p>
+
+<!-- code=c++ (!bc cppcod) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic">// virtual members</span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;iostream&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #008000; font-weight: bold">using</span> <span style="color: #008000; font-weight: bold">namespace</span> std;
+
+<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">Polygon</span> {
+  <span style="color: #008000; font-weight: bold">protected</span><span style="color: #666666">:</span>
+    <span style="color: #B00040">int</span> width, height;
+  <span style="color: #008000; font-weight: bold">public</span><span style="color: #666666">:</span>
+    <span style="color: #B00040">void</span> set_values (<span style="color: #B00040">int</span> a, <span style="color: #B00040">int</span> b)
+      { width<span style="color: #666666">=</span>a; height<span style="color: #666666">=</span>b; }
+    <span style="color: #008000; font-weight: bold">virtual</span> <span style="color: #B00040">int</span> area ()
+      { <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>; }
+};
+
+<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">Rectangle</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">public</span> Polygon {
+  <span style="color: #008000; font-weight: bold">public</span><span style="color: #666666">:</span>
+    <span style="color: #B00040">int</span> area ()
+      { <span style="color: #008000; font-weight: bold">return</span> width <span style="color: #666666">*</span> height; }
+};
+
+<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">Triangle</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">public</span> Polygon {
+  <span style="color: #008000; font-weight: bold">public</span><span style="color: #666666">:</span>
+    <span style="color: #B00040">int</span> area ()
+      { <span style="color: #008000; font-weight: bold">return</span> (width <span style="color: #666666">*</span> height <span style="color: #666666">/</span> <span style="color: #666666">2</span>); }
+};
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span> () {
+  Rectangle rect;
+  Triangle trgl;
+  Polygon poly;
+  Polygon <span style="color: #666666">*</span> ppoly1 <span style="color: #666666">=</span> <span style="color: #666666">&amp;</span>rect;
+  Polygon <span style="color: #666666">*</span> ppoly2 <span style="color: #666666">=</span> <span style="color: #666666">&amp;</span>trgl;
+  Polygon <span style="color: #666666">*</span> ppoly3 <span style="color: #666666">=</span> <span style="color: #666666">&amp;</span>poly;
+  ppoly1<span style="color: #666666">-&gt;</span>set_values (<span style="color: #666666">4</span>,<span style="color: #666666">5</span>);
+  ppoly2<span style="color: #666666">-&gt;</span>set_values (<span style="color: #666666">4</span>,<span style="color: #666666">5</span>);
+  ppoly3<span style="color: #666666">-&gt;</span>set_values (<span style="color: #666666">4</span>,<span style="color: #666666">5</span>);
+  cout <span style="color: #666666">&lt;&lt;</span> ppoly1<span style="color: #666666">-&gt;</span>area() <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&#39;\n&#39;</span>;
+  cout <span style="color: #666666">&lt;&lt;</span> ppoly2<span style="color: #666666">-&gt;</span>area() <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&#39;\n&#39;</span>;
+  cout <span style="color: #666666">&lt;&lt;</span> ppoly3<span style="color: #666666">-&gt;</span>area() <span style="color: #666666">&lt;&lt;</span> <span style="color: #BA2121">&#39;\n&#39;</span>;
+  <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>;
+}
+</pre></div>
+<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+
+<h2 id="___sec46">Unit Testing </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2023,7 +2345,7 @@ easier.
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec43">Unit Testing, benefits </h2>
+<h2 id="___sec47">Unit Testing, benefits </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2046,7 +2368,7 @@ There are many benefits associated with Unit Testing, such as
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec44">Simple example of unit test </h2>
+<h2 id="___sec48">Simple example of unit test </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -2080,7 +2402,7 @@ TEST(MyMath) {
 <p>
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
-<h2 id="___sec45">Simple example of unit test </h2>
+<h2 id="___sec49">Simple example of unit test </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
