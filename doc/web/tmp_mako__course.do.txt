@@ -326,6 +326,49 @@ formulas in HTML or ipython notebook files.
  * iPython notebook:
    * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project3/ipynb/Project3.ipynb"
 
+=== Project 4 Variational Monte Carlo, deadline May 2  ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/QuantumMonteCarlo/pdf/QuantumMonteCarlo.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/QuantumMonteCarlo/pdf/QuantumMonteCarlo.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/QuantumMonteCarlo/html/QuantumMonteCarlo.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/QuantumMonteCarlo/html/QuantumMonteCarlo-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/QuantumMonteCarlo/ipynb/QuantumMonteCarlo.ipynb"
+
+
+=== Project 4 Molecular Dynamics and statistical physics, deadline May 2  ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/MolecularDynamics/pdf/MolecularDynamics.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/MolecularDynamics/pdf/MolecularDynamics.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/MolecularDynamics/html/MolecularDynamics.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/MolecularDynamics/html/MolecularDynamics-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/MolecularDynamics/ipynb/MolecularDynamics.ipynb"
+
+
+=== Project 4 Monte Carlo Modeling of Financial Transactions, deadline May 2  ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/FinancialEngineering/pdf/FinancialEngineering.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/FinancialEngineering/pdf/FinancialEngineering.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/FinancialEngineering/html/FinancialEngineering.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/FinancialEngineering/html/FinancialEngineering-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/FinancialEngineering/ipynb/FinancialEngineering.ipynb"
+
+
+
+=== Project 4  Ising Model and Statistical Physics, deadline May 2 ===
+ * LaTeX and PDF:
+     * "LaTex file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/IsingModel/pdf/IsingModel.tex"
+     * "PDF file":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/IsingModel/pdf/IsingModel.pdf"
+ * HTML:
+   * "Plain html":"http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/IsingModel/html/IsingModel.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/IsingModel/html/Project4-bs.html"
+ * iPython notebook:
+   * "ipynb file": "http://compphysics.github.io/ComputationalPhysicsMSU/doc/Projects/2018/Project4/IsingModel/ipynb/IsingModel.ipynb"
 
 
 !split
@@ -372,7 +415,7 @@ formulas in HTML or ipython notebook files.
 | Week 17 | Partial differential equations                     |                                  |  Sections 10.3-10.4 |   |
 |         | Summary of course and discussions                  |                                  |                            |
 |----------------------------------------------------------------------------------------------------------------------------|
-| Week 18 | Finals, Oral exam                     | Schedule to be determined                                  |   |    |
+| Week 18 | Finals, Oral exam                     | Thursday May 2, BPS1420                 |   |    |
 |----------------------------------------------------------------------------------------------------------------------------|
 
 !split
@@ -414,6 +457,15 @@ The program library in C++ and Fortran2008 used in this course is a rewritten ve
 !bblock
 All programs are available at the github address of the "course":"https://github.com/CompPhysics/ComputationalPhysics/tree/master/doc/Programs"
 !eblock
+
+
+
+
+ 
+
+
+
+
 
 
 
