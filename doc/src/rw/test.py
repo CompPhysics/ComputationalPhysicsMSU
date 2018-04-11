@@ -7,7 +7,7 @@ Dim = 2
 TransitionMatrix = np.matrix('0.25 0.5; 0.75 0.5')
 # Making a copy of the transition matrix
 W = TransitionMatrix
-print W
+print(W)
 # our first state
 wold = np.zeros(Dim)
 wold[0] = 1.0
@@ -19,14 +19,14 @@ EigValues, EigVectors = np.linalg.eig(TransitionMatrix)
 permute = EigValues.argsort()
 EigValues = EigValues[permute]
 EigVectors = EigVectors[:,permute]
-for i in xrange(Dim):
-    print EigValues[i]
+for i in range(Dim):
+    print(EigValues[i])
 FifthEigvector = EigVectors[:,1]
 
-print FifthEigvector
+print(FifthEigvector)
 
 difference = np.linalg.norm(FifthEigvector-wold,2)
-print difference
+print(difference)
 eps = 1.0E-10
 count = 0
 while count < 10:
@@ -34,7 +34,7 @@ while count < 10:
           for j in range(Dim):
               wnew[i] = wnew[i]+W[i,j]*wold[j]
       count = count + 1
-      print count, wnew
+      print(count, wnew)
 #      difference = np.linalg.norm(FifthEigvector-wnew,2)
 #      print difference
       wold = wnew
