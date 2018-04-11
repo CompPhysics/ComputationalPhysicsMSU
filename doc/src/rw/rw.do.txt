@@ -1120,6 +1120,250 @@ fewer accepted moves.
 !eblock
 
 !split
+===== Two examples that illustrate the Metropolis algorithm =====
+
+Let us look at two simple examples that illustrate the Metropolis algorithm.
+
+We have the ratio 
+!bt
+\begin{equation*} 
+w_jT_{j\rightarrow i}A_{j\rightarrow i}= w_iT_{i\rightarrow j}A_{i\rightarrow j}.
+\end{equation*}
+!et
+
+Let us assume we have two states only and that we know the likelihoods $w_1=1/3$ and $w_2=2/3$. Can we find $A$ and $T$ using the ratios
+!bt
+\begin{equation*} 
+\frac{w_2}{w_1} = 2 \hspace{1cm} \frac{w_1}{w_2} = \frac{1}{2}? 
+\end{equation*} 
+!et
+
+
+!split
+===== Two examples that illustrate the Metropolis algorithm =====
+
+We have the first case
+!bt
+\begin{equation*} 
+\frac{w_2}{w_1} = 2 = \frac{T_{1\rightarrow 2}A_{1\rightarrow 2}}{T_{2\rightarrow 1}A_{2\rightarrow 1}},
+\end{equation*} 
+!et
+and using the Metropolis algorithm we have then that since the likelihood for moving to 
+state $2$ is larger than one, then we have 
+!bt
+\begin{equation*} 
+T_{1\rightarrow 2}A_{1\rightarrow 2}=1,
+\end{equation*} 
+!et
+and assuming in a very democratic way that $T_{1\rightarrow 2}=T_{2\rightarrow 1}=1/2$, we have then that the transition matrix takes the values
+!bt
+\begin{equation*} 
+W_{1\rightarrow 2}=T_{1\rightarrow 2}A_{1\rightarrow 2}=\frac{1}{2}.
+\end{equation*} 
+!et
+
+
+
+!split
+===== The other value =====
+
+For the second case
+!bt
+\begin{equation*} 
+\frac{w_1}{w_2} = \frac{1}{2} = \frac{T_{2\rightarrow 1}A_{2\rightarrow 1}}{T_{1\rightarrow 2}A_{1\rightarrow 2}},
+\end{equation*} 
+!et
+we have then
+!bt
+\begin{equation*} 
+T_{2\rightarrow 1}A_{2\rightarrow 1}=\frac{1}{2}\times\frac{1}{2},
+\end{equation*} 
+!et
+since we have $T_{1\rightarrow 2}=T_{2\rightarrow 1}=1/2$ we end with 
+!bt
+\begin{equation*} 
+W_{2\rightarrow 1}=T_{2\rightarrow 1}A_{2\rightarrow 1}=\frac{1}{4}.
+\end{equation*} 
+!et
+
+
+!split
+===== The transition matrix =====
+
+Summing up, our total transition likelihood written in terms of a matrix reads
+!bt
+\[ 
+\hat{W} = \begin{bmatrix} W_{11} & W_{12} \\ W_{21} & W_{22} \end{bmatrix}=\begin{bmatrix} ? & \frac{1}{2} \\ \frac{1}{4} & ? \end{bmatrix},
+\]
+!et
+and using the normalization requirement for the column elements we obtain
+!bt
+\[ 
+\hat{W} = \begin{bmatrix} \frac{3}{4} & \frac{1}{2} \\ \frac{1}{4} & \frac{1}{2} \end{bmatrix},
+\]
+!et
+and this matrix has eigenvalues $\lambda_0 = 1$ and $\lambda_1=1/4$. The most likely state is the one with the largest eigenvalue.
+
+
+
+!split
+===== "And the code which finds the most likely state":"https://github.com/CompPhysics/ComputationalPhysics/blob/master/doc/Programs/LecturePrograms/programs/RandomWalks/cpp/MetropolisTest.cpp" =====
+
+!bc cppcod
+int main()
+{
+  int dim = 2;
+  mat W = zeros<mat>(dim,dim);
+  vec wold = zeros<mat>(dim);
+  vec wnew = zeros<mat>(dim);
+  vec eigenvector = zeros<mat>(dim);
+  // Initializing the first vector
+  wold(0) = 1.0;
+  // Setting up the stochastic matrix W
+  W(0,0) = 0.75; W(0,1) = 0.5;
+  W(1,0) = 0.25; W(1,1) = 0.5;
+  double eps = 1.0E-10;
+  W.print("W =");
+  double difference  = norm(wold-wnew, 2);
+  int count = 0; 
+  do{
+    // Multiplying the old vector with the transition probability
+    count += 1; 
+    wnew = W*wold;
+    difference  = norm(wold-wnew, 2);
+    wold = wnew;
+    cout << "Iteration number = " << count << endl;
+    wnew.print("New vector =");
+  } while(difference > eps);
+  return 0;
+}
+!ec
+
+!split
+===== And the  output =====
+
+!bc cppcod
+W =
+   0.7500   0.5000
+   0.2500   0.5000
+Iteration number = 1
+New vector =
+   0.7500
+   0.2500
+...
+Iteration number = 16
+New vector =
+   0.6667
+   0.3333
+Iteration number = 17
+New vector =
+   0.6667
+   0.3333
+!ec
+
+We obtain the likelihoods we started with for the states $w_1$ and $w_2$!!  
+We have thus shown that the Metropolis algorithm gives the correct likelihoods for this simple example!
+
+
+!split
+===== The next example =====
+
+We are going to study one single particle in equilibrium with
+its surroundings, the latter modelled via a large heat bath
+with temperature $T$.
+
+The model used to describe this particle is that of an ideal gas
+in _one_ dimension and with velocity $-v$ or $v$.
+We are interested in finding  $P(v)dv$, which expresses the probability
+for finding the system with a given velocity $v\in [v,v+dv]$.
+The energy for this one-dimensional system is
+!bt
+\[
+  E=\frac{1}{2}kT=\frac{1}{2}v^2,
+\]
+!et
+with mass $m=1$.
+
+We will use the Boltzmann distribution
+!bt
+\[
+   P(\beta)=\frac{e^{-\beta E}}{Z},
+\]
+!et
+with $\beta=1/kT$ being the inverse temperature, $E$ is the energy of
+the system and
+$Z$ is the partition function.
+
+!split
+===== The algorithm =====
+
+!bc cppcod
+   for( montecarlo_cycles=1; Max_cycles; montecarlo_cycles++) {
+      ...
+      // change speed as function of delta v
+      v_change = (2*ran1(&idum) -1 )* delta_v;
+      v_new = v_old+v_change;
+      // energy change
+      delta_E = 0.5*(v_new*v_new - v_old*v_old) ;
+      ......
+      // Metropolis algorithm begins her
+        if ( ran1(&idum) <= exp(-beta*delta_E)  ) {
+            accept_step = accept_step + 1 ;
+            v_old = v_new ;
+            .....
+        }
+      // thereafter we must fill in  P[N] as a function of
+      // the new speed
+        P[?] = ...
+
+      // upgrade mean velocity, energy and variance
+         ...
+   
+!ec
+
+!split
+===== The python code =====
+!bc pyscpro
+# Program to test the Metropolis algorithm with one particle at given temp in
+# one dimension
+#!/usr/bin/env python
+import numpy as np
+import matplotlib.mlab as mlab
+import matplotlib.pyplot as plt
+import random
+from math import sqrt, exp
+# initialize the rng with a seed
+random.seed()
+# Hard coding of input parameters
+MCcycles = 100000
+Temperature = 2.0
+beta = 1./Temperature
+InitialVelocity = 0.0
+CurrentVelocity = InitialVelocity
+Energy = 0.5*InitialVelocity*InitialVelocity
+VelocityRange = 10*sqrt(Temperature)
+VelocityStep = 2*VelocityRange/100.
+AverageEnergy = Energy
+AverageEnergy2 = Energy*Energy
+# The Monte Carlo sampling with Metropolis starts here
+for i in range (1, MCcycles, 1):
+    TrialVelocity = CurrentVelocity + (2.0*random.random() - 1.0)*VelocityStep
+    EnergyChange = 0.5*(TrialVelocity*TrialVelocity -CurrentVelocity*CurrentVelocity);
+    if random.random() <= exp(-beta*EnergyChange):
+        CurrentVelocity = TrialVelocity
+        Energy += EnergyChange
+    AverageEnergy += Energy
+    AverageEnergy2 += Energy*Energy
+#Final averages
+AverageEnergy = AverageEnergy/MCcycles
+AverageEnergy2 = AverageEnergy2/MCcycles
+Variance = AverageEnergy2 - AverageEnergy*AverageEnergy
+print(AverageEnergy, Variance)
+
+!ec
+
+
+!split
 ===== Brief Summary =====
 
 The Monte Carlo approach, combined with the theory for Markov chains can be summarized as follows:
