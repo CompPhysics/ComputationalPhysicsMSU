@@ -1131,7 +1131,7 @@ w_jT_{j\rightarrow i}A_{j\rightarrow i}= w_iT_{i\rightarrow j}A_{i\rightarrow j}
 \end{equation*}
 !et
 
-Let us assume we have two states only and that we know the likelihoods $w_1=1/3$ and $w_2=2/3$. Can we find $A$ and $T$ using the ratios
+Let us assume for the first example that we have two states only and that we know the likelihoods $w_1=1/3$ and $w_2=2/3$. Can we find $A$ and $T$ using the ratios
 !bt
 \begin{equation*} 
 \frac{w_2}{w_1} = 2 \hspace{1cm} \frac{w_1}{w_2} = \frac{1}{2}? 
@@ -1294,32 +1294,6 @@ with $\beta=1/kT$ being the inverse temperature, $E$ is the energy of
 the system and
 $Z$ is the partition function.
 
-!split
-===== The algorithm =====
-
-!bc cppcod
-   for( montecarlo_cycles=1; Max_cycles; montecarlo_cycles++) {
-      ...
-      // change speed as function of delta v
-      v_change = (2*ran1(&idum) -1 )* delta_v;
-      v_new = v_old+v_change;
-      // energy change
-      delta_E = 0.5*(v_new*v_new - v_old*v_old) ;
-      ......
-      // Metropolis algorithm begins her
-        if ( ran1(&idum) <= exp(-beta*delta_E)  ) {
-            accept_step = accept_step + 1 ;
-            v_old = v_new ;
-            .....
-        }
-      // thereafter we must fill in  P[N] as a function of
-      // the new speed
-        P[?] = ...
-
-      // upgrade mean velocity, energy and variance
-         ...
-   
-!ec
 
 !split
 ===== The python code =====
@@ -1331,20 +1305,21 @@ import numpy as np
 import matplotlib.mlab as mlab
 import matplotlib.pyplot as plt
 import random
-from math import sqrt, exp
+from math import sqrt, exp, log
 # initialize the rng with a seed
 random.seed()
 # Hard coding of input parameters
 MCcycles = 100000
 Temperature = 2.0
 beta = 1./Temperature
-InitialVelocity = 0.0
+InitialVelocity = -2.0
 CurrentVelocity = InitialVelocity
 Energy = 0.5*InitialVelocity*InitialVelocity
 VelocityRange = 10*sqrt(Temperature)
-VelocityStep = 2*VelocityRange/100.
+VelocityStep = 2*VelocityRange/10.
 AverageEnergy = Energy
 AverageEnergy2 = Energy*Energy
+VelocityValues = np.zeros(MCcycles)
 # The Monte Carlo sampling with Metropolis starts here
 for i in range (1, MCcycles, 1):
     TrialVelocity = CurrentVelocity + (2.0*random.random() - 1.0)*VelocityStep
@@ -1352,6 +1327,7 @@ for i in range (1, MCcycles, 1):
     if random.random() <= exp(-beta*EnergyChange):
         CurrentVelocity = TrialVelocity
         Energy += EnergyChange
+        VelocityValues[i] = CurrentVelocity
     AverageEnergy += Energy
     AverageEnergy2 += Energy*Energy
 #Final averages
@@ -1359,6 +1335,14 @@ AverageEnergy = AverageEnergy/MCcycles
 AverageEnergy2 = AverageEnergy2/MCcycles
 Variance = AverageEnergy2 - AverageEnergy*AverageEnergy
 print(AverageEnergy, Variance)
+n, bins, patches = plt.hist(VelocityValues, 400, facecolor='green')
+
+plt.xlabel('$v$')
+plt.ylabel('Velocity distribution P(v)')
+plt.title(r'Velocity histogram at $k_BT=2$')
+plt.axis([-5, 5, 0, 600])
+plt.grid(True)
+plt.show()
 
 !ec
 
