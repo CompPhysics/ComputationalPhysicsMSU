@@ -11,7 +11,7 @@ from random import random
 if len(sys.argv) == 2:
     outfilename = sys.argv[1]
 else:
-    print '\nError: Name of output file must be given as command line argument.\n'
+    print('\nError: Name of output file must be given as command line argument.\n')
 
 #Initialisation function
 def initialize():
@@ -81,7 +81,13 @@ def local_energy(r,wf):
 
 #Here starts the main program
 
-number_particles,charge,dimension,max_variations,thermalisation,number_cycles,step_length = initialize()
+number_particles = 2
+charge= 2
+dimension =3 
+max_variations = 10
+thermalisation = 10
+number_cycles= 100000
+step_length = 1.0
 
 outfile = open(outfilename,'w')
 
