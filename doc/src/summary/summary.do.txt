@@ -74,7 +74,7 @@ should include
 
 
 
-In total your talk should have a duration of 20-25 minutes, but longer is also ok. The style for the final presentation follows very much the way the lay out your reports. 
+In total your talk should have a duration of 20-25 minutes, but longer is also ok. The style for the final presentation follows very much the layout your reports. 
 
 !split
 ===== What? Me worry?  =====
